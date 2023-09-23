@@ -1,6 +1,6 @@
 # We add imgui as source to our library
 
-target_sources(blink2d
+target_sources(${PROJECT_NAME}
     PRIVATE 
         ${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui_demo.cpp
@@ -11,5 +11,8 @@ target_sources(blink2d
         ${CMAKE_CURRENT_SOURCE_DIR}/imgui/backends/imgui_impl_sdlrenderer2.cpp
 )
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/imgui)
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/imgui/backends)
+target_include_directories(${PROJECT_NAME}
+    PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/imgui
+    ${CMAKE_CURRENT_SOURCE_DIR}/imgui/backends
+)
