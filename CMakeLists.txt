@@ -27,12 +27,18 @@ add_subdirectory(extern)
 # gui code
 add_subdirectory(blinkgui) 
 
+# model code
+add_subdirectory(blinkmodel) 
+
 # Include directories
 target_include_directories(${PROJECT_NAME}
     PUBLIC
     $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/blinkgui/include>
     $<BUILD_INTERFACE:${CMAKE_BINARY_DIR}/blinkgui/include>
     $<INSTALL_INTERFACE:${CMAKE_PREFIX_PATH}/include/blinkgui>
+    $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/blinkmodel/include>
+    $<BUILD_INTERFACE:${CMAKE_BINARY_DIR}/blinkmodel/include>
+    $<INSTALL_INTERFACE:${CMAKE_PREFIX_PATH}/blinkmodel/blinkgui>
 )
 
 #Link SDL

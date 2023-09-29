@@ -2,7 +2,6 @@
  * Copyright (C) ZdefaultCompanyZ - All Rights Reserved
  * Unauthorized copying of this file, via any medium is strictly prohibited
  * Proprietary and confidential
- * Written by Elmer Fudd <efudd@yoyodyne.com>, September 1943
  */
 
  #pragma once
@@ -13,6 +12,11 @@
 #include "imgui_impl_sdlrenderer2.h"
 #include <stdio.h>
 #include <SDL.h>
+
+
+#include <HexGui.hpp>
+#include <SquareGui.hpp>
+#include <ShapeSelector.hpp>
 
 #if !SDL_VERSION_ATLEAST(2,0,17)
 #error This backend requires SDL 2.0.17+ because of SDL_RenderGeometry() function
@@ -44,6 +48,7 @@ namespace blink2dgui
 
             void loop();
             void testGui();
+            void hexGui();
             bool isRunning();
 
         private:
@@ -60,5 +65,8 @@ namespace blink2dgui
             bool demo_ = true;
             bool other_ = false;
             bool done_ = false;
+            HexGui gui_;
+            SquareGui sgui_;
+            ShapeSelector shaper_;
     };
 }

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <Application.hpp>
+#include <HexGui.hpp>
 #include <cmath>
 
 namespace blink2dgui
@@ -38,7 +39,7 @@ namespace blink2dgui
 
         // Create window with SDL_Renderer graphics context
         SDL_WindowFlags window_flags = (SDL_WindowFlags)(SDL_WINDOW_ALLOW_HIGHDPI);
-        window_ = SDL_CreateWindow("Dear ImGui SDL2+SDL_Renderer example", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 720, window_flags);
+        window_ = SDL_CreateWindow("BLINK 2D", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 800, window_flags);
         renderer_ = SDL_CreateRenderer(window_, -1, SDL_RENDERER_PRESENTVSYNC | SDL_RENDERER_ACCELERATED);
         if (renderer_ == nullptr)
         {
@@ -77,6 +78,10 @@ namespace blink2dgui
         //IM_ASSERT(font != nullptr);
 
         clear_color_ = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
+
+        gui_ = HexGui();
+        sgui_ = SquareGui();
+        shaper_ = ShapeSelector();
     }
 
     Application::~Application()
@@ -112,7 +117,16 @@ namespace blink2dgui
         ImGui_ImplSDL2_NewFrame();
         ImGui::NewFrame();
 
-        testGui();
+        shaper_.renderWindow();
+        if (shaper_.isSquareSelected())
+        {
+            sgui_.renderGrid();
+        }
+        if (shaper_.isHexagonSelected())
+        {
+            gui_.renderGrid();
+        }
+        //testGui();
 
         // Rendering
         ImGui::Render();
