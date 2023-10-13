@@ -1,29 +1,9 @@
 #include <iostream>
 #include <Application.hpp>
-#include <HexGui.hpp>
 #include <cmath>
 
 namespace blink2dgui
 {
-    Application *Application::GetInstance()
-    {
-        /**
-         * This is a safer way to create an instance. instance = new Singleton is
-         * dangerous in case two instance threads wants to access at the same time
-         */
-        if(singleton_ == nullptr)
-        {
-            singleton_ = new Application();
-        }
-        return singleton_;
-    }
-
-    void Application::Destroy(Application& app)
-    {
-        delete &app;
-        singleton_ = nullptr;
-    }
-
     Application::Application()
     {
         // Setup SDL
@@ -78,10 +58,6 @@ namespace blink2dgui
         //IM_ASSERT(font != nullptr);
 
         clear_color_ = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
-
-        gui_ = HexGui();
-        sgui_ = SquareGui();
-        shaper_ = ShapeSelector();
     }
 
     Application::~Application()
@@ -117,16 +93,7 @@ namespace blink2dgui
         ImGui_ImplSDL2_NewFrame();
         ImGui::NewFrame();
 
-        shaper_.renderWindow();
-        if (shaper_.isSquareSelected())
-        {
-            sgui_.renderGrid();
-        }
-        if (shaper_.isHexagonSelected())
-        {
-            gui_.renderGrid();
-        }
-        //testGui();
+        gui_.render();
 
         // Rendering
         ImGui::Render();
@@ -137,50 +104,8 @@ namespace blink2dgui
         SDL_RenderPresent(renderer_);
     }
 
-    void Application::testGui()
-    {
-        // 1. Show the big demo window (Most of the sample code is in ImGui::ShowDemoWindow()! You can browse its code to learn more about Dear ImGui!).
-        if (demo_)
-            ImGui::ShowDemoWindow(&demo_);
-
-        // 2. Show a simple window that we create ourselves. We use a Begin/End pair to create a named window.
-        {
-            static float f = 0.0f;
-            static int counter = 0;
-
-            ImGui::Begin("Hello, world!");                          // Create a window called "Hello, world!" and append into it.
-
-            ImGui::Text("This is some useful text.");               // Display some text (you can use a format strings too)
-            ImGui::Checkbox("Demo Window", &demo_);      // Edit bools storing our window open/close state
-            ImGui::Checkbox("Another Window", &other_);
-
-            ImGui::SliderFloat("float", &f, 0.0f, 1.0f);            // Edit 1 float using a slider from 0.0f to 1.0f
-            ImGui::ColorEdit3("clear color", (float*)&clear_color_); // Edit 3 floats representing a color
-
-            if (ImGui::Button("Button"))                            // Buttons return true when clicked (most widgets return true when edited/activated)
-                counter++;
-            ImGui::SameLine();
-            ImGui::Text("counter = %d", counter);
-
-            ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / io_->Framerate, io_->Framerate);
-            ImGui::End();
-        }
-
-        // 3. Show another simple window.
-        if (other_)
-        {
-            ImGui::Begin("Another Window", &other_);   // Pass a pointer to our bool variable (the window will have a closing button that will clear the bool when clicked)
-            ImGui::Text("Hello from another window!");
-            if (ImGui::Button("Close Me"))
-                other_ = false;
-            ImGui::End();
-        }
-    }
-
     bool Application::isRunning()
     {
         return !done_;
     }
-
-    Application* Application::singleton_ = nullptr;
 }

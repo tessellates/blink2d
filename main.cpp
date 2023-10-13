@@ -12,11 +12,11 @@
 // Main code
 int main(int, char**)
 {
-    blink2dgui::Application& app = *blink2dgui::Application::GetInstance();
+    blink2dgui::Application& app = *blink2dgui::Application::instance();
     while (app.isRunning())
     {
         app.loop();
     }
-    blink2dgui::Application::Destroy(app);
+    blink2dgui::Application::destroyInstance();
     return 0;
 }

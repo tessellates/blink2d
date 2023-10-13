@@ -13,10 +13,9 @@
 #include <stdio.h>
 #include <SDL.h>
 
-
-#include <HexGui.hpp>
-#include <SquareGui.hpp>
+#include <GameGui.hpp>
 #include <ShapeSelector.hpp>
+#include <Singleton.hpp>
 
 #if !SDL_VERSION_ATLEAST(2,0,17)
 #error This backend requires SDL 2.0.17+ because of SDL_RenderGeometry() function
@@ -28,31 +27,19 @@ namespace blink2dgui
     * @class Application
     * @brief Init the application    
     */
-    class Application
+    class Application : public Singleton<Application>
     {
-        public:
-            /**
-             * This is the static method that controls the access to the singleton
-             * instance. On the first run, it creates a singleton object and places it
-             * into the static field. On subsequent runs, it returns the client existing
-             * object stored in the static field.
-             */
-            static Application *GetInstance();
-            static void Destroy(Application& app);
-            Application(Application &other) = delete; 
+        friend class Singleton<Application>; // Grant base access to constructor.
 
-            /**
-             * Singletons should not be assignable.
-             */
+        public:
+            // boiler-plate singleton
+            Application(Application &other) = delete; 
             void operator=(const Application &) = delete;
 
             void loop();
-            void testGui();
-            void hexGui();
             bool isRunning();
 
         private:
-            static Application* singleton_; 
             Application();
             ~Application();   
 
@@ -62,11 +49,8 @@ namespace blink2dgui
             ImGuiIO* io_;
             ImVec4 clear_color_;
 
-            bool demo_ = true;
-            bool other_ = false;
             bool done_ = false;
-            HexGui gui_;
-            SquareGui sgui_;
-            ShapeSelector shaper_;
+
+            GameGui gui_;
     };
 }
