@@ -8,6 +8,7 @@
 namespace blink2dgui {
 
 GameGui::GameGui() {
+    int model = 0;
     squareGui_ = SquareGui();
     // Initialization code for GameGui (if any)
 }

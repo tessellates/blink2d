@@ -39,6 +39,9 @@ namespace blink2dgui
             void loop();
             bool isRunning();
 
+            int WIDTH = 1280;
+            int HEIGHT = 800;
+
         private:
             Application();
             ~Application();   

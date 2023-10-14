@@ -14,3 +14,4 @@ public:
     Properties properties;
     GridEntity(const Coordinate& pos) : position(pos) {}
 };
+

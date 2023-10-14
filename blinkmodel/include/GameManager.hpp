@@ -1,12 +1,12 @@
 #pragma once
 
-class GameManager
-{
-public:
-    // Get the instance of the GameManager
-    static GameManager* getInstance();
+#include <Singleton.hpp>
 
-    // Delete copy constructor and assignment operator for Singleton
+class GameManager : public Singleton<GameManager>
+{
+    friend class Singleton<GameManager>; // Grant base access to constructor.
+public:
+    // boiler-plate singleton
     GameManager(const GameManager&) = delete;
     void operator=(const GameManager&) = delete;
 
@@ -16,9 +16,8 @@ public:
     void shutdown();
 
 private:
-    static GameManager* singleton_; 
-    GameManager();
-    ~GameManager();   
+    GameManager() = default;
+    ~GameManager() = default;   
 
     // Add any member variables required by the game manager here...
 };

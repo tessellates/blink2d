@@ -11,6 +11,8 @@
 #include <stdio.h>
 #include <SDL.h>
 #include <vector>
+#include "Shape.hpp"
+#include "GridEntity.hpp"
 
 namespace blink2dgui
 {
@@ -20,11 +22,11 @@ namespace blink2dgui
         SquareGui();    // Constructor
         ~SquareGui();   // Destructor
 
-        // Function to draw a square given its center, size, and color
-        void drawSquare(const ImVec2& center, float size, const ImVec4& color);
-
+        SquareGui(const SquareGui&) = default;             // Copy constructor
+        SquareGui& operator=(const SquareGui&) = default;  // Copy assignment operator
         // Function to render the entire grid
         void renderGrid();
+        void interpretEntity(const GridEntity& entity);
 
     private:
         float nPixels_;               // Size of the window in pixels
@@ -32,8 +34,7 @@ namespace blink2dgui
         ImGuiWindowFlags window_flags_;  // Flags to control window properties
         ImVec2 windowPos_;             // Position of the window
 
-        std::vector<ImVec2> squareCenters_;  // List of centers of squares
-        std::vector<ImVec4> squareColors_;   // List of colors of squares
+        std::vector<Shape> shapes_;  // List of centers of squares
     };
 }
 
