@@ -28,6 +28,8 @@ namespace blink2dgui
         // Function to render the entire grid
         void renderGrid();
         void colorLocation(const Coordinate& pos, const ImVec4& color);
+        void moveColorLocation(const Coordinate& previousPosition, const Coordinate& pos, const ImVec4& color);
+        void updateShapeMovement(const Coordinate& pos, float factor);
 
     private:
         float nPixels_;               // Size of the window in pixels

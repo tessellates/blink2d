@@ -40,11 +40,15 @@ void GameGui::render() {
     if (ImGui::IsKeyPressed(ImGuiKey_LeftArrow)) {
         snakeModel_.changeDirection(Direction::LEFT);
     }
-    int ms = 75;
+    int ms = 300;
     currentTick = SDL_GetTicks();
     elapsed = currentTick - previousTick;
     previousTick = currentTick;
     lag += elapsed;
+
+    if (snakeModel_.snake.size() > 0)
+        squareGui_.updateShapeMovement(snakeModel_.snake.front(), elapsed/ms);
+
     if (lag >= ms) {
         snakeModel_.nextStep();
         lag -= ms;
@@ -63,13 +67,20 @@ void GameGui::OnSnakeModelLocationUpdate(const GridEntity& entity)
     if (entity.type == 0)
     {
         color = ImVec4(0, 0.5f, 0, 1);
+        if (snakeModel_.snake.size() == 0)
+            squareGui_.colorLocation(entity.position, color);
+        else
+        {
+            squareGui_.moveColorLocation(snakeModel_.snake.front(), entity.position, color);
+        }
     }
     else
     {
         color = ImVec4(0.5f, 0, 0, 1);
+        squareGui_.colorLocation(entity.position, color);
     }
-    squareGui_.colorLocation(entity.position, color);
 }
+
 void GameGui::OnRemoveEntity(const Coordinate& pos) 
 {
     ImVec4 color = ImVec4(0, 0, 0, 0);

@@ -126,8 +126,8 @@ public:
     {
         auto ent = GridEntity(destination);
         ent.type = 0;
-        snake.push_front(destination);
         fireSnakeModelLocationUpdate(ent);
+        snake.push_front(destination);
     }
 
     void removeTail()

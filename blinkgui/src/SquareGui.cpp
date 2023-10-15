@@ -60,6 +60,23 @@ namespace blink2dgui
     void SquareGui::colorLocation(const Coordinate& pos, const ImVec4& color)
     {
         int gridHeight = nPixels_ / squareSize_ -1;
-        shapes_[pos.x*gridHeight + pos.y].type_.reset(new ColorShapeType(color));
+        auto& targetShape = shapes_[pos.x*gridHeight + pos.y];
+        targetShape.type_.reset(new ColorShapeType(color));
+        targetShape.sourcePosition_ = targetShape.position_;
+    }
+
+    void SquareGui::moveColorLocation(const Coordinate& previousPosition, const Coordinate& pos, const ImVec4& color)
+    {
+        int gridHeight = nPixels_ / squareSize_ -1;
+        ImVec2 imPreviousPosition = shapes_[previousPosition.x*gridHeight + previousPosition.y].position_;
+        auto& targetShape = shapes_[pos.x*gridHeight + pos.y];
+        targetShape.type_.reset(new ColorShapeType(color));
+        targetShape.sourcePosition_ = imPreviousPosition;
+    }
+
+    void SquareGui::updateShapeMovement(const Coordinate& pos, float factor)
+    {
+        int gridHeight = nPixels_ / squareSize_ -1;
+        shapes_[pos.x*gridHeight + pos.y].moveFrom(factor);
     }
 }
