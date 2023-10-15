@@ -13,10 +13,11 @@
 #include <vector>
 
 #include <SquareGui.hpp>
+#include <SnakeModel.hpp>
 
 namespace blink2dgui
 {
-    class GameGui
+    class GameGui : public SnakeModelListener
     {
     public:
         GameGui();    // Constructor
@@ -24,8 +25,20 @@ namespace blink2dgui
 
         void render();
 
+        void OnSnakeModelUpdate() override;
+        void OnVictory() override;
+        void OnLose() override;
+        void OnSnakeModelLocationUpdate(const GridEntity& entity) override;
+        void OnRemoveEntity(const Coordinate& pos) override;
     private:
         SquareGui squareGui_;
+        SnakeModel snakeModel_;
+
+        const Uint32 MS_PER_UPDATE = 200;
+        Uint32 previousTick;
+        Uint32 elapsed;
+        Uint32 currentTick;
+        Uint32 lag = 0;
     };
 }
 

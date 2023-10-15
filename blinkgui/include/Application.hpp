@@ -55,5 +55,6 @@ namespace blink2dgui
             bool done_ = false;
 
             GameGui gui_;
+            ShapeSelector shapeSelector_;
     };
 }

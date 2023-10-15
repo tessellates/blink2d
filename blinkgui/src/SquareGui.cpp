@@ -4,20 +4,20 @@
 
 namespace blink2dgui
 {
-    SquareGui::SquareGui()
+    SquareGui::SquareGui(float squareSize)
     {
-        nPixels_ = 1280.0f;
-        squareSize_ = 30.0f;
+        nPixels_ = 720.0f;
+        squareSize_ = squareSize;
         window_flags_ = ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse;
 
-        windowPos_ = ImVec2((1280- nPixels_) * 0.5, (1280 - nPixels_) * 0.5);
+        windowPos_ = ImVec2((1280- nPixels_) * 0.5, (800 - nPixels_) * 0.5);
 
         int gridWidth = nPixels_ / squareSize_ -1;
         int gridHeight = nPixels_ / squareSize_ -1;
 
 
         shapes_ = std::vector<Shape>(gridWidth*gridHeight);
-        ShapeType* type = new ColorShapeType(ImVec4(0,0,0,1));
+        ShapeType* type = new ColorShapeType(ImVec4(0,0,0,0));
         // Centering adjustments
         float startX = squareSize_;
         float startY = squareSize_;
@@ -57,17 +57,9 @@ namespace blink2dgui
         ImGui::End();
     }
 
-    void SquareGui::interpretEntity(const GridEntity& entity)
+    void SquareGui::colorLocation(const Coordinate& pos, const ImVec4& color)
     {
-        ImVec4 color;
-        if (entity.type == 0)
-        {
-            color = ImVec4(0.5f, 0.5f, 0, 1);
-        }
-        else
-        {
-            color = ImVec4(0.5f, 0, 0, 1);
-        }
+        int gridHeight = nPixels_ / squareSize_ -1;
+        shapes_[pos.x*gridHeight + pos.y].type_.reset(new ColorShapeType(color));
     }
-
 }

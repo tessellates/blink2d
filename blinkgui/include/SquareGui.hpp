@@ -19,14 +19,15 @@ namespace blink2dgui
     class SquareGui
     {
     public:
-        SquareGui();    // Constructor
+        SquareGui(float size_);    // Constructor
+        SquareGui() = default;    // Constructor
         ~SquareGui();   // Destructor
 
         SquareGui(const SquareGui&) = default;             // Copy constructor
         SquareGui& operator=(const SquareGui&) = default;  // Copy assignment operator
         // Function to render the entire grid
         void renderGrid();
-        void interpretEntity(const GridEntity& entity);
+        void colorLocation(const Coordinate& pos, const ImVec4& color);
 
     private:
         float nPixels_;               // Size of the window in pixels

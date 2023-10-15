@@ -30,3 +30,23 @@ Coordinate Coordinate::operator-(const Coordinate& other) const {
 void Coordinate::print() const {
     std::cout << "Coordinate(" << x << ", " << y << ")\n";
 }
+
+
+Coordinate Coordinate::getNeighbor(int direction) const
+{
+    static std::array<std::pair<int, int>, 8> directions = {
+        std::make_pair(0, -1),    // UP
+        std::make_pair(1, -1),    // UP_RIGHT
+        std::make_pair(1, 0),     // RIGHT
+        std::make_pair(1, 1),     // DOWN_RIGHT
+        std::make_pair(0, 1),     // DOWN
+        std::make_pair(-1, 1),    // DOWN_LEFT
+        std::make_pair(-1, 0),    // LEFT
+        std::make_pair(-1, -1)    // UP_LEFT
+    };
+
+    int dx = directions[direction].first;
+    int dy = directions[direction].second;
+
+    return Coordinate(x + dx, y + dy);
+}

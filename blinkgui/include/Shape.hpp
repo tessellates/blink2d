@@ -3,7 +3,7 @@
 #include <ShapeType.hpp>
 
 class Shape {
-private:
+public:
     std::unique_ptr<ShapeType> type_;
     ImVec2 position_;
     ImVec2 targetPosition_;
@@ -18,6 +18,7 @@ public:
 
     Shape(const Shape& other) {
         if (other.type_) {
+            type_.reset();
             type_ = other.type_->clone();
         }
         position_ = (other.position_);
@@ -31,6 +32,7 @@ public:
         if (&other == this) return *this;  // self-assignment check
 
         if (other.type_) {
+            type_.reset();
             type_ = other.type_->clone();
         } else {
             type_.reset();

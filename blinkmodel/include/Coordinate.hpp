@@ -24,6 +24,8 @@ public:
     // Subtraction operator
     Coordinate operator-(const Coordinate& other) const;
 
+    Coordinate getNeighbor(int direction) const;
+
     // Print the coordinate (for debugging)
     void print() const;
 };

@@ -19,7 +19,7 @@ namespace blink2dgui
 
         // Create window with SDL_Renderer graphics context
         SDL_WindowFlags window_flags = (SDL_WindowFlags)(SDL_WINDOW_ALLOW_HIGHDPI);
-        window_ = SDL_CreateWindow("BLINK 2D", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 1280, window_flags);
+        window_ = SDL_CreateWindow("BLINK 2D", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 800, window_flags);
         renderer_ = SDL_CreateRenderer(window_, -1, SDL_RENDERER_PRESENTVSYNC | SDL_RENDERER_ACCELERATED);
         if (renderer_ == nullptr)
         {
@@ -93,6 +93,7 @@ namespace blink2dgui
         ImGui_ImplSDL2_NewFrame();
         ImGui::NewFrame();
 
+        shapeSelector_.renderWindow();
         gui_.render();
 
         // Rendering
