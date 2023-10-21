@@ -35,3 +35,6 @@ add_subdirectory(examples)
 
 #Link SDL
 target_link_libraries(${PROJECT_NAME} PUBLIC SDL2::SDL2main SDL2::SDL2 SDL2_image::SDL2_image)
+
+#Enable imgui default math operator
+add_compile_definitions(IMGUI_DEFINE_MATH_OPERATORS)
