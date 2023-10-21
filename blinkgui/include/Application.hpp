@@ -15,6 +15,7 @@
 
 #include <GameGui.hpp>
 #include <ShapeSelector.hpp>
+#include <ControllerWindow.hpp>
 #include <Singleton.hpp>
 
 #if !SDL_VERSION_ATLEAST(2,0,17)
@@ -38,9 +39,11 @@ namespace blink2dgui
 
             void loop();
             bool isRunning();
+            void changeGameSpeed(int gameSpeed);
 
             int WIDTH = 1280;
             int HEIGHT = 800;
+            GameGui gui_;
 
         private:
             Application();
@@ -53,8 +56,8 @@ namespace blink2dgui
             ImVec4 clear_color_;
 
             bool done_ = false;
-
-            GameGui gui_;
+            
             ShapeSelector shapeSelector_;
+            ControllerWindow controllerWindow_;
     };
 }

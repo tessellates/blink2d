@@ -2,56 +2,69 @@
 
 #include <ShapeType.hpp>
 #include <imgui.h>
+#include <iostream>
 
 class Shape {
 public:
-    std::unique_ptr<ShapeType> type_;
+    std::shared_ptr<ShapeType> type_; 
+
+    float animationFraction_;
     ImVec2 position_;
     ImVec2 sourcePosition_;
-    ImVec2 step_;
+
+    Shape* uplayer_ = nullptr;
 
 public:
+    ~Shape()
+    {
+        clear();
+    }
     Shape() = default;
 
-    Shape(std::unique_ptr<ShapeType> type, const ImVec2& startPos)
-        : type_(std::move(type)), position_(startPos), sourcePosition_(startPos), step_(ImVec2(0,0)) {}
+    Shape(const std::shared_ptr<ShapeType>& type, const ImVec2& startPos)
+        : type_(type), position_(startPos), sourcePosition_(startPos) {}
 
-    Shape(const Shape& other) {
-        if (other.type_) {
-            type_.reset();
-            type_ = other.type_->clone();
-        }
-        position_ = (other.position_);
-        sourcePosition_ = (other.sourcePosition_);
-        step_ = (other.step_);
-    }
-    
-    // Copy assignment operator
-    Shape& operator=(const Shape& other) {
-        if (&other == this) return *this;  // self-assignment check
-
-        if (other.type_) {
-            type_.reset();
-            type_ = other.type_->clone();
-        } else {
-            type_.reset();
-        }
-        position_ = (other.position_);
-        sourcePosition_ = (other.sourcePosition_);
-        step_ = (other.step_);
-        return *this;
+    void clear()
+    {
+        delete uplayer_;
+        uplayer_ = nullptr; 
     }
 
     // Set the target position and calculate step values
     void moveFrom(float factor) {
-        // Calculate step values based on total steps and distance to cover
-        step_.x = (sourcePosition_.x - position_.x) / factor;
-        step_.y = (sourcePosition_.y - position_.y) / factor;
+        animationFraction_ = factor;
     }
 
+    void startMovement(const ImVec2& sourcePosition)
+    {
+        sourcePosition_ = sourcePosition;
+        animationFraction_ = 0.0;
+    }
+
+    void stopMovement()
+    {
+        sourcePosition_ = position_;
+        animationFraction_ = 1.0;
+    }
 
     void draw() {
-        ImVec2 vec = sourcePosition_ + step_;        
-        type_->draw(vec);
+        type_->draw(position_ + (sourcePosition_ - position_) * (1 - animationFraction_ ));
+        if (uplayer_)
+        {
+            uplayer_->draw();
+        }
+    }
+
+    void addLayer(const std::shared_ptr<ShapeType>& type)
+    {
+        clear();
+        uplayer_ = new Shape(type, position_);
+    }
+
+    void reset()
+    {
+        clear();
+        stopMovement();
+        type_ = ColorShapeTypeFactory::getColorShape(ImVec4(0, 0, 0, 0), type_->size_);
     }
 };

@@ -1,34 +1,33 @@
 #include <iostream>
 #include <SquareGui.hpp>
 #include <Application.hpp>
+#include <ShapeType.hpp>
 
 namespace blink2dgui
 {
-    SquareGui::SquareGui(float squareSize)
+    SquareGui::SquareGui(int gridSize)
     {
-        nPixels_ = 720.0f;
-        squareSize_ = squareSize;
+        squareSize_ = (float) nPixels_ / (gridSize + 1);
         window_flags_ = ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse;
 
         windowPos_ = ImVec2((1280- nPixels_) * 0.5, (800 - nPixels_) * 0.5);
 
-        int gridWidth = nPixels_ / squareSize_ -1;
-        int gridHeight = nPixels_ / squareSize_ -1;
+        gridWidth_ = gridSize;
+        gridHeight_ = gridSize;
 
 
-        shapes_ = std::vector<Shape>(gridWidth*gridHeight);
-        ShapeType* type = new ColorShapeType(ImVec4(0,0,0,0));
+        shapes_ = std::vector<Shape>(gridWidth_*gridHeight_);
         // Centering adjustments
         float startX = squareSize_;
         float startY = squareSize_;
-        for (int y = 0; y < gridHeight; ++y) 
+        for (int y = 0; y < gridHeight_; ++y) 
         {
-            for (int x = 0; x < gridWidth; ++x) 
+            for (int x = 0; x < gridWidth_; ++x) 
             {
                 float xPos = startX + x * squareSize_;
                 float yPos = startY + y * squareSize_;
 
-                shapes_[x*gridHeight + y] = Shape(type->clone(), ImVec2(windowPos_.x + xPos, windowPos_.y + yPos));
+                shapes_[x*gridHeight_ + y] = Shape(ColorShapeTypeFactory::getColorShape(ImVec4(0,0,0,0), squareSize_), ImVec2(windowPos_.x + xPos, windowPos_.y + yPos));
             }
         }
     }
@@ -57,26 +56,44 @@ namespace blink2dgui
         ImGui::End();
     }
 
-    void SquareGui::colorLocation(const Coordinate& pos, const ImVec4& color)
+    void SquareGui::colorLocation(const Coordinate& pos, const ImVec4& color, bool addLayer)
     {
-        int gridHeight = nPixels_ / squareSize_ -1;
-        auto& targetShape = shapes_[pos.x*gridHeight + pos.y];
-        targetShape.type_.reset(new ColorShapeType(color));
-        targetShape.sourcePosition_ = targetShape.position_;
+        auto& targetShape = getShape(pos);
+        if (addLayer)
+        {
+            targetShape.addLayer(ColorShapeTypeFactory::getColorShape(color, squareSize_));
+            return;
+        }
+        targetShape.type_ = ColorShapeTypeFactory::getColorShape(color, squareSize_);
     }
 
-    void SquareGui::moveColorLocation(const Coordinate& previousPosition, const Coordinate& pos, const ImVec4& color)
+    void SquareGui::clearPos(const Coordinate& pos)
     {
-        int gridHeight = nPixels_ / squareSize_ -1;
-        ImVec2 imPreviousPosition = shapes_[previousPosition.x*gridHeight + previousPosition.y].position_;
-        auto& targetShape = shapes_[pos.x*gridHeight + pos.y];
-        targetShape.type_.reset(new ColorShapeType(color));
-        targetShape.sourcePosition_ = imPreviousPosition;
+        getShape(pos).reset();
+    }
+    void SquareGui::moveAnimate(const Coordinate& previousPosition, const Coordinate& pos)
+    {
+        const auto& imPreviousPosition = getShape(previousPosition).position_;
+        auto& targetShape = getShape(pos);
+        targetShape.startMovement(imPreviousPosition);
+    }
+
+    void SquareGui::stopMovement(const Coordinate& pos)
+    {
+        getShape(pos).stopMovement();
     }
 
     void SquareGui::updateShapeMovement(const Coordinate& pos, float factor)
     {
-        int gridHeight = nPixels_ / squareSize_ -1;
-        shapes_[pos.x*gridHeight + pos.y].moveFrom(factor);
+        getShape(pos).moveFrom(factor);
+        if (factor >= 1)
+        {
+            stopMovement(pos);
+        }
+    }
+
+    Shape& SquareGui::getShape(const Coordinate& pos)
+    {
+        return shapes_[pos.x*gridHeight_ + pos.y];
     }
 }

@@ -50,18 +50,20 @@ public:
         spawnFood();
     }
 
-    void changeDirection(Direction direction)
+    bool changeDirection(Direction direction)
     {
         if (snake.size() == 1)
         {
             this->direction = direction;
-            return;
+            return true;
         }
         auto c = snake.front().getNeighbor(direction);
         if (std::find(snake.cbegin(), snake.cbegin()+2, c) == snake.cbegin()+2)
         {
             this->direction = direction;
+            return true;
         }
+        return false;
     }
 
     Coordinate randomCoordinate() {
@@ -126,8 +128,8 @@ public:
     {
         auto ent = GridEntity(destination);
         ent.type = 0;
-        fireSnakeModelLocationUpdate(ent);
         snake.push_front(destination);
+        fireSnakeModelLocationUpdate(ent);
     }
 
     void removeTail()

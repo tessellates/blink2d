@@ -10,48 +10,58 @@ namespace blink2dgui {
 
 GameGui::GameGui() 
 {
-    snakeModel_ = SnakeModel(23, 23);
-    int size = 30;
-    snakeModel_.listeners.push_back(this);
-    squareGui_ = SquareGui((float)size);
-    auto l = GridEntity(Coordinate(0,0));
-    l.type = 1;
-    snakeModel_.start();
-    previousTick = SDL_GetTicks();
-    //OnSnakeModelLocationUpdate( l );
-    // Initialization code for GameGui (if any)
+    setGrid(8);
 }
 
 GameGui::~GameGui() {
     // Cleanup code for GameGui (if any)
 }
 
-void GameGui::render() {
+void GameGui::setGrid(int gridSize)
+{
+    squareGui_ = SquareGui(gridSize);
+    snakeModel_ = SnakeModel(gridSize, gridSize);
+    snakeModel_.listeners.push_back(this);
+    skip = true;
+    snakeModel_.start();
+    previousTick = SDL_GetTicks();
+}
 
-    if (ImGui::IsKeyPressed(ImGuiKey_UpArrow)) {
-        snakeModel_.changeDirection(Direction::UP);
+void GameGui::render() {
+    if (skip)
+    {
+        skip = false;
+        return;
     }
-    if (ImGui::IsKeyPressed(ImGuiKey_DownArrow)) {
-        snakeModel_.changeDirection(Direction::DOWN);
-    }
-    if (ImGui::IsKeyPressed(ImGuiKey_RightArrow)) {
-        snakeModel_.changeDirection(Direction::RIGHT);
-    }
-    if (ImGui::IsKeyPressed(ImGuiKey_LeftArrow)) {
-        snakeModel_.changeDirection(Direction::LEFT);
-    }
-    int ms = 300;
+    static std::map<ImGuiKey, Direction> keyToDirection = {
+        {ImGuiKey_UpArrow, Direction::UP},
+        {ImGuiKey_DownArrow, Direction::DOWN},
+        {ImGuiKey_RightArrow, Direction::RIGHT},
+        {ImGuiKey_LeftArrow, Direction::LEFT}
+    };
+
     currentTick = SDL_GetTicks();
     elapsed = currentTick - previousTick;
     previousTick = currentTick;
     lag += elapsed;
 
-    if (snakeModel_.snake.size() > 0)
-        squareGui_.updateShapeMovement(snakeModel_.snake.front(), elapsed/ms);
+    for (const auto& [key, direction] : keyToDirection) {
+        if (ImGui::IsKeyPressed(key, false) && snakeModel_.changeDirection(direction)) {
+            //if (lag < gameSpeed_/2)
+            //    lag = gameSpeed_/2;
+        }
+    }
 
-    if (lag >= ms) {
+    if (snakeModel_.snake.size() > 0)
+        squareGui_.updateShapeMovement(snakeModel_.snake.front(), (float)lag/(float)gameSpeed_);
+        squareGui_.updateShapeMovement(snakeModel_.snake.back(), (float)lag/(float)gameSpeed_);
+
+    if (lag >= gameSpeed_) {
+        if (snakeModel_.snake.size() > 0) 
+            oldHead = snakeModel_.snake.front();
         snakeModel_.nextStep();
-        lag -= ms;
+        
+        lag -= gameSpeed_;
     }
     squareGui_.renderGrid();
 }
@@ -67,11 +77,10 @@ void GameGui::OnSnakeModelLocationUpdate(const GridEntity& entity)
     if (entity.type == 0)
     {
         color = ImVec4(0, 0.5f, 0, 1);
-        if (snakeModel_.snake.size() == 0)
-            squareGui_.colorLocation(entity.position, color);
-        else
+        squareGui_.colorLocation(entity.position, color);
+        if (snakeModel_.snake.size() > 0)
         {
-            squareGui_.moveColorLocation(snakeModel_.snake.front(), entity.position, color);
+            squareGui_.moveAnimate(oldHead, entity.position);
         }
     }
     else
@@ -84,7 +93,19 @@ void GameGui::OnSnakeModelLocationUpdate(const GridEntity& entity)
 void GameGui::OnRemoveEntity(const Coordinate& pos) 
 {
     ImVec4 color = ImVec4(0, 0, 0, 0);
-    squareGui_.colorLocation(pos, color);
+    if (snakeModel_.snake.size() >= 3)
+    {
+        squareGui_.colorLocation(snakeModel_.snake.back(), ImVec4(0, 0.5f, 0, 1), true);
+    }
+    squareGui_.moveAnimate(pos, snakeModel_.snake.back());
+
+    squareGui_.clearPos(pos);
+}
+
+void GameGui::changeGameSpeed(int gameSpeed)
+{
+    gameSpeed_ = gameSpeed;
+    lag = 0;
 }
 
 }  // namespace blink2dgui

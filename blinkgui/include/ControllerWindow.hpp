@@ -14,14 +14,16 @@
 
 namespace blink2dgui
 {
-    class ShapeSelector
+    class ControllerWindow
     {
     public:
-        ShapeSelector();    // Constructor
-        ~ShapeSelector();   // Destructor
+        ControllerWindow();    // Constructor
+        ~ControllerWindow();   // Destructor
 
         // Render the shape selector window
         void renderWindow();
+
+        // Check if square or hexagon is selected
 
     private:
         int gameSpeed = 200; 

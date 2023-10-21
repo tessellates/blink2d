@@ -93,6 +93,7 @@ namespace blink2dgui
         ImGui_ImplSDL2_NewFrame();
         ImGui::NewFrame();
 
+        controllerWindow_.renderWindow();
         shapeSelector_.renderWindow();
         gui_.render();
 
@@ -108,5 +109,10 @@ namespace blink2dgui
     bool Application::isRunning()
     {
         return !done_;
+    }
+
+    void Application::changeGameSpeed(int gameSpeed)
+    {
+        gui_.changeGameSpeed(gameSpeed);
     }
 }

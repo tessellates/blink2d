@@ -7,7 +7,7 @@ enum SnakeEntity {
 };
 
 /*SNAKE*/
-enum SnakeProperties
+enum SnakeProperties 
 {
     SNAKE_PART,
     SNAKE_DIRECTION

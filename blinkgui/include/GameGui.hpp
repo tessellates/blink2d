@@ -30,15 +30,22 @@ namespace blink2dgui
         void OnLose() override;
         void OnSnakeModelLocationUpdate(const GridEntity& entity) override;
         void OnRemoveEntity(const Coordinate& pos) override;
+        void changeGameSpeed(int gameSpeed);
+        void setGrid(int gridSize);
+
     private:
         SquareGui squareGui_;
         SnakeModel snakeModel_;
+        Coordinate oldHead;
+        Coordinate tail;
 
-        const Uint32 MS_PER_UPDATE = 200;
+        int gameSpeed_ = 200;
         Uint32 previousTick;
         Uint32 elapsed;
         Uint32 currentTick;
         Uint32 lag = 0;
+
+        bool skip;
     };
 }
 

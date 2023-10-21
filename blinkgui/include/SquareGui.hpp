@@ -19,7 +19,7 @@ namespace blink2dgui
     class SquareGui
     {
     public:
-        SquareGui(float size_);    // Constructor
+        SquareGui(int griSize);    // Constructor
         SquareGui() = default;    // Constructor
         ~SquareGui();   // Destructor
 
@@ -27,13 +27,19 @@ namespace blink2dgui
         SquareGui& operator=(const SquareGui&) = default;  // Copy assignment operator
         // Function to render the entire grid
         void renderGrid();
-        void colorLocation(const Coordinate& pos, const ImVec4& color);
-        void moveColorLocation(const Coordinate& previousPosition, const Coordinate& pos, const ImVec4& color);
+        void colorLocation(const Coordinate& pos, const ImVec4& color, bool addLayer = false);
+        void moveAnimate(const Coordinate& previousPosition, const Coordinate& pos);
         void updateShapeMovement(const Coordinate& pos, float factor);
+        void stopMovement(const Coordinate& pos);
+        void clearPos(const Coordinate& pos);
+        Shape& getShape(const Coordinate& pos);
 
+        int gridHeight_;           
+        int gridWidth_;  
     private:
-        float nPixels_;               // Size of the window in pixels
+        float nPixels_ = 720.0f;               // Size of the window in pixels
         float squareSize_;            // Size of each square
+
         ImGuiWindowFlags window_flags_;  // Flags to control window properties
         ImVec2 windowPos_;             // Position of the window
 

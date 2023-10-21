@@ -1,8 +1,9 @@
 #include "ShapeSelector.hpp"
+#include "Application.hpp"
 
 namespace blink2dgui
 {
-    ShapeSelector::ShapeSelector() : currentShape_(0)
+    ShapeSelector::ShapeSelector() 
     {
     }
 
@@ -19,28 +20,36 @@ namespace blink2dgui
         ImGui::SetNextWindowSize(windowSize);
         ImGui::SetNextWindowPos(pos);
 
-        ImGui::Begin("Shape Selector", nullptr, flags);
+        ImGui::Begin("Game Settings", nullptr, flags);
 
-        const char* shapes[] = { "Square", "Hexagon" };
-        ImGui::Combo("Shapes", &currentShape_, shapes, IM_ARRAYSIZE(shapes));
+        //const char* shapes[] = { "Square", "Hexagon" };
+        //ImGui::Combo("Shapes", &currentShape_, shapes, IM_ARRAYSIZE(shapes));
 
+        if(ImGui::SliderInt("Game Speed", &gameSpeed, 25, 1000))
+        {
+            Application::instance()->changeGameSpeed(gameSpeed);
+        }
 
+        // Create a slider from 5 to 300
+        ImGui::SliderInt("Grid Size", &gridSize, 4, 40);
+
+        // Add some spacing
+        ImGui::Spacing();
+
+        // Confirm button
+        if (ImGui::Button("Confirm")) {
+            // Handle the confirmation action
+            // This is where you'd put code to use the selected grid size
+            Application::instance()->gui_.setGrid(gridSize);
+        }
+
+/*
         ImGui::SetNextWindowSize(windowSize);
         ImGui::SetNextWindowPos(pos2);
 
         ImGui::Begin("Shape Selector mirror", nullptr, flags);
         ImGui::Combo("Shapes", &currentShape_, shapes, IM_ARRAYSIZE(shapes));
 
-        ImGui::End();
-    }
-
-    bool ShapeSelector::isSquareSelected() const
-    {
-        return currentShape_ == 0;
-    }
-
-    bool ShapeSelector::isHexagonSelected() const
-    {
-        return currentShape_ == 1;
+        ImGui::End();*/
     }
 }
