@@ -17,7 +17,7 @@
 
 namespace blink2dgui
 {
-    class GameGui : public SnakeModelListener
+    class GameGui : public GameStateListener
     {
     public:
         GameGui();    // Constructor
@@ -25,15 +25,17 @@ namespace blink2dgui
 
         void render();
 
-        void OnSnakeModelUpdate() override;
-        void OnVictory() override;
-        void OnLose() override;
-        void OnSnakeModelLocationUpdate(const GridEntity& entity) override;
-        void OnRemoveEntity(const Coordinate& pos) override;
+        void onAddEntity(const Coordinate& pos, const GridEntity& entity) override;
+        void onRemoveEntity(const Coordinate& pos,  const GridEntity& entity) override;
+        void onModelPropertyChange(int, int) override;
+
         void changeGameSpeed(int gameSpeed);
         void setGrid(int gridSize);
 
     private:
+        std::vector<Command*> commandHistory;
+        CompositeStateCommand gameCycle;
+
         SquareGui squareGui_;
         SnakeModel snakeModel_;
         Coordinate oldHead;

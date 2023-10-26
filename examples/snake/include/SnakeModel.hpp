@@ -1,66 +1,51 @@
 #pragma once
 
 #include <Coordinate.hpp>
+#include <Command.hpp>
 #include <Direction.hpp>
 #include <random>
+#include <GameState.hpp>
 #include <deque>
 
-class EpicModel
+enum SnakeModelProperties
 {
-public:
-    virtual void OnVictory() = 0;
-    virtual void OnLose() = 0;
-    virtual void OnEntityChanged(const GridEntity& entity) = 0;
-    virtual void OnRemoveEntity(const Coordinate& pos) = 0;
+    DIRECTION
 };
 
-class SnakeModelListener
-{
-public:
-    virtual void OnSnakeModelUpdate() = 0;
-    virtual void OnVictory() = 0;
-    virtual void OnLose() = 0;
-    virtual void OnSnakeModelLocationUpdate(const GridEntity& entity) = 0;
-    virtual void OnRemoveEntity(const Coordinate& pos) = 0;
-};
-
-class SnakeModel
+class SnakeModel : public GameState
 {
 public:
     int width;
     int height;
     std::deque<Coordinate> snake;
     Coordinate food;
-    Direction direction;
-    std::vector<SnakeModelListener*> listeners;
-    bool isPaused; // probably higher up
 
     SnakeModel() = default;
+
     SnakeModel(int width, int height) : width(width), height(height)
     {
         snake = std::deque<Coordinate>();
-        listeners = std::vector<SnakeModelListener*>();
-        direction = Direction::UP;
-        isPaused = true;
+        intProperties.push_back(Direction::UP);
     };
+
 
     void start()
     {
-        moveHead(randomCoordinate());
-        spawnFood();
+        //moveHead(randomCoordinate());
+        //spawnFood();
     }
 
     bool changeDirection(Direction direction)
     {
         if (snake.size() == 1)
         {
-            this->direction = direction;
+            intProperties[DIRECTION] = direction;
             return true;
         }
         auto c = snake.front().getNeighbor(direction);
         if (std::find(snake.cbegin(), snake.cbegin()+2, c) == snake.cbegin()+2)
         {
-            this->direction = direction;
+            intProperties[DIRECTION] = direction;
             return true;
         }
         return false;
@@ -84,26 +69,27 @@ public:
         return Coordinate(x, y);
     };
 
-    void spawnFood()
+    AddEntityCommand* spawnFood()
     {
         if (snake.size() == width*height)
         {
             winGame();
-            return;
+            return nullptr;
         }
         food = randomCoordinate();
         while (std::find(snake.cbegin(), snake.cend(), food) != snake.cend()) 
         {
-            food = randomCoordinate();
+            auto ent = GridEntity(food);
+            ent.type = 1;
+            AddEntityCommand* command = new AddEntityCommand(food, ent);
+            return command;
         }
-        auto ent = GridEntity(food);
-        ent.type = 1;
-        fireSnakeModelLocationUpdate(ent);
+        return nullptr;
     }
 
-    bool nextStep()
+    bool nextStep(CompositeStateCommand& gameCycle)
     {
-        auto destination = snake.front().getNeighbor(direction);
+        auto destination = snake.front().getNeighbor(intProperties[DIRECTION]);
         if (!inBounds(destination))
         {
             loseGame();
@@ -114,29 +100,42 @@ public:
             loseGame();
             return false;
         }
+        auto ent = GridEntity(destination);
+        ent.type = 0;
+        AddEntityCommand* moveHead = new AddEntityCommand(destination, ent);
+        moveHead->execute();
+        gameCycle.addCommand(moveHead);
 
-        moveHead(destination);
         if (destination != food)
-            removeTail();
+        {
+            ent = GridEntity(snake.back());
+            RemoveEntityCommand* removeTail = new RemoveEntityCommand(snake.back(), ent);
+            removeTail->execute();
+            gameCycle.addCommand(removeTail);
+        }            
         else
-            spawnFood();
-
+        {
+            AddEntityCommand* spawnF = spawnFood();
+            if (spawnF)
+            {
+                spawnF->execute();
+                gameCycle.addCommand(spawnF);
+            }
+        }
         return true;
     }
 
-    void moveHead(const Coordinate& destination)
+
+    void fireRemoveEntity(const Coordinate& cor, const GridEntity& ent) override
     {
-        auto ent = GridEntity(destination);
-        ent.type = 0;
-        snake.push_front(destination);
-        fireSnakeModelLocationUpdate(ent);
+        snake.pop_back();
+        GameState::fireRemoveEntity(cor, ent);
     }
 
-    void removeTail()
+    void fireAddEntity(const Coordinate& cor, const GridEntity& ent) override
     {
-        auto c = snake.back();
-        snake.pop_back();
-        fireRemoveEntity(c);
+        snake.push_front(cor);
+        GameState::fireAddEntity(cor, ent);
     }
 
     bool inBounds(const Coordinate& position)
@@ -148,55 +147,11 @@ public:
         return true;
     }
 
-    void fireLose()
-    {
-        for(auto listener : listeners)
-        {
-            listener->OnLose();
-        }
-    }
-
-    void fireVictory()
-    {
-        for(auto listener : listeners)
-        {
-            listener->OnVictory();
-        }
-    }
-
-    void fireSnake()
-    {
-        for(auto listener : listeners)
-        {
-            listener->OnLose();
-        }
-    }
-
-    void fireSnakeModelLocationUpdate(const GridEntity& entity)
-    {
-        for(auto listener : listeners)
-        {
-            listener->OnSnakeModelLocationUpdate(entity);
-        }
-    }
-
-    void fireRemoveEntity(const Coordinate& pos)
-    {
-        for(auto listener : listeners)
-        {
-            listener->OnRemoveEntity(pos);
-        }
-    }
-
     void loseGame()
     {
-        isPaused = true;
-        fireLose();
     }
 
     void winGame()
     {
-        isPaused = true;
-        fireVictory();
     }
 };

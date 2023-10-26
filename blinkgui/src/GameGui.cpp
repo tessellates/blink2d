@@ -59,19 +59,14 @@ void GameGui::render() {
     if (lag >= gameSpeed_) {
         if (snakeModel_.snake.size() > 0) 
             oldHead = snakeModel_.snake.front();
-        snakeModel_.nextStep();
+        snakeModel_.nextStep(gameCycle);
         
         lag -= gameSpeed_;
     }
     squareGui_.renderGrid();
 }
 
-
-void GameGui::OnSnakeModelUpdate() {}
-void GameGui::OnVictory() {}
-void GameGui::OnLose() {}
-
-void GameGui::OnSnakeModelLocationUpdate(const GridEntity& entity) 
+void GameGui::onAddEntity(const Coordinate& pos, const GridEntity& entity) 
 {
     ImVec4 color;
     if (entity.type == 0)
@@ -90,7 +85,7 @@ void GameGui::OnSnakeModelLocationUpdate(const GridEntity& entity)
     }
 }
 
-void GameGui::OnRemoveEntity(const Coordinate& pos) 
+void GameGui::onRemoveEntity(const Coordinate& pos, const GridEntity& entity) 
 {
     ImVec4 color = ImVec4(0, 0, 0, 0);
     if (snakeModel_.snake.size() >= 3)
@@ -101,6 +96,9 @@ void GameGui::OnRemoveEntity(const Coordinate& pos)
 
     squareGui_.clearPos(pos);
 }
+
+void GameGui::onModelPropertyChange(int, int) {}
+
 
 void GameGui::changeGameSpeed(int gameSpeed)
 {

@@ -16,8 +16,10 @@ parser = argparse.ArgumentParser()
 parser.add_argument('-c', action='store_true')
 # We add the option to create a debug build, -d. Default will then be a release build
 parser.add_argument('-d', action='store_true')
+parser.add_argument('-t', action='store_true')
 clean = parser.parse_args().c
 debug = parser.parse_args().d
+tests = parser.parse_args().t
 
 # Get the current working directory
 path = os.getcwd()
@@ -41,6 +43,10 @@ if not debug:
 else:
     cmakeCommands.append("-DCMAKE_BUILD_TYPE=Debug")
     config = "Debug"
+
+if tests:
+    cmakeCommands.append("-DBUILD_TESTS=True")
+
 
 # We run cmake with working directory in the build folder
 subprocess.run(cmakeCommands, cwd=buildPath)

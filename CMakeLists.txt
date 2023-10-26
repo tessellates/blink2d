@@ -33,6 +33,18 @@ add_subdirectory(blinkmodel)
 # examples
 add_subdirectory(examples) 
 
+option(BUILD_TESTS "Build tests" OFF)
+
+if(BUILD_TESTS)
+    # Enable testing for the project.
+    enable_testing()
+    add_subdirectory(${CMAKE_SOURCE_DIR}/extern/googletest ${CMAKE_SOURCE_DIR}/tests)
+
+    # Include your tests subdirectory.
+    add_subdirectory(tests)
+endif()
+
+
 #Link SDL
 target_link_libraries(${PROJECT_NAME} PUBLIC SDL2::SDL2main SDL2::SDL2 SDL2_image::SDL2_image)
 
