@@ -16,8 +16,11 @@ set(CMAKE_FIND_FRAMEWORK LAST)
 find_package(SDL2_IMAGE REQUIRED)
 find_package(SDL2 REQUIRED)
 
-# Create an executable and all files required to run it.
-add_executable(${PROJECT_NAME}
+# Create the library
+add_library(${PROJECT_NAME})
+
+# Create an executable and its source file
+add_executable(main
     main.cpp
     )
 
@@ -45,8 +48,11 @@ if(BUILD_TESTS)
 endif()
 
 
-#Link SDL
+#Link SDL to the library
 target_link_libraries(${PROJECT_NAME} PUBLIC SDL2::SDL2main SDL2::SDL2 SDL2_image::SDL2_image)
+
+#Link the library to an executable
+target_link_libraries(main PUBLIC ${PROJECT_NAME})
 
 #Enable imgui default math operator
 add_compile_definitions(IMGUI_DEFINE_MATH_OPERATORS)

@@ -9,7 +9,7 @@ set(TEST_SOURCES
 
 # Create a test executable.
 add_executable(my_tests ${TEST_SOURCES} )
-target_link_libraries(my_tests gtest gtest_main)
+target_link_libraries(my_tests gtest gtest_main ${PROJECT_NAME})
 
 # Link GoogleTest and your own library (if applicable) to your test executable.
 #target_link_libraries(my_tests GTest::GTest GTest::Main your_library_if_needed)
