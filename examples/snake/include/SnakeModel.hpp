@@ -69,6 +69,15 @@ public:
         return Coordinate(x, y);
     };
 
+    AddEntityCommand* moveHead(const Coordinate& pos)
+    {
+        auto ent = GridEntity(pos);
+        ent.type = 0;
+        AddEntityCommand* moveHead = new AddEntityCommand(pos, ent);
+        moveHead->gameState = this;
+        return moveHead;
+    }
+
     AddEntityCommand* spawnFood()
     {
         if (snake.size() == width*height)
@@ -76,19 +85,67 @@ public:
             winGame();
             return nullptr;
         }
-        food = randomCoordinate();
-        while (std::find(snake.cbegin(), snake.cend(), food) != snake.cend()) 
+        Coordinate foodcoor = randomCoordinate();
+        while (std::find(snake.cbegin(), snake.cend(), foodcoor) != snake.cend())
         {
-            auto ent = GridEntity(food);
-            ent.type = 1;
-            AddEntityCommand* command = new AddEntityCommand(food, ent);
-            return command;
+            foodcoor = randomCoordinate();
         }
-        return nullptr;
+        auto ent = GridEntity(foodcoor);
+        ent.type = 1;
+        AddEntityCommand* command = new AddEntityCommand(foodcoor, ent);
+        command->gameState = this;
+        return command;
+    }
+
+    void spawn(CompositeStateCommand& gameCycle, const Coordinate& pos)
+    {
+        auto ent = GridEntity(pos);
+        ent.type = 0;
+        AddEntityCommand* moveHeadCommand = moveHead(pos);
+        moveHeadCommand->execute();
+        gameCycle.addCommand(moveHeadCommand);
+
+        if (pos != food)
+        {
+            if (snake.size() > 1)
+            {
+                ent = GridEntity(snake.back());
+                RemoveEntityCommand* removeTail = new RemoveEntityCommand(snake.back(), ent);
+                removeTail->gameState = this;
+                removeTail->execute();
+                gameCycle.addCommand(removeTail);
+            }
+            else
+            {
+                return;
+            }
+        }            
+        else
+        {
+            AddEntityCommand* spawnF = spawnFood();
+            if (spawnF)
+            {
+                spawnF->execute();
+                gameCycle.addCommand(spawnF);
+            }
+        }
     }
 
     bool nextStep(CompositeStateCommand& gameCycle)
     {
+        if (snake.size() == 0 )
+        {
+            AddEntityCommand* moveHeadCommand = moveHead(randomCoordinate());
+            moveHeadCommand->execute();
+            gameCycle.addCommand(moveHeadCommand);
+            AddEntityCommand* spawnF = spawnFood();
+            if (spawnF)
+            {
+                spawnF->execute();
+                gameCycle.addCommand(spawnF);
+            }
+            return true;
+        }
         auto destination = snake.front().getNeighbor(intProperties[DIRECTION]);
         if (!inBounds(destination))
         {
@@ -100,28 +157,7 @@ public:
             loseGame();
             return false;
         }
-        auto ent = GridEntity(destination);
-        ent.type = 0;
-        AddEntityCommand* moveHead = new AddEntityCommand(destination, ent);
-        moveHead->execute();
-        gameCycle.addCommand(moveHead);
-
-        if (destination != food)
-        {
-            ent = GridEntity(snake.back());
-            RemoveEntityCommand* removeTail = new RemoveEntityCommand(snake.back(), ent);
-            removeTail->execute();
-            gameCycle.addCommand(removeTail);
-        }            
-        else
-        {
-            AddEntityCommand* spawnF = spawnFood();
-            if (spawnF)
-            {
-                spawnF->execute();
-                gameCycle.addCommand(spawnF);
-            }
-        }
+        spawn(gameCycle, destination);
         return true;
     }
 
@@ -134,7 +170,10 @@ public:
 
     void fireAddEntity(const Coordinate& cor, const GridEntity& ent) override
     {
-        snake.push_front(cor);
+        if (ent.type == 0)
+            snake.push_front(cor);
+        else
+            food = cor;
         GameState::fireAddEntity(cor, ent);
     }
 

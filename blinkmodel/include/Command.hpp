@@ -1,67 +1,26 @@
 #pragma once
 
 #include <vector>
-#include "GridEntity.hpp"
-#include "Coordinate.hpp"
+#include <function>
 
-class GameState;
-
-class Command {
+class Command 
+{
 public:
-    GameState* gameState;
-    virtual ~Command() = default;
-    virtual bool execute() = 0;
-    virtual Command* getCommand();
+    std::function<void> foward;
+    std::function<void> back;
+    
+    Command(std::function<void> forward, std::function<void> back)
+    void execute() const;
+    void rewind() const;
 };
 
-class StateCommand : public Command {
+class Cycle
+{
 public:
-    virtual void rewind() = 0;
-};
+    std::vector<Command> commands = std::vector<Command>();
 
-class CompositeStateCommand : public StateCommand {
-public:
-    std::vector<StateCommand*> commands = std::vector<StateCommand*>();
-    void addCommand(StateCommand* command);
-    bool execute() override;
-    void rewind() override;
-};
-
-class RemoveEntityCommand : public StateCommand {
-    Coordinate remove;
-    GridEntity entity;
-
-public:
-    RemoveEntityCommand(const Coordinate& add, GridEntity& entity);
-    bool execute() override;
-    void rewind() override;
-};
-
-class AddEntityCommand : public StateCommand {
-    Coordinate add;
-    GridEntity entity;
-
-public:
-    AddEntityCommand(const Coordinate& remove, GridEntity& entity);
-    bool execute() override;
-    void rewind() override;
-};
-
-class ModelPropertyChangeCommand : public StateCommand {
-    int propertyIndex;
-    int propertyValueOld;
-    int propertyValueNew;
-
-public:
-    ModelPropertyChangeCommand(int propertyIndex, int propertyValue);
-    bool execute() override;
-    void rewind() override;
-};
-
-class GeneratorCommand : public Command {
-private:
-    StateCommand* generatedCommand;
-
-public:
-    Command* getCommand() override;
+    Cycle() = default;
+    void addCommand(const Command& command);
+    void execute() const;
+    void rewind() const;
 };

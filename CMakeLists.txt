@@ -19,6 +19,17 @@ find_package(SDL2 REQUIRED)
 # Create the library
 add_library(${PROJECT_NAME})
 
+if (XCODE)
+    # For xcode to see them
+    file(GLOB_RECURSE XCODEHEADERS 
+        ${CMAKE_SOURCE_DIR}/blinkgui/include/*.hpp  # This line will include all .hpp files in the include directory
+        ${CMAKE_SOURCE_DIR}/blinkmodel/include/*.hpp  # This line will include all .hpp files in the include directory
+        ${CMAKE_SOURCE_DIR}/examples/snake/include/*.hpp  # This line will include all .hpp files in the include directory
+    )
+    message("SETTING UP XCODE")
+    target_sources(${PROJECT_NAME} PRIVATE ${XCODEHEADERS})
+endif()
+
 # Create an executable and its source file
 add_executable(main
     main.cpp

@@ -13,7 +13,7 @@ if sys.platform == ("win32" or "win64"):
     if os.path.exists(path + "\build\Debug"):
         maincmd = r"build\Debug\building.exe"
 else:
-    maincmd = "./build/{}".format(__NAME)
+    maincmd = "./build/{}".format("main")
 
 myenv = dict(os.environ)
 myenv["PATH"] = os.pathsep.join([path, myenv.get("PATH", "")])

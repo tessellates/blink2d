@@ -42,7 +42,7 @@ namespace blink2dgui
             // This is where you'd put code to use the selected grid size
             Application::instance()->gui_.setGrid(gridSize);
         }
-
+        ImGui::End();
 /*
         ImGui::SetNextWindowSize(windowSize);
         ImGui::SetNextWindowPos(pos2);

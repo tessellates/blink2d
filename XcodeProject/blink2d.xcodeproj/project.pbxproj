@@ -1,0 +1,2668 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		193F606989BA466BB62AFC13 /* RUN_TESTS */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 8B4C23C060FD44BBBF4FC6D4 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */;
+			buildPhases = (
+				003C8D08B0008F35F218E126 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+			);
+			name = RUN_TESTS;
+			productName = RUN_TESTS;
+		};
+		81ACE5240DF043F8BE12C386 /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 63CA5E6167A44445B410E17D /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				93426DA6A4AC2C2AC9CE883C /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				1D5152B86C014580A6B3FA75 /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		9101174B5FB74A7F92A41EA1 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 4A1A4C1632C648CA910E27E9 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				296D42DC678427E4E8FDB078 /* Generate CMakeFiles/ALL_BUILD */,
+			);
+			dependencies = (
+				4F75672DEE4B4326B0C7153C /* PBXTargetDependency */,
+				82EE73FDDA5444F391D92BF1 /* PBXTargetDependency */,
+				DAA02FFBDA6E4F3A8D6B6531 /* PBXTargetDependency */,
+				10A23DAD0E084E3A933B2FD8 /* PBXTargetDependency */,
+				43FC02D9170E4382A058C1EC /* PBXTargetDependency */,
+				FD2681079901490CB0FBD7AB /* PBXTargetDependency */,
+				D8045BF4B8394790BEBFD718 /* PBXTargetDependency */,
+				EA13244BC91B47EA93717BC4 /* PBXTargetDependency */,
+				EC010B18844142D1AA5D19F3 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		A8F89586ACA0446F8093C5A8 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2502CF31DB8047818D1BD081 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				16797896AD0E2E3C5DF48AD0 /* Generate CMakeFiles/ZERO_CHECK */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		01209A3C605D4CF8BF3F261D /* /Users/tobiash/Projects/DearUI/Blink2D/tests/snake/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 0AA4C6076F6145C99C53E7B9 /* /Users/tobiash/Projects/DearUI/Blink2D/tests/snake/CMakeLists.txt */; };
+		04D9353AC5EB43108CF0E6C7 /* /Users/tobiash/Projects/DearUI/Blink2D/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 62F6EA2F91F5435F842C1947 /* /Users/tobiash/Projects/DearUI/Blink2D/CMakeLists.txt */; };
+		09B6D242A4BE4D42B790C64B /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/GameState.hpp */ = {isa = PBXBuildFile; fileRef = C182E5D06A7347C79F661D0D /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/GameState.hpp */; };
+		0E7CC5E57E9545E5900AE44B /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/src/Command.cpp */ = {isa = PBXBuildFile; fileRef = FC40DEB9366E40689E42A50C /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/src/Command.cpp */; };
+		116EA34A731E43AC95EE89A3 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/ShapeType.hpp */ = {isa = PBXBuildFile; fileRef = A1400B7656984194B305CF18 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/ShapeType.hpp */; };
+		1D220526CEC2471F9B8D4386 /* /Users/tobiash/Projects/DearUI/Blink2D/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 9927DEA1D85A42A9BC72D169 /* /Users/tobiash/Projects/DearUI/Blink2D/CMakeLists.txt */; };
+		2D3AA20A0E86468882152309 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/ShapeSelector.hpp */ = {isa = PBXBuildFile; fileRef = 97195442488D4E8694CBF858 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/ShapeSelector.hpp */; };
+		325C590698CC4D9FB4ED34C2 /* /Users/tobiash/Projects/DearUI/Blink2D/main.cpp */ = {isa = PBXBuildFile; fileRef = B71259E6F2134B54B8377AEC /* /Users/tobiash/Projects/DearUI/Blink2D/main.cpp */; };
+		3743784CD77D470C8A966490 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/imgui_demo.cpp */ = {isa = PBXBuildFile; fileRef = 3A08B89A00FC4C018FA0874A /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/imgui_demo.cpp */; };
+		37526B8C8C9244B8BCF70B1A /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/CRTP.hpp */ = {isa = PBXBuildFile; fileRef = 013D9B0E1B404CAF86FFBBBB /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/CRTP.hpp */; };
+		3FEE1A20ACD844F6BE94766C /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/imgui_widgets.cpp */ = {isa = PBXBuildFile; fileRef = CAA71CC4DF7D41D1A8197EB0 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/imgui_widgets.cpp */; };
+		47D4FA3181284030A56266F1 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/Singleton.hpp */ = {isa = PBXBuildFile; fileRef = 4E5B03F1BEE84A1AAF1B3B18 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/Singleton.hpp */; };
+		49CA7CE9C6B64FE3896A495F /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/src/gtest_main.cc */ = {isa = PBXBuildFile; fileRef = C33098B349E446EB8C086B46 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/src/gtest_main.cc */; };
+		4C37A3F76D214787A1F12986 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/src/gtest-all.cc */ = {isa = PBXBuildFile; fileRef = C47C94D1383645F09513D3C0 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/src/gtest-all.cc */; };
+		4E9A6E2AD2954B849A638709 /* /Users/tobiash/Projects/DearUI/Blink2D/examples/snake/include/SnakeModel.hpp */ = {isa = PBXBuildFile; fileRef = 0E631BBE751A45F9AEECCF39 /* /Users/tobiash/Projects/DearUI/Blink2D/examples/snake/include/SnakeModel.hpp */; };
+		4EB3E492CC1C42EDA3B59995 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = F3BD836BF79B4438ADA53ED4 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock/CMakeLists.txt */; };
+		55BD4D4879DA4E8C95A1DB8E /* /Users/tobiash/Projects/DearUI/Blink2D/tests/snake/snake_test.cpp */ = {isa = PBXBuildFile; fileRef = 81ACEC6EC63740D79FF989E6 /* /Users/tobiash/Projects/DearUI/Blink2D/tests/snake/snake_test.cpp */; };
+		593A06BB2AAB49DFA8C4CC46 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 76D2924F10514AC6BC7950D8 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/CMakeLists.txt */; };
+		5E6F1447B20A41F0BA62E3D3 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/Application.cpp */ = {isa = PBXBuildFile; fileRef = 566DB3BF29264E04927B0CB8 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/Application.cpp */; };
+		62D6DC424FF543B0B6D66FBC /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/Command.hpp */ = {isa = PBXBuildFile; fileRef = 390840A3D0784F2FB62C9A67 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/Command.hpp */; };
+		652334C47E234081B68070D0 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = E24A9E29EBF24E9B8FEF2394 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock/CMakeLists.txt */; };
+		6859C0E1FACE471B95B2D005 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/src/GameManager.cpp */ = {isa = PBXBuildFile; fileRef = CD6B94F36BC2489D8565E2F6 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/src/GameManager.cpp */; };
+		6AA39650F7434EF1947D0017 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/GameGrid.hpp */ = {isa = PBXBuildFile; fileRef = E940B83FF6DD4E32BB0A7501 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/GameGrid.hpp */; };
+		7245F9AE4A86461884D3FA67 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/GameGui.hpp */ = {isa = PBXBuildFile; fileRef = D649A0F5912746BDB576BBEF /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/GameGui.hpp */; };
+		755F51110FCD4512AD6B12E6 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/GameGui.cpp */ = {isa = PBXBuildFile; fileRef = A9DA33A34321492CAA74D83F /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/GameGui.cpp */; };
+		7794B83DFFFD4499AE4D4B5B /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/GridEntity.hpp */ = {isa = PBXBuildFile; fileRef = 0C1F2EACD9AC44DBA548DDF8 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/GridEntity.hpp */; };
+		790A463C23AD431B8E40FA4E /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/imgui.cpp */ = {isa = PBXBuildFile; fileRef = 660C38FAC6C8473281BB512E /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/imgui.cpp */; };
+		840120F91981455A8FA4BCEF /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/ControllerWindow.hpp */ = {isa = PBXBuildFile; fileRef = 76D2268B98E349EB9263F0BE /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/ControllerWindow.hpp */; };
+		96754F548EA14328B0278454 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/ShapeSelector.cpp */ = {isa = PBXBuildFile; fileRef = 99851AABE8204F059A7FDC52 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/ShapeSelector.cpp */; };
+		A088EB60407A46FF9D7D9CC4 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/GameManager.hpp */ = {isa = PBXBuildFile; fileRef = C11BA3997DAB4AD98BF99FE7 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/GameManager.hpp */; };
+		A2A1AA885F18442E868B5E01 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/Buttons.hpp */ = {isa = PBXBuildFile; fileRef = 80DB2457181247B5BF4E81F6 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/Buttons.hpp */; };
+		A38B058D3F1F4F6E9C3A21A7 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock/src/gmock_main.cc */ = {isa = PBXBuildFile; fileRef = 4E84B008BBB84A6C845975D5 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock/src/gmock_main.cc */; };
+		B12C0BF294F545249FBFAB99 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/Direction.hpp */ = {isa = PBXBuildFile; fileRef = 39B4F60F86DC4C9688B367CA /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/Direction.hpp */; };
+		B78B3E999EE145EBA03C6C18 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/imgui_draw.cpp */ = {isa = PBXBuildFile; fileRef = 7A2265DE01B14328B86865E2 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/imgui_draw.cpp */; };
+		B8572383CCC047CDAA07D88F /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/HexGui.cpp */ = {isa = PBXBuildFile; fileRef = 999274B0B7A84D78B959DA09 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/HexGui.cpp */; };
+		C6D46BDF498E415EB26B2279 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock/src/gmock-all.cc */ = {isa = PBXBuildFile; fileRef = 7D7977B876694ECBA055A7EC /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock/src/gmock-all.cc */; };
+		C6FFAF75B6C14ADEAB0013D5 /* /Users/tobiash/Projects/DearUI/Blink2D/tests/google_test_test.cpp */ = {isa = PBXBuildFile; fileRef = 4320BE771EA04B0C96D92530 /* /Users/tobiash/Projects/DearUI/Blink2D/tests/google_test_test.cpp */; };
+		CA64D0E2644144E994F06C4C /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/Application.hpp */ = {isa = PBXBuildFile; fileRef = C83F5F43CA804D75864FE0A7 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/Application.hpp */; };
+		CE2D99B4B86C43499F583D01 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/imgui_tables.cpp */ = {isa = PBXBuildFile; fileRef = 51410301C40D4BD0BB0E7752 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/imgui_tables.cpp */; };
+		CE8DDD214C834D1B9AF66998 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/SquareGui.cpp */ = {isa = PBXBuildFile; fileRef = 01547A49E5624B9F96B96860 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/SquareGui.cpp */; };
+		D0107E2A9C724361850041E5 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/ControllerWindow.cpp */ = {isa = PBXBuildFile; fileRef = CE622D59E8F147FA90769B2B /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/ControllerWindow.cpp */; };
+		D270323739E84D478CCBD2CF /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/SquareGui.hpp */ = {isa = PBXBuildFile; fileRef = DE271694EBA244929DED7265 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/SquareGui.hpp */; };
+		D28FB632241545A480948C56 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/Shape.hpp */ = {isa = PBXBuildFile; fileRef = 5B58EE83866C43278C60B9D4 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/Shape.hpp */; };
+		E14BFEF90B70475AAA15F5BC /* /Users/tobiash/Projects/DearUI/Blink2D/tests/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 7719B78005094D4B9F828812 /* /Users/tobiash/Projects/DearUI/Blink2D/tests/CMakeLists.txt */; };
+		E27EBBA954FF468EAB9F86FE /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/src/Coordinate.cpp */ = {isa = PBXBuildFile; fileRef = E9D7C90CBD5B4199B2BE0081 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/src/Coordinate.cpp */; };
+		E581A3CBA2C44A258BEEF8FA /* /Users/tobiash/Projects/DearUI/Blink2D/examples/snake/include/Snake.hpp */ = {isa = PBXBuildFile; fileRef = 597BBD36A6284FBCA6E7E112 /* /Users/tobiash/Projects/DearUI/Blink2D/examples/snake/include/Snake.hpp */; };
+		E6820882CE2A4EC3A1EE9A95 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/Coordinate.hpp */ = {isa = PBXBuildFile; fileRef = 0530D7BD8D6041EF8945557A /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/Coordinate.hpp */; };
+		E8BFC68E05D64B44AEDB5099 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/backends/imgui_impl_sdlrenderer2.cpp */ = {isa = PBXBuildFile; fileRef = D6185C64F9BE4B019049F566 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/backends/imgui_impl_sdlrenderer2.cpp */; };
+		E9E53FD30119423EBE707C89 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/HexGui.hpp */ = {isa = PBXBuildFile; fileRef = 4D110538569E44E2A66CB2D4 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/HexGui.hpp */; };
+		EBF03C490ED94B94BB94447D /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/ShapeType.cpp */ = {isa = PBXBuildFile; fileRef = 89CE6673FC5E4D55AACA012D /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/ShapeType.cpp */; };
+		F1F026870E114EF1B760EEC6 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = A28A6B53702647FEA993B296 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/CMakeLists.txt */; };
+		F8604CFF174049958FACB451 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/backends/imgui_impl_sdl2.cpp */ = {isa = PBXBuildFile; fileRef = 66D656A155D149FCBFA1DEC9 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/backends/imgui_impl_sdl2.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		5B8430E0DDA04954B7CE171D /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		5D90E7E1260843B5B80BACFF /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		94FFE2A1FA404B3398D31CC5 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		B3431B048B0D43A2BEA2FD79 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		087E489FCDC84BB58FD9BAFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6B135B424A948F997B46083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF1CBA1090654C728EBEB454;
+			remoteInfo = blink2d;
+		};
+		23D40DD49C454483BAF81DAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6B135B424A948F997B46083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8F89586ACA0446F8093C5A8;
+			remoteInfo = ZERO_CHECK;
+		};
+		454E85C6A0CA471A87A47DE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6B135B424A948F997B46083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7C0BB92ED9440D8B0E94D24;
+			remoteInfo = gtest_main;
+		};
+		4A75E17CA7B14375B0346422 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6B135B424A948F997B46083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADDC6AED5C734A0EB488CF0C;
+			remoteInfo = gmock_main;
+		};
+		4AB53D70AD634D2388254286 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6B135B424A948F997B46083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFE244C5E7A446FBBD1116BE;
+			remoteInfo = main;
+		};
+		4E55ACC9B5C648858D98D79A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6B135B424A948F997B46083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7C0BB92ED9440D8B0E94D24;
+			remoteInfo = gtest_main;
+		};
+		627622480FD24BDC93D16AFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6B135B424A948F997B46083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 12DBC49925A4422E80C257DE;
+			remoteInfo = snake_test;
+		};
+		6349E659986148C89E336F80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6B135B424A948F997B46083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EED69A799114D1481221089;
+			remoteInfo = gtest;
+		};
+		6CE8AE3787774025865F9299 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6B135B424A948F997B46083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9101174B5FB74A7F92A41EA1;
+			remoteInfo = ALL_BUILD;
+		};
+		73C3BA904A72472CA11129BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6B135B424A948F997B46083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF1CBA1090654C728EBEB454;
+			remoteInfo = blink2d;
+		};
+		791FCB00F0964861AFB204FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6B135B424A948F997B46083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EED69A799114D1481221089;
+			remoteInfo = gtest;
+		};
+		8720D410608943CA9380AA09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6B135B424A948F997B46083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9DFB906245C42F49733CD11;
+			remoteInfo = google_test_test;
+		};
+		8AD9123517374D7C8753F57B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6B135B424A948F997B46083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EED69A799114D1481221089;
+			remoteInfo = gtest;
+		};
+		B8015A0D1882429D97D33A9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6B135B424A948F997B46083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EED69A799114D1481221089;
+			remoteInfo = gtest;
+		};
+		BC3D86A6925A4CCABCD4FEFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6B135B424A948F997B46083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7C0BB92ED9440D8B0E94D24;
+			remoteInfo = gtest_main;
+		};
+		CEEAFC986D3C4419926F8906 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6B135B424A948F997B46083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8F89586ACA0446F8093C5A8;
+			remoteInfo = ZERO_CHECK;
+		};
+		D36A5EE3AA1A4BCF843934D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6B135B424A948F997B46083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF1CBA1090654C728EBEB454;
+			remoteInfo = blink2d;
+		};
+		D48BA623D12E43669F02D767 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6B135B424A948F997B46083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEEB69E847E8474F8B369E9F;
+			remoteInfo = gmock;
+		};
+		DD5792C4304D42EBA1BE816B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6B135B424A948F997B46083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EED69A799114D1481221089;
+			remoteInfo = gtest;
+		};
+		E2E149398BB646CEA6A1374F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6B135B424A948F997B46083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF1CBA1090654C728EBEB454;
+			remoteInfo = blink2d;
+		};
+		E3D258A96E7E4A389178017B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6B135B424A948F997B46083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8F89586ACA0446F8093C5A8;
+			remoteInfo = ZERO_CHECK;
+		};
+		EA4CB506926043C79552DD06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6B135B424A948F997B46083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEEB69E847E8474F8B369E9F;
+			remoteInfo = gmock;
+		};
+		F6EDCA6699C44CF3B62152E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6B135B424A948F997B46083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EED69A799114D1481221089;
+			remoteInfo = gtest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		013D9B0E1B404CAF86FFBBBB /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/CRTP.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = CRTP.hpp; path = blinkmodel/include/CRTP.hpp; sourceTree = SOURCE_ROOT; };
+		01547A49E5624B9F96B96860 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/SquareGui.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = SquareGui.cpp; path = blinkgui/src/SquareGui.cpp; sourceTree = SOURCE_ROOT; };
+		015482216162491791ECA147 /* gmock_main */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libgmock_main.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0530D7BD8D6041EF8945557A /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/Coordinate.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = Coordinate.hpp; path = blinkmodel/include/Coordinate.hpp; sourceTree = SOURCE_ROOT; };
+		0AA4C6076F6145C99C53E7B9 /* /Users/tobiash/Projects/DearUI/Blink2D/tests/snake/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = tests/snake/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		0BF23415A7F44075A61DC634 /* blink2d */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libblink2d.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C1F2EACD9AC44DBA548DDF8 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/GridEntity.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = GridEntity.hpp; path = blinkmodel/include/GridEntity.hpp; sourceTree = SOURCE_ROOT; };
+		0E631BBE751A45F9AEECCF39 /* /Users/tobiash/Projects/DearUI/Blink2D/examples/snake/include/SnakeModel.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = SnakeModel.hpp; path = examples/snake/include/SnakeModel.hpp; sourceTree = SOURCE_ROOT; };
+		2D481ED49B3C4799B8C70D65 /* main */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = main; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E8D9674A74B451EAD998B27 /* gmock */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libgmock.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		390840A3D0784F2FB62C9A67 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/Command.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = Command.hpp; path = blinkmodel/include/Command.hpp; sourceTree = SOURCE_ROOT; };
+		39B4F60F86DC4C9688B367CA /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/Direction.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = Direction.hpp; path = blinkmodel/include/Direction.hpp; sourceTree = SOURCE_ROOT; };
+		3A08B89A00FC4C018FA0874A /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/imgui_demo.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = imgui_demo.cpp; path = extern/imgui/imgui_demo.cpp; sourceTree = SOURCE_ROOT; };
+		4320BE771EA04B0C96D92530 /* /Users/tobiash/Projects/DearUI/Blink2D/tests/google_test_test.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = google_test_test.cpp; path = tests/google_test_test.cpp; sourceTree = SOURCE_ROOT; };
+		4D110538569E44E2A66CB2D4 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/HexGui.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = HexGui.hpp; path = blinkgui/include/HexGui.hpp; sourceTree = SOURCE_ROOT; };
+		4E5B03F1BEE84A1AAF1B3B18 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/Singleton.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = Singleton.hpp; path = blinkmodel/include/Singleton.hpp; sourceTree = SOURCE_ROOT; };
+		4E84B008BBB84A6C845975D5 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock/src/gmock_main.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = gmock_main.cc; path = extern/googletest/googlemock/src/gmock_main.cc; sourceTree = SOURCE_ROOT; };
+		51410301C40D4BD0BB0E7752 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/imgui_tables.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = imgui_tables.cpp; path = extern/imgui/imgui_tables.cpp; sourceTree = SOURCE_ROOT; };
+		536F865F22854EBEBDB9D83A /* snake_test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = snake_test; sourceTree = BUILT_PRODUCTS_DIR; };
+		566DB3BF29264E04927B0CB8 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/Application.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Application.cpp; path = blinkgui/src/Application.cpp; sourceTree = SOURCE_ROOT; };
+		597BBD36A6284FBCA6E7E112 /* /Users/tobiash/Projects/DearUI/Blink2D/examples/snake/include/Snake.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = Snake.hpp; path = examples/snake/include/Snake.hpp; sourceTree = SOURCE_ROOT; };
+		5B58EE83866C43278C60B9D4 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/Shape.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = Shape.hpp; path = blinkgui/include/Shape.hpp; sourceTree = SOURCE_ROOT; };
+		62F6EA2F91F5435F842C1947 /* /Users/tobiash/Projects/DearUI/Blink2D/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		660C38FAC6C8473281BB512E /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/imgui.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = imgui.cpp; path = extern/imgui/imgui.cpp; sourceTree = SOURCE_ROOT; };
+		66D656A155D149FCBFA1DEC9 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/backends/imgui_impl_sdl2.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = imgui_impl_sdl2.cpp; path = extern/imgui/backends/imgui_impl_sdl2.cpp; sourceTree = SOURCE_ROOT; };
+		76D2268B98E349EB9263F0BE /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/ControllerWindow.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = ControllerWindow.hpp; path = blinkgui/include/ControllerWindow.hpp; sourceTree = SOURCE_ROOT; };
+		76D2924F10514AC6BC7950D8 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = extern/googletest/googletest/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		76F0F1910850434C8FF9A729 /* gtest */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libgtest.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7719B78005094D4B9F828812 /* /Users/tobiash/Projects/DearUI/Blink2D/tests/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = tests/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		7A2265DE01B14328B86865E2 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/imgui_draw.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = imgui_draw.cpp; path = extern/imgui/imgui_draw.cpp; sourceTree = SOURCE_ROOT; };
+		7D7977B876694ECBA055A7EC /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock/src/gmock-all.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = "gmock-all.cc"; path = "extern/googletest/googlemock/src/gmock-all.cc"; sourceTree = SOURCE_ROOT; };
+		80DB2457181247B5BF4E81F6 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/Buttons.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = Buttons.hpp; path = blinkgui/include/Buttons.hpp; sourceTree = SOURCE_ROOT; };
+		81ACEC6EC63740D79FF989E6 /* /Users/tobiash/Projects/DearUI/Blink2D/tests/snake/snake_test.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = snake_test.cpp; path = tests/snake/snake_test.cpp; sourceTree = SOURCE_ROOT; };
+		89CE6673FC5E4D55AACA012D /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/ShapeType.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ShapeType.cpp; path = blinkgui/src/ShapeType.cpp; sourceTree = SOURCE_ROOT; };
+		8B605D6E4619401A93F59178 /* gtest_main */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libgtest_main.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		97195442488D4E8694CBF858 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/ShapeSelector.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = ShapeSelector.hpp; path = blinkgui/include/ShapeSelector.hpp; sourceTree = SOURCE_ROOT; };
+		9927DEA1D85A42A9BC72D169 /* /Users/tobiash/Projects/DearUI/Blink2D/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		99851AABE8204F059A7FDC52 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/ShapeSelector.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ShapeSelector.cpp; path = blinkgui/src/ShapeSelector.cpp; sourceTree = SOURCE_ROOT; };
+		999274B0B7A84D78B959DA09 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/HexGui.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = HexGui.cpp; path = blinkgui/src/HexGui.cpp; sourceTree = SOURCE_ROOT; };
+		A1400B7656984194B305CF18 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/ShapeType.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = ShapeType.hpp; path = blinkgui/include/ShapeType.hpp; sourceTree = SOURCE_ROOT; };
+		A28A6B53702647FEA993B296 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = extern/googletest/googletest/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		A9DA33A34321492CAA74D83F /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/GameGui.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GameGui.cpp; path = blinkgui/src/GameGui.cpp; sourceTree = SOURCE_ROOT; };
+		B71259E6F2134B54B8377AEC /* /Users/tobiash/Projects/DearUI/Blink2D/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = main.cpp; sourceTree = SOURCE_ROOT; };
+		C11BA3997DAB4AD98BF99FE7 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/GameManager.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = GameManager.hpp; path = blinkmodel/include/GameManager.hpp; sourceTree = SOURCE_ROOT; };
+		C182E5D06A7347C79F661D0D /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/GameState.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = GameState.hpp; path = blinkmodel/include/GameState.hpp; sourceTree = SOURCE_ROOT; };
+		C33098B349E446EB8C086B46 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/src/gtest_main.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = gtest_main.cc; path = extern/googletest/googletest/src/gtest_main.cc; sourceTree = SOURCE_ROOT; };
+		C47C94D1383645F09513D3C0 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/src/gtest-all.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = "gtest-all.cc"; path = "extern/googletest/googletest/src/gtest-all.cc"; sourceTree = SOURCE_ROOT; };
+		C83F5F43CA804D75864FE0A7 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/Application.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = Application.hpp; path = blinkgui/include/Application.hpp; sourceTree = SOURCE_ROOT; };
+		CAA71CC4DF7D41D1A8197EB0 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/imgui_widgets.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = imgui_widgets.cpp; path = extern/imgui/imgui_widgets.cpp; sourceTree = SOURCE_ROOT; };
+		CD6B94F36BC2489D8565E2F6 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/src/GameManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GameManager.cpp; path = blinkmodel/src/GameManager.cpp; sourceTree = SOURCE_ROOT; };
+		CE622D59E8F147FA90769B2B /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/ControllerWindow.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ControllerWindow.cpp; path = blinkgui/src/ControllerWindow.cpp; sourceTree = SOURCE_ROOT; };
+		CFC45BE9166D46BAA0B39228 /* /Users/tobiash/Projects/DearUI/Blink2D/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		D6185C64F9BE4B019049F566 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/backends/imgui_impl_sdlrenderer2.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = imgui_impl_sdlrenderer2.cpp; path = extern/imgui/backends/imgui_impl_sdlrenderer2.cpp; sourceTree = SOURCE_ROOT; };
+		D649A0F5912746BDB576BBEF /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/GameGui.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = GameGui.hpp; path = blinkgui/include/GameGui.hpp; sourceTree = SOURCE_ROOT; };
+		DE271694EBA244929DED7265 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/SquareGui.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = SquareGui.hpp; path = blinkgui/include/SquareGui.hpp; sourceTree = SOURCE_ROOT; };
+		E24A9E29EBF24E9B8FEF2394 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = extern/googletest/googlemock/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		E940B83FF6DD4E32BB0A7501 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/GameGrid.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = GameGrid.hpp; path = blinkmodel/include/GameGrid.hpp; sourceTree = SOURCE_ROOT; };
+		E9D7C90CBD5B4199B2BE0081 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/src/Coordinate.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Coordinate.cpp; path = blinkmodel/src/Coordinate.cpp; sourceTree = SOURCE_ROOT; };
+		F1C456E39E0749A4B05B3A01 /* google_test_test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = google_test_test; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3BD836BF79B4438ADA53ED4 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = extern/googletest/googlemock/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		FC40DEB9366E40689E42A50C /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/src/Command.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Command.cpp; path = blinkmodel/src/Command.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1609F4B9D16147CAA9F41BE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		212422E28A3943D4ADAB0698 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22651F2866094E599B135857 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CE352D0993F46FEA3C5DAB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EAA83AFAF3842D181E444DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92A5F25E47D54030B2A14CBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0D7B5D0709F4E638CD120EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F85B0C3FE8D640F499A53025 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05D7D7B11A0B4DCBBE72FF86 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				484F589DBACE4DFEA01D3F76 /* CMake Rules */,
+				CFC45BE9166D46BAA0B39228 /* /Users/tobiash/Projects/DearUI/Blink2D/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		0F7A4F19D9C440C288CAA831 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0BF23415A7F44075A61DC634 /* blink2d */,
+				2E8D9674A74B451EAD998B27 /* gmock */,
+				015482216162491791ECA147 /* gmock_main */,
+				F1C456E39E0749A4B05B3A01 /* google_test_test */,
+				76F0F1910850434C8FF9A729 /* gtest */,
+				8B605D6E4619401A93F59178 /* gtest_main */,
+				2D481ED49B3C4799B8C70D65 /* main */,
+				536F865F22854EBEBDB9D83A /* snake_test */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		146F0D61D20147C99C259E96 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1CEAADF9D4C74953B6255774 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				D7C441F0FDA84064ADE221F6 /* Source Files */,
+				9927DEA1D85A42A9BC72D169 /* /Users/tobiash/Projects/DearUI/Blink2D/CMakeLists.txt */,
+			);
+			name = main;
+			sourceTree = "<group>";
+		};
+		277758957B5647AA938EC5AF /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				C83F5F43CA804D75864FE0A7 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/Application.hpp */,
+				80DB2457181247B5BF4E81F6 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/Buttons.hpp */,
+				76D2268B98E349EB9263F0BE /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/ControllerWindow.hpp */,
+				D649A0F5912746BDB576BBEF /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/GameGui.hpp */,
+				4D110538569E44E2A66CB2D4 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/HexGui.hpp */,
+				5B58EE83866C43278C60B9D4 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/Shape.hpp */,
+				97195442488D4E8694CBF858 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/ShapeSelector.hpp */,
+				A1400B7656984194B305CF18 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/ShapeType.hpp */,
+				DE271694EBA244929DED7265 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include/SquareGui.hpp */,
+				013D9B0E1B404CAF86FFBBBB /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/CRTP.hpp */,
+				390840A3D0784F2FB62C9A67 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/Command.hpp */,
+				0530D7BD8D6041EF8945557A /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/Coordinate.hpp */,
+				39B4F60F86DC4C9688B367CA /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/Direction.hpp */,
+				E940B83FF6DD4E32BB0A7501 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/GameGrid.hpp */,
+				C11BA3997DAB4AD98BF99FE7 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/GameManager.hpp */,
+				C182E5D06A7347C79F661D0D /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/GameState.hpp */,
+				0C1F2EACD9AC44DBA548DDF8 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/GridEntity.hpp */,
+				4E5B03F1BEE84A1AAF1B3B18 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include/Singleton.hpp */,
+				597BBD36A6284FBCA6E7E112 /* /Users/tobiash/Projects/DearUI/Blink2D/examples/snake/include/Snake.hpp */,
+				0E631BBE751A45F9AEECCF39 /* /Users/tobiash/Projects/DearUI/Blink2D/examples/snake/include/SnakeModel.hpp */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		32D494EDF11F4976A62A0928 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				7D7977B876694ECBA055A7EC /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock/src/gmock-all.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		3840E7E5CE164FF989D996E2 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				4E84B008BBB84A6C845975D5 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock/src/gmock_main.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		44FE0090C3CA4C8F95FD4FCA /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				C47C94D1383645F09513D3C0 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/src/gtest-all.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		457F20DA25744F2EB012404E /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				566DB3BF29264E04927B0CB8 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/Application.cpp */,
+				CE622D59E8F147FA90769B2B /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/ControllerWindow.cpp */,
+				A9DA33A34321492CAA74D83F /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/GameGui.cpp */,
+				999274B0B7A84D78B959DA09 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/HexGui.cpp */,
+				99851AABE8204F059A7FDC52 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/ShapeSelector.cpp */,
+				89CE6673FC5E4D55AACA012D /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/ShapeType.cpp */,
+				01547A49E5624B9F96B96860 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/SquareGui.cpp */,
+				FC40DEB9366E40689E42A50C /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/src/Command.cpp */,
+				E9D7C90CBD5B4199B2BE0081 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/src/Coordinate.cpp */,
+				CD6B94F36BC2489D8565E2F6 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/src/GameManager.cpp */,
+				66D656A155D149FCBFA1DEC9 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/backends/imgui_impl_sdl2.cpp */,
+				D6185C64F9BE4B019049F566 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/backends/imgui_impl_sdlrenderer2.cpp */,
+				660C38FAC6C8473281BB512E /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/imgui.cpp */,
+				3A08B89A00FC4C018FA0874A /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/imgui_demo.cpp */,
+				7A2265DE01B14328B86865E2 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/imgui_draw.cpp */,
+				51410301C40D4BD0BB0E7752 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/imgui_tables.cpp */,
+				CAA71CC4DF7D41D1A8197EB0 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/imgui_widgets.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		484F589DBACE4DFEA01D3F76 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		4B53EC95F149457BBBC0E162 /* blink2d */ = {
+			isa = PBXGroup;
+			children = (
+				277758957B5647AA938EC5AF /* Header Files */,
+				457F20DA25744F2EB012404E /* Source Files */,
+				62F6EA2F91F5435F842C1947 /* /Users/tobiash/Projects/DearUI/Blink2D/CMakeLists.txt */,
+			);
+			name = blink2d;
+			sourceTree = "<group>";
+		};
+		7D9993A3B3A14305AF78B111 /* snake_test */ = {
+			isa = PBXGroup;
+			children = (
+				B813F4461BF74F518A1B398A /* Source Files */,
+				0AA4C6076F6145C99C53E7B9 /* /Users/tobiash/Projects/DearUI/Blink2D/tests/snake/CMakeLists.txt */,
+			);
+			name = snake_test;
+			sourceTree = "<group>";
+		};
+		7F24CE27FF5340E2B136BCA0 = {
+			isa = PBXGroup;
+			children = (
+				4B53EC95F149457BBBC0E162 /* blink2d */,
+				1CEAADF9D4C74953B6255774 /* main */,
+				05D7D7B11A0B4DCBBE72FF86 /* ALL_BUILD */,
+				F4D0C63DF37442989ABC9ADE /* gmock */,
+				DBAC95FCA71E4774AB71234D /* gmock_main */,
+				85C1EFD986FE4865BE7990AC /* gtest */,
+				D197DD8842374FB39F43AFBA /* gtest_main */,
+				D4F2762A2D0440BDA26661C2 /* google_test_test */,
+				7D9993A3B3A14305AF78B111 /* snake_test */,
+				0F7A4F19D9C440C288CAA831 /* Products */,
+				146F0D61D20147C99C259E96 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		85C1EFD986FE4865BE7990AC /* gtest */ = {
+			isa = PBXGroup;
+			children = (
+				44FE0090C3CA4C8F95FD4FCA /* Source Files */,
+				76D2924F10514AC6BC7950D8 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/CMakeLists.txt */,
+			);
+			name = gtest;
+			sourceTree = "<group>";
+		};
+		93EA1651397A43369F5831C3 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				4320BE771EA04B0C96D92530 /* /Users/tobiash/Projects/DearUI/Blink2D/tests/google_test_test.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		B813F4461BF74F518A1B398A /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				81ACEC6EC63740D79FF989E6 /* /Users/tobiash/Projects/DearUI/Blink2D/tests/snake/snake_test.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		D197DD8842374FB39F43AFBA /* gtest_main */ = {
+			isa = PBXGroup;
+			children = (
+				E8E0D63C4AB24D3E8E8B149D /* Source Files */,
+				A28A6B53702647FEA993B296 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/CMakeLists.txt */,
+			);
+			name = gtest_main;
+			sourceTree = "<group>";
+		};
+		D4F2762A2D0440BDA26661C2 /* google_test_test */ = {
+			isa = PBXGroup;
+			children = (
+				93EA1651397A43369F5831C3 /* Source Files */,
+				7719B78005094D4B9F828812 /* /Users/tobiash/Projects/DearUI/Blink2D/tests/CMakeLists.txt */,
+			);
+			name = google_test_test;
+			sourceTree = "<group>";
+		};
+		D7C441F0FDA84064ADE221F6 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				B71259E6F2134B54B8377AEC /* /Users/tobiash/Projects/DearUI/Blink2D/main.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		DBAC95FCA71E4774AB71234D /* gmock_main */ = {
+			isa = PBXGroup;
+			children = (
+				3840E7E5CE164FF989D996E2 /* Source Files */,
+				E24A9E29EBF24E9B8FEF2394 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock/CMakeLists.txt */,
+			);
+			name = gmock_main;
+			sourceTree = "<group>";
+		};
+		E8E0D63C4AB24D3E8E8B149D /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				C33098B349E446EB8C086B46 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/src/gtest_main.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		F4D0C63DF37442989ABC9ADE /* gmock */ = {
+			isa = PBXGroup;
+			children = (
+				32D494EDF11F4976A62A0928 /* Source Files */,
+				F3BD836BF79B4438ADA53ED4 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock/CMakeLists.txt */,
+			);
+			name = gmock;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		12DBC49925A4422E80C257DE /* snake_test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9FD10BBF3E74B1C962E370A /* Build configuration list for PBXNativeTarget "snake_test" */;
+			buildPhases = (
+				C0471FEC4E7E493BAC659012 /* Sources */,
+				B0D7B5D0709F4E638CD120EC /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE30A34AE9DA4A7BB4320227 /* PBXTargetDependency */,
+				9E5EF692B3B64F2685B7B0D1 /* PBXTargetDependency */,
+				4214B4B755A2473197A752B3 /* PBXTargetDependency */,
+			);
+			name = snake_test;
+			productName = snake_test;
+			productReference = 536F865F22854EBEBDB9D83A /* snake_test */;
+			productType = "com.apple.product-type.tool";
+		};
+		4EED69A799114D1481221089 /* gtest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80600902BD1D4DBEB0350D16 /* Build configuration list for PBXNativeTarget "gtest" */;
+			buildPhases = (
+				99B01A6276F6436A8862A282 /* Sources */,
+				92A5F25E47D54030B2A14CBB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gtest;
+			productName = gtest;
+			productReference = 76F0F1910850434C8FF9A729 /* gtest */;
+			productType = "com.apple.product-type.library.static";
+		};
+		ADDC6AED5C734A0EB488CF0C /* gmock_main */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B592A7929EAC4EFF97BAA48E /* Build configuration list for PBXNativeTarget "gmock_main" */;
+			buildPhases = (
+				A6F38ED172AB4275A6A427B5 /* Sources */,
+				22651F2866094E599B135857 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48DFD5DC01CF416BB6455D22 /* PBXTargetDependency */,
+				5B03A61E4D8A40D48743AD97 /* PBXTargetDependency */,
+			);
+			name = gmock_main;
+			productName = gmock_main;
+			productReference = 015482216162491791ECA147 /* gmock_main */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CEEB69E847E8474F8B369E9F /* gmock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B0C400B87CD4F6BB3D89FF0 /* Build configuration list for PBXNativeTarget "gmock" */;
+			buildPhases = (
+				A4656BCD6B754888A19E1F7D /* Sources */,
+				8EAA83AFAF3842D181E444DB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74B64A30E93445199E75C8F6 /* PBXTargetDependency */,
+			);
+			name = gmock;
+			productName = gmock;
+			productReference = 2E8D9674A74B451EAD998B27 /* gmock */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D9DFB906245C42F49733CD11 /* google_test_test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4897A85220A45D08159271C /* Build configuration list for PBXNativeTarget "google_test_test" */;
+			buildPhases = (
+				F366D404234E428E92E804C0 /* Sources */,
+				1609F4B9D16147CAA9F41BE9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B39E26EF2F5A40149F5D4868 /* PBXTargetDependency */,
+				399326F2159E48B58B583469 /* PBXTargetDependency */,
+				90004EEBD66046AB994DF04F /* PBXTargetDependency */,
+			);
+			name = google_test_test;
+			productName = google_test_test;
+			productReference = F1C456E39E0749A4B05B3A01 /* google_test_test */;
+			productType = "com.apple.product-type.tool";
+		};
+		DF1CBA1090654C728EBEB454 /* blink2d */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CFB1C336F8D411F8061D9F7 /* Build configuration list for PBXNativeTarget "blink2d" */;
+			buildPhases = (
+				5E9674294C7742899975E346 /* Sources */,
+				F85B0C3FE8D640F499A53025 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7C10C0D664834AF59248CC32 /* PBXTargetDependency */,
+			);
+			name = blink2d;
+			productName = blink2d;
+			productReference = 0BF23415A7F44075A61DC634 /* blink2d */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E7C0BB92ED9440D8B0E94D24 /* gtest_main */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB39F71AE72C404EB63C40ED /* Build configuration list for PBXNativeTarget "gtest_main" */;
+			buildPhases = (
+				64B5D6D1CE0D4FBA9BD92A2D /* Sources */,
+				212422E28A3943D4ADAB0698 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				34B26B0700A94B4090F9661D /* PBXTargetDependency */,
+			);
+			name = gtest_main;
+			productName = gtest_main;
+			productReference = 8B605D6E4619401A93F59178 /* gtest_main */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EFE244C5E7A446FBBD1116BE /* main */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C704DBED9C954CABA6621749 /* Build configuration list for PBXNativeTarget "main" */;
+			buildPhases = (
+				52DE092BF615459A8F056586 /* Sources */,
+				8CE352D0993F46FEA3C5DAB2 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				814DE4ACA5F94FE08CE3D1C7 /* PBXTargetDependency */,
+				B24B7937FCCB4D89B53A02BA /* PBXTargetDependency */,
+			);
+			name = main;
+			productName = main;
+			productReference = 2D481ED49B3C4799B8C70D65 /* main */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C6B135B424A948F997B46083 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+			};
+			buildConfigurationList = ABC7722DA351400C834E39D1 /* Build configuration list for PBXProject "blink2d" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				5B8430E0DDA04954B7CE171D /* Debug */,
+				B3431B048B0D43A2BEA2FD79 /* Release */,
+				94FFE2A1FA404B3398D31CC5 /* MinSizeRel */,
+				5D90E7E1260843B5B80BACFF /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 7F24CE27FF5340E2B136BCA0;
+			projectDirPath = /Users/tobiash/Projects/DearUI/Blink2D;
+			projectRoot = "";
+			targets = (
+				9101174B5FB74A7F92A41EA1 /* ALL_BUILD */,
+				193F606989BA466BB62AFC13 /* RUN_TESTS */,
+				A8F89586ACA0446F8093C5A8 /* ZERO_CHECK */,
+				DF1CBA1090654C728EBEB454 /* blink2d */,
+				CEEB69E847E8474F8B369E9F /* gmock */,
+				ADDC6AED5C734A0EB488CF0C /* gmock_main */,
+				D9DFB906245C42F49733CD11 /* google_test_test */,
+				4EED69A799114D1481221089 /* gtest */,
+				E7C0BB92ED9440D8B0E94D24 /* gtest_main */,
+				81ACE5240DF043F8BE12C386 /* install */,
+				EFE244C5E7A446FBBD1116BE /* main */,
+				12DBC49925A4422E80C257DE /* snake_test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		003C8D08B0008F35F218E126 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject
+  /usr/local/Cellar/cmake/3.27.6/bin/ctest --force-new-ctest-process -C $CONFIGURATION$EFFECTIVE_PLATFORM_NAME
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject
+  /usr/local/Cellar/cmake/3.27.6/bin/ctest --force-new-ctest-process -C $CONFIGURATION$EFFECTIVE_PLATFORM_NAME
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject
+  /usr/local/Cellar/cmake/3.27.6/bin/ctest --force-new-ctest-process -C $CONFIGURATION$EFFECTIVE_PLATFORM_NAME
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject
+  /usr/local/Cellar/cmake/3.27.6/bin/ctest --force-new-ctest-process -C $CONFIGURATION$EFFECTIVE_PLATFORM_NAME
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		16797896AD0E2E3C5DF48AD0 /* Generate CMakeFiles/ZERO_CHECK */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ZERO_CHECK";
+			outputPaths = (
+/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/ZERO_CHECK			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject
+  make -f /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject
+  make -f /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject
+  make -f /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject
+  make -f /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeScripts/ReRunCMake.make
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		296D42DC678427E4E8FDB078 /* Generate CMakeFiles/ALL_BUILD */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ALL_BUILD";
+			outputPaths = (
+/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/ALL_BUILD			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject
+  echo Build\\ all\\ projects
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		3C0110FC8322DE7E50886E21 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		87AF4882E018677E2624B544 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		910A41151295C5F9742C25BD = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		93426DA6A4AC2C2AC9CE883C /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject
+  /usr/local/Cellar/cmake/3.27.6/bin/cmake -DBUILD_TYPE=$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject
+  /usr/local/Cellar/cmake/3.27.6/bin/cmake -DBUILD_TYPE=$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject
+  /usr/local/Cellar/cmake/3.27.6/bin/cmake -DBUILD_TYPE=$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject
+  /usr/local/Cellar/cmake/3.27.6/bin/cmake -DBUILD_TYPE=$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		9B50530E35CC49C82C2FACCF = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52DE092BF615459A8F056586 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				325C590698CC4D9FB4ED34C2 /* /Users/tobiash/Projects/DearUI/Blink2D/main.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E9674294C7742899975E346 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E6F1447B20A41F0BA62E3D3 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/Application.cpp */,
+				D0107E2A9C724361850041E5 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/ControllerWindow.cpp */,
+				755F51110FCD4512AD6B12E6 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/GameGui.cpp */,
+				B8572383CCC047CDAA07D88F /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/HexGui.cpp */,
+				96754F548EA14328B0278454 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/ShapeSelector.cpp */,
+				EBF03C490ED94B94BB94447D /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/ShapeType.cpp */,
+				CE8DDD214C834D1B9AF66998 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkgui/src/SquareGui.cpp */,
+				0E7CC5E57E9545E5900AE44B /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/src/Command.cpp */,
+				E27EBBA954FF468EAB9F86FE /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/src/Coordinate.cpp */,
+				6859C0E1FACE471B95B2D005 /* /Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/src/GameManager.cpp */,
+				F8604CFF174049958FACB451 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/backends/imgui_impl_sdl2.cpp */,
+				E8BFC68E05D64B44AEDB5099 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/backends/imgui_impl_sdlrenderer2.cpp */,
+				790A463C23AD431B8E40FA4E /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/imgui.cpp */,
+				3743784CD77D470C8A966490 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/imgui_demo.cpp */,
+				B78B3E999EE145EBA03C6C18 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/imgui_draw.cpp */,
+				CE2D99B4B86C43499F583D01 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/imgui_tables.cpp */,
+				3FEE1A20ACD844F6BE94766C /* /Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/imgui_widgets.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64B5D6D1CE0D4FBA9BD92A2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49CA7CE9C6B64FE3896A495F /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/src/gtest_main.cc */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99B01A6276F6436A8862A282 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C37A3F76D214787A1F12986 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/src/gtest-all.cc */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4656BCD6B754888A19E1F7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6D46BDF498E415EB26B2279 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock/src/gmock-all.cc */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6F38ED172AB4275A6A427B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A38B058D3F1F4F6E9C3A21A7 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock/src/gmock_main.cc */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0471FEC4E7E493BAC659012 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55BD4D4879DA4E8C95A1DB8E /* /Users/tobiash/Projects/DearUI/Blink2D/tests/snake/snake_test.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F366D404234E428E92E804C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6FFAF75B6C14ADEAB0013D5 /* /Users/tobiash/Projects/DearUI/Blink2D/tests/google_test_test.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		10A23DAD0E084E3A933B2FD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADDC6AED5C734A0EB488CF0C /* gmock_main */;
+			targetProxy = 4A75E17CA7B14375B0346422 /* PBXContainerItemProxy */;
+		};
+		1D5152B86C014580A6B3FA75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9101174B5FB74A7F92A41EA1 /* ALL_BUILD */;
+			targetProxy = 6CE8AE3787774025865F9299 /* PBXContainerItemProxy */;
+		};
+		34B26B0700A94B4090F9661D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EED69A799114D1481221089 /* gtest */;
+			targetProxy = F6EDCA6699C44CF3B62152E1 /* PBXContainerItemProxy */;
+		};
+		399326F2159E48B58B583469 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EED69A799114D1481221089 /* gtest */;
+			targetProxy = 791FCB00F0964861AFB204FF /* PBXContainerItemProxy */;
+		};
+		4214B4B755A2473197A752B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7C0BB92ED9440D8B0E94D24 /* gtest_main */;
+			targetProxy = BC3D86A6925A4CCABCD4FEFC /* PBXContainerItemProxy */;
+		};
+		43FC02D9170E4382A058C1EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EED69A799114D1481221089 /* gtest */;
+			targetProxy = B8015A0D1882429D97D33A9F /* PBXContainerItemProxy */;
+		};
+		48DFD5DC01CF416BB6455D22 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEEB69E847E8474F8B369E9F /* gmock */;
+			targetProxy = EA4CB506926043C79552DD06 /* PBXContainerItemProxy */;
+		};
+		4F75672DEE4B4326B0C7153C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF1CBA1090654C728EBEB454 /* blink2d */;
+			targetProxy = E2E149398BB646CEA6A1374F /* PBXContainerItemProxy */;
+		};
+		5B03A61E4D8A40D48743AD97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EED69A799114D1481221089 /* gtest */;
+			targetProxy = 6349E659986148C89E336F80 /* PBXContainerItemProxy */;
+		};
+		74B64A30E93445199E75C8F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EED69A799114D1481221089 /* gtest */;
+			targetProxy = 8AD9123517374D7C8753F57B /* PBXContainerItemProxy */;
+		};
+		7C10C0D664834AF59248CC32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8F89586ACA0446F8093C5A8 /* ZERO_CHECK */;
+			targetProxy = E3D258A96E7E4A389178017B /* PBXContainerItemProxy */;
+		};
+		814DE4ACA5F94FE08CE3D1C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF1CBA1090654C728EBEB454 /* blink2d */;
+			targetProxy = 087E489FCDC84BB58FD9BAFF /* PBXContainerItemProxy */;
+		};
+		82EE73FDDA5444F391D92BF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFE244C5E7A446FBBD1116BE /* main */;
+			targetProxy = 4AB53D70AD634D2388254286 /* PBXContainerItemProxy */;
+		};
+		90004EEBD66046AB994DF04F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7C0BB92ED9440D8B0E94D24 /* gtest_main */;
+			targetProxy = 4E55ACC9B5C648858D98D79A /* PBXContainerItemProxy */;
+		};
+		9E5EF692B3B64F2685B7B0D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EED69A799114D1481221089 /* gtest */;
+			targetProxy = DD5792C4304D42EBA1BE816B /* PBXContainerItemProxy */;
+		};
+		B24B7937FCCB4D89B53A02BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8F89586ACA0446F8093C5A8 /* ZERO_CHECK */;
+			targetProxy = 23D40DD49C454483BAF81DAF /* PBXContainerItemProxy */;
+		};
+		B39E26EF2F5A40149F5D4868 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF1CBA1090654C728EBEB454 /* blink2d */;
+			targetProxy = 73C3BA904A72472CA11129BB /* PBXContainerItemProxy */;
+		};
+		BE30A34AE9DA4A7BB4320227 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF1CBA1090654C728EBEB454 /* blink2d */;
+			targetProxy = D36A5EE3AA1A4BCF843934D6 /* PBXContainerItemProxy */;
+		};
+		D8045BF4B8394790BEBFD718 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D9DFB906245C42F49733CD11 /* google_test_test */;
+			targetProxy = 8720D410608943CA9380AA09 /* PBXContainerItemProxy */;
+		};
+		DAA02FFBDA6E4F3A8D6B6531 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEEB69E847E8474F8B369E9F /* gmock */;
+			targetProxy = D48BA623D12E43669F02D767 /* PBXContainerItemProxy */;
+		};
+		EA13244BC91B47EA93717BC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 12DBC49925A4422E80C257DE /* snake_test */;
+			targetProxy = 627622480FD24BDC93D16AFB /* PBXContainerItemProxy */;
+		};
+		EC010B18844142D1AA5D19F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8F89586ACA0446F8093C5A8 /* ZERO_CHECK */;
+			targetProxy = CEEAFC986D3C4419926F8906 /* PBXContainerItemProxy */;
+		};
+		FD2681079901490CB0FBD7AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7C0BB92ED9440D8B0E94D24 /* gtest_main */;
+			targetProxy = 454E85C6A0CA471A87A47DE3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00A27F734E36470F8B419EB3 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/MinSizeRel;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,"$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++20'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest_main;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/gtest_main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		11C1AE627D38443096AB9868 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		18C33540F91344C6A6BE3551 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		1AEA86C7F5174EBE9E9D2BB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/Debug;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",IMGUI_DEFINE_MATH_OPERATORS,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/backends,/Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/examples/snake/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/examples/snake/include,"$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++20' ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = blink2d;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/usr/local/Cellar/sdl2/2.28.3/include/SDL2,/usr/local/include/SDL2,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/blink2d.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		2D0D0C2E3F2A409C95BDFD26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		2D8EE5020FC64E1FB1F2353E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/RelWithDebInfo;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,"$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=c++20'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/gtest.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		2E260DE2A5614CE2AD1EE52C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/Debug;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",IMGUI_DEFINE_MATH_OPERATORS,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/backends,/Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/examples/snake/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/examples/snake/include,"$(inherited)");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (/usr/local/Cellar/sdl2/2.28.3/lib,"$(inherited)");
+				LIBRARY_SEARCH_PATHS = ("/usr/local/Cellar/sdl2/2.28.3/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",/usr/local/Cellar/sdl2/2.28.3/lib,"$(inherited)");
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++20' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/Debug/libblink2d.a,/usr/local/Cellar/sdl2/2.28.3/lib/libSDL2main.a,/usr/local/Cellar/sdl2/2.28.3/lib/libSDL2.dylib,/usr/local/Cellar/sdl2_image/2.6.3_2/lib/libSDL2_image.dylib,"$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = main;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/usr/local/Cellar/sdl2/2.28.3/include/SDL2,/usr/local/include/SDL2,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		3DFC23EAEB254D4FA17CE025 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/tests/MinSizeRel;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/backends,/Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/examples/snake/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/examples/snake/include,"$(inherited)");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (/usr/local/Cellar/sdl2/2.28.3/lib,"$(inherited)");
+				LIBRARY_SEARCH_PATHS = ("/usr/local/Cellar/sdl2/2.28.3/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",/usr/local/Cellar/sdl2/2.28.3/lib,"$(inherited)");
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++20' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/MinSizeRel/libgtest.a,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/MinSizeRel/libgtest_main.a,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/MinSizeRel/libblink2d.a,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/MinSizeRel/libgtest.a,/usr/local/Cellar/sdl2/2.28.3/lib/libSDL2main.a,/usr/local/Cellar/sdl2/2.28.3/lib/libSDL2.dylib,/usr/local/Cellar/sdl2_image/2.6.3_2/lib/libSDL2_image.dylib,"$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = google_test_test;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,/usr/local/Cellar/sdl2/2.28.3/include/SDL2,/usr/local/include/SDL2,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/google_test_test.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		41E7EE3A20CB4D7097AF1E1A /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		474869BE8B8D416DB7D0B859 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		49EA1BCA33824C9698B1FF9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk;
+				SYMROOT = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build;
+			};
+			name = Debug;
+		};
+		4DA26C3172754CFDADA67767 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/MinSizeRel;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock,"$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++20'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/gmock.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		4DD8F1243EF5437180EC6CF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/Release;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,"$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++20'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/gtest.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		4F032240B7BC47CAB0D3DCB1 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		5180D56657314F83B35576FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/tests/snake/Release;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/backends,/Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/examples/snake/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/examples/snake/include,"$(inherited)");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (/usr/local/Cellar/sdl2/2.28.3/lib,"$(inherited)");
+				LIBRARY_SEARCH_PATHS = ("/usr/local/Cellar/sdl2/2.28.3/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",/usr/local/Cellar/sdl2/2.28.3/lib,"$(inherited)");
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++20' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/Release/libgtest.a,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/Release/libgtest_main.a,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/Release/libblink2d.a,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/Release/libgtest.a,/usr/local/Cellar/sdl2/2.28.3/lib/libSDL2main.a,/usr/local/Cellar/sdl2/2.28.3/lib/libSDL2.dylib,/usr/local/Cellar/sdl2_image/2.6.3_2/lib/libSDL2_image.dylib,"$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = snake_test;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,/usr/local/Cellar/sdl2/2.28.3/include/SDL2,/usr/local/include/SDL2,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/snake_test.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		5184B94F65E8420CB2F2BB81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/Release;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",IMGUI_DEFINE_MATH_OPERATORS,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/backends,/Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/examples/snake/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/examples/snake/include,"$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++20' ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = blink2d;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/usr/local/Cellar/sdl2/2.28.3/include/SDL2,/usr/local/include/SDL2,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/blink2d.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		518BF618CE0C43FA9BBF2E27 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/MinSizeRel;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,"$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++20'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock_main;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/gmock_main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		557529A34E524EDB8B6BAFCE /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/MinSizeRel;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,"$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++20'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/gtest.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		591A86D1188E4DA8BA0A4E95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/tests/snake/Debug;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/backends,/Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/examples/snake/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/examples/snake/include,"$(inherited)");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (/usr/local/Cellar/sdl2/2.28.3/lib,"$(inherited)");
+				LIBRARY_SEARCH_PATHS = ("/usr/local/Cellar/sdl2/2.28.3/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",/usr/local/Cellar/sdl2/2.28.3/lib,"$(inherited)");
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++20' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/Debug/libgtest.a,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/Debug/libgtest_main.a,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/Debug/libblink2d.a,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/Debug/libgtest.a,/usr/local/Cellar/sdl2/2.28.3/lib/libSDL2main.a,/usr/local/Cellar/sdl2/2.28.3/lib/libSDL2.dylib,/usr/local/Cellar/sdl2_image/2.6.3_2/lib/libSDL2_image.dylib,"$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = snake_test;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,/usr/local/Cellar/sdl2/2.28.3/include/SDL2,/usr/local/include/SDL2,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/snake_test.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		59893A80C0D14EB5B88E44C9 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/RelWithDebInfo;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock,"$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=c++20'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/gmock.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		5FB745C32A8F45139A5E89FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		60F55F7E9BFF41CAB1820107 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/Release;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,"$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++20'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest_main;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/gtest_main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		61B25C3EF7474E9EB1C751ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/Debug;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,"$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=c++20'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock_main;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/gmock_main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		640CDD82C6C14A3C8F30D7D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		6EEDF25222884AAAACC9DBB8 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/RelWithDebInfo;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",IMGUI_DEFINE_MATH_OPERATORS,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/backends,/Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/examples/snake/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/examples/snake/include,"$(inherited)");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (/usr/local/Cellar/sdl2/2.28.3/lib,"$(inherited)");
+				LIBRARY_SEARCH_PATHS = ("/usr/local/Cellar/sdl2/2.28.3/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",/usr/local/Cellar/sdl2/2.28.3/lib,"$(inherited)");
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++20' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/RelWithDebInfo/libblink2d.a,/usr/local/Cellar/sdl2/2.28.3/lib/libSDL2main.a,/usr/local/Cellar/sdl2/2.28.3/lib/libSDL2.dylib,/usr/local/Cellar/sdl2_image/2.6.3_2/lib/libSDL2_image.dylib,"$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = main;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/usr/local/Cellar/sdl2/2.28.3/include/SDL2,/usr/local/include/SDL2,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		76223B78567D46B8BB8A07F5 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		7989A4B4F1AF45A98B5FC196 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/Debug;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,"$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=c++20'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/gtest.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		80B6776B2A894D40AC2FB8C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/Debug;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock,"$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=c++20'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/gmock.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		831D908D66ED44B895920FEA /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		8CBD191FBF4846259B234BB1 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/tests/snake/RelWithDebInfo;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/backends,/Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/examples/snake/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/examples/snake/include,"$(inherited)");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (/usr/local/Cellar/sdl2/2.28.3/lib,"$(inherited)");
+				LIBRARY_SEARCH_PATHS = ("/usr/local/Cellar/sdl2/2.28.3/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",/usr/local/Cellar/sdl2/2.28.3/lib,"$(inherited)");
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++20' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/RelWithDebInfo/libgtest.a,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/RelWithDebInfo/libgtest_main.a,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/RelWithDebInfo/libblink2d.a,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/RelWithDebInfo/libgtest.a,/usr/local/Cellar/sdl2/2.28.3/lib/libSDL2main.a,/usr/local/Cellar/sdl2/2.28.3/lib/libSDL2.dylib,/usr/local/Cellar/sdl2_image/2.6.3_2/lib/libSDL2_image.dylib,"$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = snake_test;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,/usr/local/Cellar/sdl2/2.28.3/include/SDL2,/usr/local/include/SDL2,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/snake_test.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		92A969CF293D497194E478E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build;
+			};
+			name = Release;
+		};
+		93F5974EF2AA49E6A93AE1DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/Release;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,"$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++20'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock_main;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/gmock_main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		943CA89787954DA19C3FAC50 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build;
+			};
+			name = MinSizeRel;
+		};
+		9847EEA8C42A422596C29C8E /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/tests/snake/MinSizeRel;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/backends,/Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/examples/snake/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/examples/snake/include,"$(inherited)");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (/usr/local/Cellar/sdl2/2.28.3/lib,"$(inherited)");
+				LIBRARY_SEARCH_PATHS = ("/usr/local/Cellar/sdl2/2.28.3/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",/usr/local/Cellar/sdl2/2.28.3/lib,"$(inherited)");
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++20' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/MinSizeRel/libgtest.a,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/MinSizeRel/libgtest_main.a,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/MinSizeRel/libblink2d.a,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/MinSizeRel/libgtest.a,/usr/local/Cellar/sdl2/2.28.3/lib/libSDL2main.a,/usr/local/Cellar/sdl2/2.28.3/lib/libSDL2.dylib,/usr/local/Cellar/sdl2_image/2.6.3_2/lib/libSDL2_image.dylib,"$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = snake_test;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,/usr/local/Cellar/sdl2/2.28.3/include/SDL2,/usr/local/include/SDL2,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/snake_test.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		9996B52080794F0A9B8420F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/Release;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock,"$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++20'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/gmock.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		9998EEB0A54445819BDAE350 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/RelWithDebInfo;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,"$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=c++20'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock_main;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/gmock_main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		9D9D069535AC44499C9B3C39 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		A1E7A5DCFB9B48BFB83816FA /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build;
+			};
+			name = RelWithDebInfo;
+		};
+		A48208ACB4EA4607B4EE5F53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/Release;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",IMGUI_DEFINE_MATH_OPERATORS,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/backends,/Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/examples/snake/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/examples/snake/include,"$(inherited)");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (/usr/local/Cellar/sdl2/2.28.3/lib,"$(inherited)");
+				LIBRARY_SEARCH_PATHS = ("/usr/local/Cellar/sdl2/2.28.3/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",/usr/local/Cellar/sdl2/2.28.3/lib,"$(inherited)");
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++20' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/Release/libblink2d.a,/usr/local/Cellar/sdl2/2.28.3/lib/libSDL2main.a,/usr/local/Cellar/sdl2/2.28.3/lib/libSDL2.dylib,/usr/local/Cellar/sdl2_image/2.6.3_2/lib/libSDL2_image.dylib,"$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = main;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/usr/local/Cellar/sdl2/2.28.3/include/SDL2,/usr/local/include/SDL2,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		A70364B0C1A64852B282990F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/Debug;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,"$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=c++20'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest_main;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/gtest_main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		BD98888D3D4F48A8B85EBB27 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		BE1DF5E93F5B40FA896B2084 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		C09C61B670D64ADB8A903F12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		DBC660EC2B3E49D38735735D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/tests/Debug;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/backends,/Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/examples/snake/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/examples/snake/include,"$(inherited)");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (/usr/local/Cellar/sdl2/2.28.3/lib,"$(inherited)");
+				LIBRARY_SEARCH_PATHS = ("/usr/local/Cellar/sdl2/2.28.3/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",/usr/local/Cellar/sdl2/2.28.3/lib,"$(inherited)");
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++20' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/Debug/libgtest.a,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/Debug/libgtest_main.a,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/Debug/libblink2d.a,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/Debug/libgtest.a,/usr/local/Cellar/sdl2/2.28.3/lib/libSDL2main.a,/usr/local/Cellar/sdl2/2.28.3/lib/libSDL2.dylib,/usr/local/Cellar/sdl2_image/2.6.3_2/lib/libSDL2_image.dylib,"$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = google_test_test;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,/usr/local/Cellar/sdl2/2.28.3/include/SDL2,/usr/local/include/SDL2,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/google_test_test.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		DBFC55D8A1DC460695CDE2DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/tests/Release;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/backends,/Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/examples/snake/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/examples/snake/include,"$(inherited)");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (/usr/local/Cellar/sdl2/2.28.3/lib,"$(inherited)");
+				LIBRARY_SEARCH_PATHS = ("/usr/local/Cellar/sdl2/2.28.3/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",/usr/local/Cellar/sdl2/2.28.3/lib,"$(inherited)");
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++20' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/Release/libgtest.a,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/Release/libgtest_main.a,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/Release/libblink2d.a,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/Release/libgtest.a,/usr/local/Cellar/sdl2/2.28.3/lib/libSDL2main.a,/usr/local/Cellar/sdl2/2.28.3/lib/libSDL2.dylib,/usr/local/Cellar/sdl2_image/2.6.3_2/lib/libSDL2_image.dylib,"$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = google_test_test;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,/usr/local/Cellar/sdl2/2.28.3/include/SDL2,/usr/local/include/SDL2,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/google_test_test.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		DCF2A1D5B50D4A93A5DAFB45 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		DDFB50772CE44404804530D1 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/RelWithDebInfo;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",IMGUI_DEFINE_MATH_OPERATORS,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/backends,/Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/examples/snake/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/examples/snake/include,"$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++20' ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = blink2d;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/usr/local/Cellar/sdl2/2.28.3/include/SDL2,/usr/local/include/SDL2,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/blink2d.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		E5C9A5BF4D0A48DCABCBBBD5 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/MinSizeRel;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",IMGUI_DEFINE_MATH_OPERATORS,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/backends,/Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/examples/snake/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/examples/snake/include,"$(inherited)");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (/usr/local/Cellar/sdl2/2.28.3/lib,"$(inherited)");
+				LIBRARY_SEARCH_PATHS = ("/usr/local/Cellar/sdl2/2.28.3/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",/usr/local/Cellar/sdl2/2.28.3/lib,"$(inherited)");
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++20' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/MinSizeRel/libblink2d.a,/usr/local/Cellar/sdl2/2.28.3/lib/libSDL2main.a,/usr/local/Cellar/sdl2/2.28.3/lib/libSDL2.dylib,/usr/local/Cellar/sdl2_image/2.6.3_2/lib/libSDL2_image.dylib,"$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = main;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/usr/local/Cellar/sdl2/2.28.3/include/SDL2,/usr/local/include/SDL2,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		F34C6B99DF8E4AD4B3678A24 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/RelWithDebInfo;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,"$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=c++20'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest_main;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/gtest_main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		F4DD41F2F7FB429794992166 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/MinSizeRel;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",IMGUI_DEFINE_MATH_OPERATORS,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/backends,/Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/examples/snake/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/examples/snake/include,"$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++20' ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = blink2d;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/usr/local/Cellar/sdl2/2.28.3/include/SDL2,/usr/local/include/SDL2,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/blink2d.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		F7600EAADACE4A62A9A960C8 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		FD56F67FDA4642E59F3D10AF /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/tests/RelWithDebInfo;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui,/Users/tobiash/Projects/DearUI/Blink2D/extern/imgui/backends,/Users/tobiash/Projects/DearUI/Blink2D/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkgui/include,/Users/tobiash/Projects/DearUI/Blink2D/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/blinkmodel/include,/Users/tobiash/Projects/DearUI/Blink2D/examples/snake/include,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/examples/snake/include,"$(inherited)");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (/usr/local/Cellar/sdl2/2.28.3/lib,"$(inherited)");
+				LIBRARY_SEARCH_PATHS = ("/usr/local/Cellar/sdl2/2.28.3/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",/usr/local/Cellar/sdl2/2.28.3/lib,"$(inherited)");
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++20' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/RelWithDebInfo/libgtest.a,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/RelWithDebInfo/libgtest_main.a,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/RelWithDebInfo/libblink2d.a,/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/lib/RelWithDebInfo/libgtest.a,/usr/local/Cellar/sdl2/2.28.3/lib/libSDL2main.a,/usr/local/Cellar/sdl2/2.28.3/lib/libSDL2.dylib,/usr/local/Cellar/sdl2_image/2.6.3_2/lib/libSDL2_image.dylib,"$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = google_test_test;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,/usr/local/Cellar/sdl2/2.28.3/include/SDL2,/usr/local/include/SDL2,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/build/google_test_test.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0CFB1C336F8D411F8061D9F7 /* Build configuration list for PBXNativeTarget "blink2d" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AEA86C7F5174EBE9E9D2BB4 /* Debug */,
+				5184B94F65E8420CB2F2BB81 /* Release */,
+				F4DD41F2F7FB429794992166 /* MinSizeRel */,
+				DDFB50772CE44404804530D1 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		2502CF31DB8047818D1BD081 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11C1AE627D38443096AB9868 /* Debug */,
+				18C33540F91344C6A6BE3551 /* Release */,
+				BD98888D3D4F48A8B85EBB27 /* MinSizeRel */,
+				76223B78567D46B8BB8A07F5 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4A1A4C1632C648CA910E27E9 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				474869BE8B8D416DB7D0B859 /* Debug */,
+				5FB745C32A8F45139A5E89FD /* Release */,
+				41E7EE3A20CB4D7097AF1E1A /* MinSizeRel */,
+				831D908D66ED44B895920FEA /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		63CA5E6167A44445B410E17D /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C09C61B670D64ADB8A903F12 /* Debug */,
+				2D0D0C2E3F2A409C95BDFD26 /* Release */,
+				DCF2A1D5B50D4A93A5DAFB45 /* MinSizeRel */,
+				F7600EAADACE4A62A9A960C8 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7B0C400B87CD4F6BB3D89FF0 /* Build configuration list for PBXNativeTarget "gmock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80B6776B2A894D40AC2FB8C1 /* Debug */,
+				9996B52080794F0A9B8420F0 /* Release */,
+				4DA26C3172754CFDADA67767 /* MinSizeRel */,
+				59893A80C0D14EB5B88E44C9 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		80600902BD1D4DBEB0350D16 /* Build configuration list for PBXNativeTarget "gtest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7989A4B4F1AF45A98B5FC196 /* Debug */,
+				4DD8F1243EF5437180EC6CF4 /* Release */,
+				557529A34E524EDB8B6BAFCE /* MinSizeRel */,
+				2D8EE5020FC64E1FB1F2353E /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8B4C23C060FD44BBBF4FC6D4 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE1DF5E93F5B40FA896B2084 /* Debug */,
+				640CDD82C6C14A3C8F30D7D1 /* Release */,
+				9D9D069535AC44499C9B3C39 /* MinSizeRel */,
+				4F032240B7BC47CAB0D3DCB1 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		ABC7722DA351400C834E39D1 /* Build configuration list for PBXProject "blink2d" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49EA1BCA33824C9698B1FF9F /* Debug */,
+				92A969CF293D497194E478E0 /* Release */,
+				943CA89787954DA19C3FAC50 /* MinSizeRel */,
+				A1E7A5DCFB9B48BFB83816FA /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B592A7929EAC4EFF97BAA48E /* Build configuration list for PBXNativeTarget "gmock_main" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61B25C3EF7474E9EB1C751ED /* Debug */,
+				93F5974EF2AA49E6A93AE1DD /* Release */,
+				518BF618CE0C43FA9BBF2E27 /* MinSizeRel */,
+				9998EEB0A54445819BDAE350 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C704DBED9C954CABA6621749 /* Build configuration list for PBXNativeTarget "main" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E260DE2A5614CE2AD1EE52C /* Debug */,
+				A48208ACB4EA4607B4EE5F53 /* Release */,
+				E5C9A5BF4D0A48DCABCBBBD5 /* MinSizeRel */,
+				6EEDF25222884AAAACC9DBB8 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C9FD10BBF3E74B1C962E370A /* Build configuration list for PBXNativeTarget "snake_test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				591A86D1188E4DA8BA0A4E95 /* Debug */,
+				5180D56657314F83B35576FC /* Release */,
+				9847EEA8C42A422596C29C8E /* MinSizeRel */,
+				8CBD191FBF4846259B234BB1 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EB39F71AE72C404EB63C40ED /* Build configuration list for PBXNativeTarget "gtest_main" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A70364B0C1A64852B282990F /* Debug */,
+				60F55F7E9BFF41CAB1820107 /* Release */,
+				00A27F734E36470F8B419EB3 /* MinSizeRel */,
+				F34C6B99DF8E4AD4B3678A24 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F4897A85220A45D08159271C /* Build configuration list for PBXNativeTarget "google_test_test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBC660EC2B3E49D38735735D /* Debug */,
+				DBFC55D8A1DC460695CDE2DF /* Release */,
+				3DFC23EAEB254D4FA17CE025 /* MinSizeRel */,
+				FD56F67FDA4642E59F3D10AF /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C6B135B424A948F997B46083 /* Project object */;
+}

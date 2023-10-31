@@ -1,0 +1,889 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeDetermineSystem.cmake:211 (message)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      The system is: Darwin - 22.6.0 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      2023-10-28 16:36:26.409 xcodebuild[30073:1349192] DVTCoreDeviceEnabledState: DVTCoreDeviceEnabledState_Disabled set via user default (DVTEnableCoreDevice=disabled)
+      Command line invocation:
+          /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild
+      
+      User defaults from command line:
+          IDEPackageSupportUseBuiltinSCM = YES
+      
+      Computing target dependency graph and provisioning inputs
+      
+      Create build description
+      Build description signature: 8a87f154a3de5dfd42ae251b3989fe97
+      Build description path: /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/./XCBuildData/8a87f154a3de5dfd42ae251b3989fe97.xcbuilddata
+      
+      warning: Building targets in manual order is deprecated - check "Parallelize build for command-line builds" in the project editor, or set DISABLE_MANUAL_TARGET_ORDER_BUILD_WARNING in any of the targets in the current build to suppress this warning
+      CreateBuildDirectory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.xcodeproj
+          builtin-create-build-directory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX
+      
+      ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk /var/folders/pr/qvrw9qhn1xx23jv83y8x0x200000gn/C/com.apple.DeveloperTools/14.3.1-14E300c/Xcode/SDKStatCaches.noindex/macosx13.3-22E245-.sdkstatcache
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.xcodeproj
+          /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o /var/folders/pr/qvrw9qhn1xx23jv83y8x0x200000gn/C/com.apple.DeveloperTools/14.3.1-14E300c/Xcode/SDKStatCaches.noindex/macosx13.3-22E245-.sdkstatcache
+      
+      CreateBuildDirectory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/EagerLinkingTBDs/Debug
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.xcodeproj
+          builtin-create-build-directory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/EagerLinkingTBDs/Debug
+      
+      WriteAuxiliaryFile /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/DerivedSources/Entitlements.plist (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX
+          write-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/DerivedSources/Entitlements.plist
+      
+      ProcessProductPackaging "" /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX.xcent (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX
+          
+          Entitlements:
+          
+          {
+          "com.apple.application-identifier" = "";
+          "com.apple.security.get-task-allow" = 1;
+      }
+          
+          builtin-productPackagingUtility -entitlements -format xml -o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX.xcent
+      
+      ProcessProductPackagingDER /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX.xcent /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX.xcent.der (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX
+          /usr/bin/derq query -f xml -i /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX.xcent -o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX.xcent.der --raw
+      
+      WriteAuxiliaryFile /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX.hmap (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX
+          write-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX.hmap
+      
+      WriteAuxiliaryFile /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/all-product-headers.yaml (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX
+          write-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/all-product-headers.yaml
+      
+      WriteAuxiliaryFile /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-project-headers.hmap (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX
+          write-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-project-headers.hmap
+      
+      WriteAuxiliaryFile /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-own-target-headers.hmap (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX
+          write-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-own-target-headers.hmap
+      
+      WriteAuxiliaryFile /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-generated-files.hmap (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX
+          write-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-generated-files.hmap
+      
+      WriteAuxiliaryFile /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-all-target-headers.hmap (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX
+          write-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-all-target-headers.hmap
+      
+      WriteAuxiliaryFile /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-all-non-framework-target-headers.hmap (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX
+          write-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-all-non-framework-target-headers.hmap
+      
+      WriteAuxiliaryFile /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/x86_64/CompilerIdCXX.LinkFileList (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX
+          write-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/x86_64/CompilerIdCXX.LinkFileList
+      
+      CompileC /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/x86_64/CMakeCXXCompilerId.o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CMakeCXXCompilerId.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX
+          /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -ivfsstatcache /var/folders/pr/qvrw9qhn1xx23jv83y8x0x200000gn/C/com.apple.DeveloperTools/14.3.1-14E300c/Xcode/SDKStatCaches.noindex/macosx13.3-22E245-.sdkstatcache -target x86_64-apple-macos13.3 -fmessage-length\\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\\=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -fvisibility\\=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body -iquote /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-generated-files.hmap -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-own-target-headers.hmap -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-all-target-headers.hmap -iquote /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-project-headers.hmap -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/include -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/DerivedSources-normal/x86_64 -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/DerivedSources/x86_64 -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/DerivedSources -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX -MMD -MT dependencies -MF /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/x86_64/CMakeCXXCompilerId.d --serialize-diagnostics /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/x86_64/CMakeCXXCompilerId.dia -c /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CMakeCXXCompilerId.cpp -o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/x86_64/CMakeCXXCompilerId.o
+      
+      Ld /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX normal (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX
+          /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -Xlinker -reproducible -target x86_64-apple-macos13.3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -L/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/EagerLinkingTBDs/Debug -L/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/EagerLinkingTBDs/Debug -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX -filelist /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/x86_64/CompilerIdCXX.LinkFileList -Xlinker -object_path_lto -Xlinker /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/x86_64/CompilerIdCXX_lto.o -Xlinker -no_adhoc_codesign -Xlinker -dependency_info -Xlinker /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/x86_64/CompilerIdCXX_dependency_info.dat -o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX
+      
+      WriteAuxiliaryFile /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX
+          write-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh
+      
+      PhaseScriptExecution Run\\ Script /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX
+          /bin/sh -c /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh
+      GCC_VERSION=com.apple.compilers.llvm.clang.1_0
+      ARCHS=x86_64
+      
+      CodeSign /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX
+          
+          Signing Identity:     "-"
+          
+          /usr/bin/codesign --force --sign - --entitlements /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX.xcent --timestamp\\=none --generate-entitlement-der /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX
+      
+      RegisterExecutionPolicyException /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX
+          builtin-RegisterExecutionPolicyException /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX
+      
+      warning: Traditional headermap style is no longer supported; please migrate to using separate headermaps and set 'ALWAYS_SEARCH_USER_PATHS' to NO. (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+      note: Run script build phase 'Run Script' will be run during every build because the option to run the script phase "Based on dependency analysis" is unchecked. (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+      ** BUILD SUCCEEDED **
+      
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX"
+      
+      The CXX compiler identification is AppleClang, found in:
+        /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF"
+      binary: "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF'
+        
+        Run Build Command(s): /usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_11daf -parallelizeTargets -configuration Debug -hideShellScriptEnvironment
+        2023-10-28 16:36:37.609 xcodebuild[30129:1349666] DVTCoreDeviceEnabledState: DVTCoreDeviceEnabledState_Disabled set via user default (DVTEnableCoreDevice=disabled)
+        Command line invocation:
+            /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_11daf -parallelizeTargets -configuration Debug -hideShellScriptEnvironment
+        
+        User defaults from command line:
+            HideShellScriptEnvironment = YES
+            IDEPackageSupportUseBuiltinSCM = YES
+        
+        Computing target dependency graph and provisioning inputs
+        
+        Create build description
+        Build description signature: 66625f8073a3fa36d65d0a2c93ce89b5
+        Build description path: /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/XCBuildData/66625f8073a3fa36d65d0a2c93ce89b5.xcbuilddata
+        
+        note: Building targets in dependency order
+        CreateBuildDirectory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build
+            cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/CMAKE_TRY_COMPILE.xcodeproj
+            builtin-create-build-directory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build
+        
+        CreateBuildDirectory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug
+            cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/CMAKE_TRY_COMPILE.xcodeproj
+            builtin-create-build-directory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug
+        
+        ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk /var/folders/pr/qvrw9qhn1xx23jv83y8x0x200000gn/C/com.apple.DeveloperTools/14.3.1-14E300c/Xcode/SDKStatCaches.noindex/macosx13.3-22E245-.sdkstatcache
+            cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/CMAKE_TRY_COMPILE.xcodeproj
+            /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o /var/folders/pr/qvrw9qhn1xx23jv83y8x0x200000gn/C/com.apple.DeveloperTools/14.3.1-14E300c/Xcode/SDKStatCaches.noindex/macosx13.3-22E245-.sdkstatcache
+        
+        CreateBuildDirectory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/EagerLinkingTBDs/Debug
+            cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/CMAKE_TRY_COMPILE.xcodeproj
+            builtin-create-build-directory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/EagerLinkingTBDs/Debug
+        
+        WriteAuxiliaryFile /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/cmTC_11daf.LinkFileList (in target 'cmTC_11daf' from project 'CMAKE_TRY_COMPILE')
+            cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF
+            write-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/cmTC_11daf.LinkFileList
+        
+        CompileC /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/CMakeCXXCompilerABI.o /usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeCXXCompilerABI.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'cmTC_11daf' from project 'CMAKE_TRY_COMPILE')
+            cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF
+            /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -ivfsstatcache /var/folders/pr/qvrw9qhn1xx23jv83y8x0x200000gn/C/com.apple.DeveloperTools/14.3.1-14E300c/Xcode/SDKStatCaches.noindex/macosx13.3-22E245-.sdkstatcache -target x86_64-apple-macos13.3 -fmessage-length\\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\\=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -DCMAKE_INTDIR\\=\\"Debug\\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug/include -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/DerivedSources-normal/x86_64 -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/DerivedSources/x86_64 -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/DerivedSources -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug -v -Wl,-v -MMD -MT dependencies -MF /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/CMakeCXXCompilerABI.d --serialize-diagnostics /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/CMakeCXXCompilerABI.dia -c /usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeCXXCompilerABI.cpp -o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/CMakeCXXCompilerABI.o
+        Apple clang version 14.0.3 (clang-1403.0.22.14.1)
+        Target: x86_64-apple-macos13.3
+        Thread model: posix
+        InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+        clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx13.3.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=2 -target-sdk-version=13.3 -fvisibility-inlines-hidden-static-local-var -target-cpu penryn -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debug-info-kind=standalone -dwarf-version=4 -debugger-tuning=lldb -target-linker-version 857.1 -v -fcoverage-compilation-dir=/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3 -dependency-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/CMakeCXXCompilerABI.d -skip-unused-modulemap-deps -MT dependencies -ivfsstatcache /var/folders/pr/qvrw9qhn1xx23jv83y8x0x200000gn/C/com.apple.DeveloperTools/14.3.1-14E300c/Xcode/SDKStatCaches.noindex/macosx13.3-22E245-.sdkstatcache -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -D "CMAKE_INTDIR=\\"Debug\\"" -I /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug/include -I /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/DerivedSources-normal/x86_64 -I /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/DerivedSources/x86_64 -I /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/DerivedSources -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug -stdlib=libc++ -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -O0 -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -Wdeprecated-declarations -Winvalid-offsetof -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -fdebug-compilation-dir=/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF -ferror-limit 19 -fmacro-backtrace-limit 0 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -no-opaque-pointers -fcxx-exceptions -fexceptions -fpascal-strings -fmax-type-align=16 -fcommon -fdiagnostics-show-note-include-stack -fasm-blocks -serialize-diagnostic-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/CMakeCXXCompilerABI.dia -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/CMakeCXXCompilerABI.o -x c++ /usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 14.0.3 (clang-1403.0.22.14.1) default target x86_64-apple-darwin22.6.0
+        ignoring nonexistent directory "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug/include"
+        ignoring nonexistent directory "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/DerivedSources-normal/x86_64"
+        ignoring nonexistent directory "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/DerivedSources/x86_64"
+        ignoring nonexistent directory "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/DerivedSources"
+        ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/local/include"
+        ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/Library/Frameworks"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug (framework directory)
+         /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1
+         /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include
+         /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include
+         /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
+         /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks (framework directory)
+        End of search list.
+        
+        Ld /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug/cmTC_11daf normal (in target 'cmTC_11daf' from project 'CMAKE_TRY_COMPILE')
+            cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF
+            /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -Xlinker -reproducible -target x86_64-apple-macos13.3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -L/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/EagerLinkingTBDs/Debug -L/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/EagerLinkingTBDs/Debug -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug -filelist /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/cmTC_11daf.LinkFileList -Xlinker -object_path_lto -Xlinker /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/cmTC_11daf_lto.o -Xlinker -no_deduplicate -v -Wl,-v -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/cmTC_11daf_dependency_info.dat -o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug/cmTC_11daf
+        Apple clang version 14.0.3 (clang-1403.0.22.14.1)
+        Target: x86_64-apple-macos13.3
+        Thread model: posix
+        InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 13.3.0 13.3 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug/cmTC_11daf -L/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/EagerLinkingTBDs/Debug -L/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug -reproducible -filelist /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/cmTC_11daf.LinkFileList -object_path_lto /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/cmTC_11daf_lto.o -no_deduplicate -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/cmTC_11daf_dependency_info.dat -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/EagerLinkingTBDs/Debug -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug
+        @(#)PROGRAM:ld  PROJECT:ld64-857.1
+        BUILD 23:13:24 May  7 2023
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+        Library search paths:
+        	/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/EagerLinkingTBDs/Debug
+        	/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug
+        	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib
+        Framework search paths:
+        	/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/EagerLinkingTBDs/Debug
+        	/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug
+        	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/
+        
+        RegisterExecutionPolicyException /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug/cmTC_11daf (in target 'cmTC_11daf' from project 'CMAKE_TRY_COMPILE')
+            cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF
+            builtin-RegisterExecutionPolicyException /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug/cmTC_11daf
+        
+        ** BUILD SUCCEEDED **
+        
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1]
+          add: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include]
+          add: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include]
+          add: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        end of search list found
+        collapse include dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1]
+        collapse include dir [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include]
+        collapse include dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include]
+        collapse include dir [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        implicit include dirs: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_11daf -parallelizeTargets -configuration Debug -hideShellScriptEnvironment]
+        ignore line: [2023-10-28 16:36:37.609 xcodebuild[30129:1349666] DVTCoreDeviceEnabledState: DVTCoreDeviceEnabledState_Disabled set via user default (DVTEnableCoreDevice=disabled)]
+        ignore line: [Command line invocation:]
+        ignore line: [    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_11daf -parallelizeTargets -configuration Debug -hideShellScriptEnvironment]
+        ignore line: []
+        ignore line: [User defaults from command line:]
+        ignore line: [    HideShellScriptEnvironment = YES]
+        ignore line: [    IDEPackageSupportUseBuiltinSCM = YES]
+        ignore line: []
+        ignore line: [Computing target dependency graph and provisioning inputs]
+        ignore line: []
+        ignore line: [Create build description]
+        ignore line: [Build description signature: 66625f8073a3fa36d65d0a2c93ce89b5]
+        ignore line: [Build description path: /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/XCBuildData/66625f8073a3fa36d65d0a2c93ce89b5.xcbuilddata]
+        ignore line: []
+        ignore line: [note: Building targets in dependency order]
+        ignore line: [CreateBuildDirectory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build]
+        ignore line: [    cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/CMAKE_TRY_COMPILE.xcodeproj]
+        ignore line: [    builtin-create-build-directory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build]
+        ignore line: []
+        ignore line: [CreateBuildDirectory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug]
+        ignore line: [    cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/CMAKE_TRY_COMPILE.xcodeproj]
+        ignore line: [    builtin-create-build-directory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug]
+        ignore line: []
+        ignore line: [ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk /var/folders/pr/qvrw9qhn1xx23jv83y8x0x200000gn/C/com.apple.DeveloperTools/14.3.1-14E300c/Xcode/SDKStatCaches.noindex/macosx13.3-22E245-.sdkstatcache]
+        ignore line: [    cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/CMAKE_TRY_COMPILE.xcodeproj]
+        ignore line: [    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o /var/folders/pr/qvrw9qhn1xx23jv83y8x0x200000gn/C/com.apple.DeveloperTools/14.3.1-14E300c/Xcode/SDKStatCaches.noindex/macosx13.3-22E245-.sdkstatcache]
+        ignore line: []
+        ignore line: [CreateBuildDirectory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/EagerLinkingTBDs/Debug]
+        ignore line: [    cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/CMAKE_TRY_COMPILE.xcodeproj]
+        ignore line: [    builtin-create-build-directory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/EagerLinkingTBDs/Debug]
+        ignore line: []
+        ignore line: [WriteAuxiliaryFile /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/cmTC_11daf.LinkFileList (in target 'cmTC_11daf' from project 'CMAKE_TRY_COMPILE')]
+        ignore line: [    cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF]
+        ignore line: [    write-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/cmTC_11daf.LinkFileList]
+        ignore line: []
+        ignore line: [CompileC /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/CMakeCXXCompilerABI.o /usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeCXXCompilerABI.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'cmTC_11daf' from project 'CMAKE_TRY_COMPILE')]
+        ignore line: [    cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF]
+        ignore line: [    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -ivfsstatcache /var/folders/pr/qvrw9qhn1xx23jv83y8x0x200000gn/C/com.apple.DeveloperTools/14.3.1-14E300c/Xcode/SDKStatCaches.noindex/macosx13.3-22E245-.sdkstatcache -target x86_64-apple-macos13.3 -fmessage-length\\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\\=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -DCMAKE_INTDIR\\=\\"Debug\\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug/include -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/DerivedSources-normal/x86_64 -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/DerivedSources/x86_64 -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/DerivedSources -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug -v -Wl -v -MMD -MT dependencies -MF /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/CMakeCXXCompilerABI.d --serialize-diagnostics /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/CMakeCXXCompilerABI.dia -c /usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeCXXCompilerABI.cpp -o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/CMakeCXXCompilerABI.o]
+        ignore line: [Apple clang version 14.0.3 (clang-1403.0.22.14.1)]
+        ignore line: [Target: x86_64-apple-macos13.3]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+        ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx13.3.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=2 -target-sdk-version=13.3 -fvisibility-inlines-hidden-static-local-var -target-cpu penryn -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debug-info-kind=standalone -dwarf-version=4 -debugger-tuning=lldb -target-linker-version 857.1 -v -fcoverage-compilation-dir=/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3 -dependency-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/CMakeCXXCompilerABI.d -skip-unused-modulemap-deps -MT dependencies -ivfsstatcache /var/folders/pr/qvrw9qhn1xx23jv83y8x0x200000gn/C/com.apple.DeveloperTools/14.3.1-14E300c/Xcode/SDKStatCaches.noindex/macosx13.3-22E245-.sdkstatcache -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -D "CMAKE_INTDIR=\\"Debug\\"" -I /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug/include -I /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/DerivedSources-normal/x86_64 -I /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/DerivedSources/x86_64 -I /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/DerivedSources -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug -stdlib=libc++ -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -O0 -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -Wdeprecated-declarations -Winvalid-offsetof -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -fdebug-compilation-dir=/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF -ferror-limit 19 -fmacro-backtrace-limit 0 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -no-opaque-pointers -fcxx-exceptions -fexceptions -fpascal-strings -fmax-type-align=16 -fcommon -fdiagnostics-show-note-include-stack -fasm-blocks -serialize-diagnostic-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/CMakeCXXCompilerABI.dia -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/CMakeCXXCompilerABI.o -x c++ /usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang -cc1 version 14.0.3 (clang-1403.0.22.14.1) default target x86_64-apple-darwin22.6.0]
+        ignore line: [ignoring nonexistent directory "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug/include"]
+        ignore line: [ignoring nonexistent directory "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/DerivedSources-normal/x86_64"]
+        ignore line: [ignoring nonexistent directory "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/DerivedSources/x86_64"]
+        ignore line: [ignoring nonexistent directory "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/DerivedSources"]
+        ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/Library/Frameworks"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug (framework directory)]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks (framework directory)]
+        ignore line: [End of search list.]
+        ignore line: []
+        ignore line: [Ld /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug/cmTC_11daf normal (in target 'cmTC_11daf' from project 'CMAKE_TRY_COMPILE')]
+        ignore line: [    cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF]
+        ignore line: [    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -Xlinker -reproducible -target x86_64-apple-macos13.3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -L/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/EagerLinkingTBDs/Debug -L/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/EagerLinkingTBDs/Debug -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug -filelist /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/cmTC_11daf.LinkFileList -Xlinker -object_path_lto -Xlinker /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/cmTC_11daf_lto.o -Xlinker -no_deduplicate -v -Wl -v -Wl -search_paths_first -Wl -headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/cmTC_11daf_dependency_info.dat -o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug/cmTC_11daf]
+        ignore line: [Apple clang version 14.0.3 (clang-1403.0.22.14.1)]
+        ignore line: [Target: x86_64-apple-macos13.3]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+        reduced line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 13.3.0 13.3 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug/cmTC_11daf -L/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/EagerLinkingTBDs/Debug -L/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug -reproducible -filelist /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/cmTC_11daf.LinkFileList -object_path_lto /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/cmTC_11daf_lto.o -no_deduplicate -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/cmTC_11daf_dependency_info.dat -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/EagerLinkingTBDs/Debug -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug]
+                  to: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 13.3.0 13.3 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug/cmTC_11daf -L/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug -reproducible -filelist /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/cmTC_11daf.LinkFileList -object_path_lto /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/cmTC_11daf_lto.o -no_deduplicate -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/cmTC_11daf_dependency_info.dat -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug]
+        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 13.3.0 13.3 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug/cmTC_11daf -L/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug -reproducible -filelist /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/cmTC_11daf.LinkFileList -object_path_lto /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/cmTC_11daf_lto.o -no_deduplicate -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/cmTC_11daf_dependency_info.dat -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug]
+          arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib] ==> skip value of -lto_library
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [x86_64] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [13.3.0] ==> ignore
+          arg [13.3] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk] ==> ignore
+          arg [-o] ==> ignore
+          arg [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug/cmTC_11daf] ==> ignore
+          arg [-L/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug] ==> dir [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug]
+          arg [-reproducible] ==> ignore
+          arg [-filelist] ==> ignore
+          arg [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/cmTC_11daf.LinkFileList] ==> ignore
+          arg [-object_path_lto] ==> ignore
+          arg [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/cmTC_11daf_lto.o] ==> obj [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/cmTC_11daf_lto.o]
+          arg [-no_deduplicate] ==> ignore
+          arg [-v] ==> ignore
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-dependency_info] ==> ignore
+          arg [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/cmTC_11daf_dependency_info.dat] ==> ignore
+          arg [-lc++] ==> lib [c++]
+          arg [-lSystem] ==> lib [System]
+          arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a]
+          arg [-F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug] ==> ignore
+        Library search paths: [;/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/EagerLinkingTBDs/Debug;/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib]
+        Framework search paths: [;/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/EagerLinkingTBDs/Debug;/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/]
+        remove lib [System]
+        remove lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a]
+        collapse library dir [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug] ==> [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug], skipping non-system directory
+        collapse library dir [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/EagerLinkingTBDs/Debug] ==> [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/EagerLinkingTBDs/Debug], skipping non-system directory
+        collapse library dir [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug] ==> [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug], skipping non-system directory
+        collapse library dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib]
+        collapse framework dir [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/EagerLinkingTBDs/Debug] ==> [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/EagerLinkingTBDs/Debug], skipping non-system directory
+        collapse framework dir [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug] ==> [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/Debug], skipping non-system directory
+        collapse framework dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks]
+        implicit libs: [c++]
+        implicit objs: [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-THKHWF/build/cmTC_11daf.build/Debug/Objects-normal/x86_64/cmTC_11daf_lto.o]
+        implicit dirs: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib]
+        implicit fwks: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks]
+      
+      
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "extern/googletest/CMakeLists.txt:6 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      2023-10-28 16:47:31.054 xcodebuild[30336:1354601] DVTCoreDeviceEnabledState: DVTCoreDeviceEnabledState_Disabled set via user default (DVTEnableCoreDevice=disabled)
+      Command line invocation:
+          /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild
+      
+      User defaults from command line:
+          IDEPackageSupportUseBuiltinSCM = YES
+      
+      Computing target dependency graph and provisioning inputs
+      
+      Create build description
+      Build description signature: 224b452455d9875ef1273029d0989de5
+      Build description path: /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/./XCBuildData/224b452455d9875ef1273029d0989de5.xcbuilddata
+      
+      warning: Building targets in manual order is deprecated - check "Parallelize build for command-line builds" in the project editor, or set DISABLE_MANUAL_TARGET_ORDER_BUILD_WARNING in any of the targets in the current build to suppress this warning
+      CreateBuildDirectory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.xcodeproj
+          builtin-create-build-directory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC
+      
+      ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk /var/folders/pr/qvrw9qhn1xx23jv83y8x0x200000gn/C/com.apple.DeveloperTools/14.3.1-14E300c/Xcode/SDKStatCaches.noindex/macosx13.3-22E245-.sdkstatcache
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.xcodeproj
+          /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o /var/folders/pr/qvrw9qhn1xx23jv83y8x0x200000gn/C/com.apple.DeveloperTools/14.3.1-14E300c/Xcode/SDKStatCaches.noindex/macosx13.3-22E245-.sdkstatcache
+      
+      CreateBuildDirectory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/EagerLinkingTBDs/Debug
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.xcodeproj
+          builtin-create-build-directory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/EagerLinkingTBDs/Debug
+      
+      WriteAuxiliaryFile /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/DerivedSources/Entitlements.plist (in target 'CompilerIdC' from project 'CompilerIdC')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC
+          write-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/DerivedSources/Entitlements.plist
+      
+      ProcessProductPackaging "" /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC.xcent (in target 'CompilerIdC' from project 'CompilerIdC')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC
+          
+          Entitlements:
+          
+          {
+          "com.apple.application-identifier" = "";
+          "com.apple.security.get-task-allow" = 1;
+      }
+          
+          builtin-productPackagingUtility -entitlements -format xml -o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC.xcent
+      
+      ProcessProductPackagingDER /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC.xcent /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC.xcent.der (in target 'CompilerIdC' from project 'CompilerIdC')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC
+          /usr/bin/derq query -f xml -i /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC.xcent -o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC.xcent.der --raw
+      
+      WriteAuxiliaryFile /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-project-headers.hmap (in target 'CompilerIdC' from project 'CompilerIdC')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC
+          write-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-project-headers.hmap
+      
+      WriteAuxiliaryFile /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-generated-files.hmap (in target 'CompilerIdC' from project 'CompilerIdC')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC
+          write-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-generated-files.hmap
+      
+      WriteAuxiliaryFile /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC.hmap (in target 'CompilerIdC' from project 'CompilerIdC')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC
+          write-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC.hmap
+      
+      WriteAuxiliaryFile /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-own-target-headers.hmap (in target 'CompilerIdC' from project 'CompilerIdC')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC
+          write-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-own-target-headers.hmap
+      
+      WriteAuxiliaryFile /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/all-product-headers.yaml (in target 'CompilerIdC' from project 'CompilerIdC')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC
+          write-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/all-product-headers.yaml
+      
+      WriteAuxiliaryFile /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-all-non-framework-target-headers.hmap (in target 'CompilerIdC' from project 'CompilerIdC')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC
+          write-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-all-non-framework-target-headers.hmap
+      
+      WriteAuxiliaryFile /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-all-target-headers.hmap (in target 'CompilerIdC' from project 'CompilerIdC')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC
+          write-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-all-target-headers.hmap
+      
+      WriteAuxiliaryFile /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/x86_64/CompilerIdC.LinkFileList (in target 'CompilerIdC' from project 'CompilerIdC')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC
+          write-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/x86_64/CompilerIdC.LinkFileList
+      
+      CompileC /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/x86_64/CMakeCCompilerId.o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CMakeCCompilerId.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'CompilerIdC' from project 'CompilerIdC')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC
+          /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -ivfsstatcache /var/folders/pr/qvrw9qhn1xx23jv83y8x0x200000gn/C/com.apple.DeveloperTools/14.3.1-14E300c/Xcode/SDKStatCaches.noindex/macosx13.3-22E245-.sdkstatcache -target x86_64-apple-macos13.3 -fmessage-length\\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\\=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-implicit-fallthrough -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -g -fvisibility\\=hidden -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -iquote /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-generated-files.hmap -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-own-target-headers.hmap -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-all-target-headers.hmap -iquote /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-project-headers.hmap -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/include -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/DerivedSources-normal/x86_64 -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/DerivedSources/x86_64 -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/DerivedSources -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC -MMD -MT dependencies -MF /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/x86_64/CMakeCCompilerId.d --serialize-diagnostics /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/x86_64/CMakeCCompilerId.dia -c /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CMakeCCompilerId.c -o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/x86_64/CMakeCCompilerId.o
+      
+      Ld /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC normal (in target 'CompilerIdC' from project 'CompilerIdC')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC
+          /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target x86_64-apple-macos13.3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -L/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/EagerLinkingTBDs/Debug -L/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/EagerLinkingTBDs/Debug -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC -filelist /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/x86_64/CompilerIdC.LinkFileList -Xlinker -object_path_lto -Xlinker /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/x86_64/CompilerIdC_lto.o -Xlinker -no_adhoc_codesign -Xlinker -dependency_info -Xlinker /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/x86_64/CompilerIdC_dependency_info.dat -o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC
+      
+      WriteAuxiliaryFile /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh (in target 'CompilerIdC' from project 'CompilerIdC')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC
+          write-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh
+      
+      PhaseScriptExecution Run\\ Script /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh (in target 'CompilerIdC' from project 'CompilerIdC')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC
+          /bin/sh -c /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh
+      GCC_VERSION=com.apple.compilers.llvm.clang.1_0
+      ARCHS=x86_64
+      
+      CodeSign /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC (in target 'CompilerIdC' from project 'CompilerIdC')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC
+          
+          Signing Identity:     "-"
+          
+          /usr/bin/codesign --force --sign - --entitlements /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC.xcent --timestamp\\=none --generate-entitlement-der /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC
+      
+      RegisterExecutionPolicyException /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC (in target 'CompilerIdC' from project 'CompilerIdC')
+          cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC
+          builtin-RegisterExecutionPolicyException /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC
+      
+      warning: Traditional headermap style is no longer supported; please migrate to using separate headermaps and set 'ALWAYS_SEARCH_USER_PATHS' to NO. (in target 'CompilerIdC' from project 'CompilerIdC')
+      note: Run script build phase 'Run Script' will be run during every build because the option to run the script phase "Based on dependency analysis" is unchecked. (in target 'CompilerIdC' from project 'CompilerIdC')
+      ** BUILD SUCCEEDED **
+      
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC"
+      
+      The C compiler identification is AppleClang, found in:
+        /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "extern/googletest/CMakeLists.txt:6 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv"
+      binary: "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv'
+        
+        Run Build Command(s): /usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_46d0c -parallelizeTargets -configuration Debug -hideShellScriptEnvironment
+        2023-10-28 16:47:33.056 xcodebuild[30384:1354881] DVTCoreDeviceEnabledState: DVTCoreDeviceEnabledState_Disabled set via user default (DVTEnableCoreDevice=disabled)
+        Command line invocation:
+            /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_46d0c -parallelizeTargets -configuration Debug -hideShellScriptEnvironment
+        
+        User defaults from command line:
+            HideShellScriptEnvironment = YES
+            IDEPackageSupportUseBuiltinSCM = YES
+        
+        Computing target dependency graph and provisioning inputs
+        
+        Create build description
+        Build description signature: 2367d2ccf8613770ac3d5457fe8645b1
+        Build description path: /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/XCBuildData/2367d2ccf8613770ac3d5457fe8645b1.xcbuilddata
+        
+        note: Building targets in dependency order
+        CreateBuildDirectory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build
+            cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/CMAKE_TRY_COMPILE.xcodeproj
+            builtin-create-build-directory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build
+        
+        CreateBuildDirectory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug
+            cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/CMAKE_TRY_COMPILE.xcodeproj
+            builtin-create-build-directory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug
+        
+        ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk /var/folders/pr/qvrw9qhn1xx23jv83y8x0x200000gn/C/com.apple.DeveloperTools/14.3.1-14E300c/Xcode/SDKStatCaches.noindex/macosx13.3-22E245-.sdkstatcache
+            cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/CMAKE_TRY_COMPILE.xcodeproj
+            /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o /var/folders/pr/qvrw9qhn1xx23jv83y8x0x200000gn/C/com.apple.DeveloperTools/14.3.1-14E300c/Xcode/SDKStatCaches.noindex/macosx13.3-22E245-.sdkstatcache
+        
+        CreateBuildDirectory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/EagerLinkingTBDs/Debug
+            cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/CMAKE_TRY_COMPILE.xcodeproj
+            builtin-create-build-directory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/EagerLinkingTBDs/Debug
+        
+        WriteAuxiliaryFile /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/cmTC_46d0c.LinkFileList (in target 'cmTC_46d0c' from project 'CMAKE_TRY_COMPILE')
+            cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv
+            write-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/cmTC_46d0c.LinkFileList
+        
+        CompileC /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/CMakeCCompilerABI.o /usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeCCompilerABI.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'cmTC_46d0c' from project 'CMAKE_TRY_COMPILE')
+            cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv
+            /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -ivfsstatcache /var/folders/pr/qvrw9qhn1xx23jv83y8x0x200000gn/C/com.apple.DeveloperTools/14.3.1-14E300c/Xcode/SDKStatCaches.noindex/macosx13.3-22E245-.sdkstatcache -target x86_64-apple-macos13.3 -fmessage-length\\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\\=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-implicit-fallthrough -DCMAKE_INTDIR\\=\\"Debug\\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug/include -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/DerivedSources-normal/x86_64 -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/DerivedSources/x86_64 -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/DerivedSources -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug -v -Wl,-v -MMD -MT dependencies -MF /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/CMakeCCompilerABI.d --serialize-diagnostics /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/CMakeCCompilerABI.dia -c /usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeCCompilerABI.c -o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/CMakeCCompilerABI.o
+        Apple clang version 14.0.3 (clang-1403.0.22.14.1)
+        Target: x86_64-apple-macos13.3
+        Thread model: posix
+        InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+        clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx13.3.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=2 -target-sdk-version=13.3 -fvisibility-inlines-hidden-static-local-var -target-cpu penryn -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debug-info-kind=standalone -dwarf-version=4 -debugger-tuning=lldb -target-linker-version 857.1 -v -fcoverage-compilation-dir=/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3 -dependency-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/CMakeCCompilerABI.d -skip-unused-modulemap-deps -MT dependencies -ivfsstatcache /var/folders/pr/qvrw9qhn1xx23jv83y8x0x200000gn/C/com.apple.DeveloperTools/14.3.1-14E300c/Xcode/SDKStatCaches.noindex/macosx13.3-22E245-.sdkstatcache -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -D "CMAKE_INTDIR=\\"Debug\\"" -I /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug/include -I /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/DerivedSources-normal/x86_64 -I /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/DerivedSources/x86_64 -I /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/DerivedSources -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -O0 -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-implicit-fallthrough -Wdeprecated-declarations -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdebug-compilation-dir=/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv -ferror-limit 19 -fmacro-backtrace-limit 0 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -no-opaque-pointers -fpascal-strings -fmax-type-align=16 -fcommon -fdiagnostics-show-note-include-stack -fasm-blocks -serialize-diagnostic-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/CMakeCCompilerABI.dia -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/CMakeCCompilerABI.o -x c /usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeCCompilerABI.c
+        clang -cc1 version 14.0.3 (clang-1403.0.22.14.1) default target x86_64-apple-darwin22.6.0
+        ignoring nonexistent directory "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug/include"
+        ignoring nonexistent directory "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/DerivedSources-normal/x86_64"
+        ignoring nonexistent directory "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/DerivedSources/x86_64"
+        ignoring nonexistent directory "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/DerivedSources"
+        ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/local/include"
+        ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/Library/Frameworks"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug (framework directory)
+         /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include
+         /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include
+         /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
+         /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks (framework directory)
+        End of search list.
+        
+        Ld /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug/cmTC_46d0c normal (in target 'cmTC_46d0c' from project 'CMAKE_TRY_COMPILE')
+            cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv
+            /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target x86_64-apple-macos13.3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -L/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/EagerLinkingTBDs/Debug -L/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/EagerLinkingTBDs/Debug -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug -filelist /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/cmTC_46d0c.LinkFileList -Xlinker -object_path_lto -Xlinker /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/cmTC_46d0c_lto.o -Xlinker -no_deduplicate -v -Wl,-v -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/cmTC_46d0c_dependency_info.dat -o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug/cmTC_46d0c
+        Apple clang version 14.0.3 (clang-1403.0.22.14.1)
+        Target: x86_64-apple-macos13.3
+        Thread model: posix
+        InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 13.3.0 13.3 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug/cmTC_46d0c -L/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/EagerLinkingTBDs/Debug -L/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug -reproducible -filelist /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/cmTC_46d0c.LinkFileList -object_path_lto /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/cmTC_46d0c_lto.o -no_deduplicate -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/cmTC_46d0c_dependency_info.dat -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/EagerLinkingTBDs/Debug -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug
+        @(#)PROGRAM:ld  PROJECT:ld64-857.1
+        BUILD 23:13:24 May  7 2023
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+        Library search paths:
+        	/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/EagerLinkingTBDs/Debug
+        	/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug
+        	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib
+        Framework search paths:
+        	/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/EagerLinkingTBDs/Debug
+        	/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug
+        	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/
+        
+        RegisterExecutionPolicyException /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug/cmTC_46d0c (in target 'cmTC_46d0c' from project 'CMAKE_TRY_COMPILE')
+            cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv
+            builtin-RegisterExecutionPolicyException /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug/cmTC_46d0c
+        
+        ** BUILD SUCCEEDED **
+        
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "extern/googletest/CMakeLists.txt:6 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include]
+          add: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include]
+          add: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        end of search list found
+        collapse include dir [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include]
+        collapse include dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include]
+        collapse include dir [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        implicit include dirs: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "extern/googletest/CMakeLists.txt:6 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_46d0c -parallelizeTargets -configuration Debug -hideShellScriptEnvironment]
+        ignore line: [2023-10-28 16:47:33.056 xcodebuild[30384:1354881] DVTCoreDeviceEnabledState: DVTCoreDeviceEnabledState_Disabled set via user default (DVTEnableCoreDevice=disabled)]
+        ignore line: [Command line invocation:]
+        ignore line: [    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_46d0c -parallelizeTargets -configuration Debug -hideShellScriptEnvironment]
+        ignore line: []
+        ignore line: [User defaults from command line:]
+        ignore line: [    HideShellScriptEnvironment = YES]
+        ignore line: [    IDEPackageSupportUseBuiltinSCM = YES]
+        ignore line: []
+        ignore line: [Computing target dependency graph and provisioning inputs]
+        ignore line: []
+        ignore line: [Create build description]
+        ignore line: [Build description signature: 2367d2ccf8613770ac3d5457fe8645b1]
+        ignore line: [Build description path: /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/XCBuildData/2367d2ccf8613770ac3d5457fe8645b1.xcbuilddata]
+        ignore line: []
+        ignore line: [note: Building targets in dependency order]
+        ignore line: [CreateBuildDirectory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build]
+        ignore line: [    cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/CMAKE_TRY_COMPILE.xcodeproj]
+        ignore line: [    builtin-create-build-directory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build]
+        ignore line: []
+        ignore line: [CreateBuildDirectory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug]
+        ignore line: [    cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/CMAKE_TRY_COMPILE.xcodeproj]
+        ignore line: [    builtin-create-build-directory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug]
+        ignore line: []
+        ignore line: [ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk /var/folders/pr/qvrw9qhn1xx23jv83y8x0x200000gn/C/com.apple.DeveloperTools/14.3.1-14E300c/Xcode/SDKStatCaches.noindex/macosx13.3-22E245-.sdkstatcache]
+        ignore line: [    cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/CMAKE_TRY_COMPILE.xcodeproj]
+        ignore line: [    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o /var/folders/pr/qvrw9qhn1xx23jv83y8x0x200000gn/C/com.apple.DeveloperTools/14.3.1-14E300c/Xcode/SDKStatCaches.noindex/macosx13.3-22E245-.sdkstatcache]
+        ignore line: []
+        ignore line: [CreateBuildDirectory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/EagerLinkingTBDs/Debug]
+        ignore line: [    cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/CMAKE_TRY_COMPILE.xcodeproj]
+        ignore line: [    builtin-create-build-directory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/EagerLinkingTBDs/Debug]
+        ignore line: []
+        ignore line: [WriteAuxiliaryFile /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/cmTC_46d0c.LinkFileList (in target 'cmTC_46d0c' from project 'CMAKE_TRY_COMPILE')]
+        ignore line: [    cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv]
+        ignore line: [    write-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/cmTC_46d0c.LinkFileList]
+        ignore line: []
+        ignore line: [CompileC /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/CMakeCCompilerABI.o /usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeCCompilerABI.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'cmTC_46d0c' from project 'CMAKE_TRY_COMPILE')]
+        ignore line: [    cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv]
+        ignore line: [    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -ivfsstatcache /var/folders/pr/qvrw9qhn1xx23jv83y8x0x200000gn/C/com.apple.DeveloperTools/14.3.1-14E300c/Xcode/SDKStatCaches.noindex/macosx13.3-22E245-.sdkstatcache -target x86_64-apple-macos13.3 -fmessage-length\\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\\=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-implicit-fallthrough -DCMAKE_INTDIR\\=\\"Debug\\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug/include -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/DerivedSources-normal/x86_64 -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/DerivedSources/x86_64 -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/DerivedSources -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug -v -Wl -v -MMD -MT dependencies -MF /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/CMakeCCompilerABI.d --serialize-diagnostics /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/CMakeCCompilerABI.dia -c /usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeCCompilerABI.c -o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/CMakeCCompilerABI.o]
+        ignore line: [Apple clang version 14.0.3 (clang-1403.0.22.14.1)]
+        ignore line: [Target: x86_64-apple-macos13.3]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+        ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx13.3.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=2 -target-sdk-version=13.3 -fvisibility-inlines-hidden-static-local-var -target-cpu penryn -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debug-info-kind=standalone -dwarf-version=4 -debugger-tuning=lldb -target-linker-version 857.1 -v -fcoverage-compilation-dir=/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3 -dependency-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/CMakeCCompilerABI.d -skip-unused-modulemap-deps -MT dependencies -ivfsstatcache /var/folders/pr/qvrw9qhn1xx23jv83y8x0x200000gn/C/com.apple.DeveloperTools/14.3.1-14E300c/Xcode/SDKStatCaches.noindex/macosx13.3-22E245-.sdkstatcache -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -D "CMAKE_INTDIR=\\"Debug\\"" -I /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug/include -I /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/DerivedSources-normal/x86_64 -I /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/DerivedSources/x86_64 -I /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/DerivedSources -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -O0 -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-implicit-fallthrough -Wdeprecated-declarations -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdebug-compilation-dir=/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv -ferror-limit 19 -fmacro-backtrace-limit 0 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -no-opaque-pointers -fpascal-strings -fmax-type-align=16 -fcommon -fdiagnostics-show-note-include-stack -fasm-blocks -serialize-diagnostic-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/CMakeCCompilerABI.dia -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/CMakeCCompilerABI.o -x c /usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [clang -cc1 version 14.0.3 (clang-1403.0.22.14.1) default target x86_64-apple-darwin22.6.0]
+        ignore line: [ignoring nonexistent directory "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug/include"]
+        ignore line: [ignoring nonexistent directory "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/DerivedSources-normal/x86_64"]
+        ignore line: [ignoring nonexistent directory "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/DerivedSources/x86_64"]
+        ignore line: [ignoring nonexistent directory "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/DerivedSources"]
+        ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/Library/Frameworks"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug (framework directory)]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks (framework directory)]
+        ignore line: [End of search list.]
+        ignore line: []
+        ignore line: [Ld /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug/cmTC_46d0c normal (in target 'cmTC_46d0c' from project 'CMAKE_TRY_COMPILE')]
+        ignore line: [    cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv]
+        ignore line: [    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target x86_64-apple-macos13.3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -L/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/EagerLinkingTBDs/Debug -L/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/EagerLinkingTBDs/Debug -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug -filelist /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/cmTC_46d0c.LinkFileList -Xlinker -object_path_lto -Xlinker /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/cmTC_46d0c_lto.o -Xlinker -no_deduplicate -v -Wl -v -Wl -search_paths_first -Wl -headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/cmTC_46d0c_dependency_info.dat -o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug/cmTC_46d0c]
+        ignore line: [Apple clang version 14.0.3 (clang-1403.0.22.14.1)]
+        ignore line: [Target: x86_64-apple-macos13.3]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+        reduced line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 13.3.0 13.3 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug/cmTC_46d0c -L/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/EagerLinkingTBDs/Debug -L/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug -reproducible -filelist /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/cmTC_46d0c.LinkFileList -object_path_lto /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/cmTC_46d0c_lto.o -no_deduplicate -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/cmTC_46d0c_dependency_info.dat -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/EagerLinkingTBDs/Debug -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug]
+                  to: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 13.3.0 13.3 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug/cmTC_46d0c -L/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug -reproducible -filelist /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/cmTC_46d0c.LinkFileList -object_path_lto /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/cmTC_46d0c_lto.o -no_deduplicate -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/cmTC_46d0c_dependency_info.dat -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug]
+        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 13.3.0 13.3 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug/cmTC_46d0c -L/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug -reproducible -filelist /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/cmTC_46d0c.LinkFileList -object_path_lto /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/cmTC_46d0c_lto.o -no_deduplicate -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/cmTC_46d0c_dependency_info.dat -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug]
+          arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib] ==> skip value of -lto_library
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [x86_64] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [13.3.0] ==> ignore
+          arg [13.3] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk] ==> ignore
+          arg [-o] ==> ignore
+          arg [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug/cmTC_46d0c] ==> ignore
+          arg [-L/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug] ==> dir [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug]
+          arg [-reproducible] ==> ignore
+          arg [-filelist] ==> ignore
+          arg [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/cmTC_46d0c.LinkFileList] ==> ignore
+          arg [-object_path_lto] ==> ignore
+          arg [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/cmTC_46d0c_lto.o] ==> obj [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/cmTC_46d0c_lto.o]
+          arg [-no_deduplicate] ==> ignore
+          arg [-v] ==> ignore
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-dependency_info] ==> ignore
+          arg [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/cmTC_46d0c_dependency_info.dat] ==> ignore
+          arg [-lSystem] ==> lib [System]
+          arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a]
+          arg [-F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug] ==> ignore
+        Library search paths: [;/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/EagerLinkingTBDs/Debug;/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib]
+        Framework search paths: [;/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/EagerLinkingTBDs/Debug;/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/]
+        remove lib [System]
+        remove lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a]
+        collapse library dir [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug] ==> [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug], skipping non-system directory
+        collapse library dir [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/EagerLinkingTBDs/Debug] ==> [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/EagerLinkingTBDs/Debug], skipping non-system directory
+        collapse library dir [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug] ==> [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug], skipping non-system directory
+        collapse library dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib]
+        collapse framework dir [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/EagerLinkingTBDs/Debug] ==> [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/EagerLinkingTBDs/Debug], skipping non-system directory
+        collapse framework dir [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug] ==> [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/Debug], skipping non-system directory
+        collapse framework dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks]
+        implicit libs: []
+        implicit objs: [/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-Z6kGRv/build/cmTC_46d0c.build/Debug/Objects-normal/x86_64/cmTC_46d0c_lto.o]
+        implicit dirs: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib]
+        implicit fwks: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks]
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "extern/googletest/googletest/cmake/internal_utils.cmake:66 (find_package)"
+      - "extern/googletest/googletest/CMakeLists.txt:83 (config_compiler_and_linker)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU"
+      binary: "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU'
+        
+        Run Build Command(s): /usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_eb521 -parallelizeTargets -configuration Debug -hideShellScriptEnvironment
+        2023-10-28 16:47:35.322 xcodebuild[30441:1355205] DVTCoreDeviceEnabledState: DVTCoreDeviceEnabledState_Disabled set via user default (DVTEnableCoreDevice=disabled)
+        Command line invocation:
+            /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_eb521 -parallelizeTargets -configuration Debug -hideShellScriptEnvironment
+        
+        User defaults from command line:
+            HideShellScriptEnvironment = YES
+            IDEPackageSupportUseBuiltinSCM = YES
+        
+        Computing target dependency graph and provisioning inputs
+        
+        Create build description
+        Build description signature: 30f93a6923e48d1d24ddc6ae5ba4246e
+        Build description path: /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/build/XCBuildData/30f93a6923e48d1d24ddc6ae5ba4246e.xcbuilddata
+        
+        note: Building targets in dependency order
+        CreateBuildDirectory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/build
+            cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/CMAKE_TRY_COMPILE.xcodeproj
+            builtin-create-build-directory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/build
+        
+        CreateBuildDirectory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/Debug
+            cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/CMAKE_TRY_COMPILE.xcodeproj
+            builtin-create-build-directory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/Debug
+        
+        ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk /var/folders/pr/qvrw9qhn1xx23jv83y8x0x200000gn/C/com.apple.DeveloperTools/14.3.1-14E300c/Xcode/SDKStatCaches.noindex/macosx13.3-22E245-.sdkstatcache
+            cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/CMAKE_TRY_COMPILE.xcodeproj
+            /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o /var/folders/pr/qvrw9qhn1xx23jv83y8x0x200000gn/C/com.apple.DeveloperTools/14.3.1-14E300c/Xcode/SDKStatCaches.noindex/macosx13.3-22E245-.sdkstatcache
+        
+        CreateBuildDirectory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/build/EagerLinkingTBDs/Debug
+            cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/CMAKE_TRY_COMPILE.xcodeproj
+            builtin-create-build-directory /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/build/EagerLinkingTBDs/Debug
+        
+        WriteAuxiliaryFile /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/build/cmTC_eb521.build/Debug/Objects-normal/x86_64/cmTC_eb521.LinkFileList (in target 'cmTC_eb521' from project 'CMAKE_TRY_COMPILE')
+            cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU
+            write-file /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/build/cmTC_eb521.build/Debug/Objects-normal/x86_64/cmTC_eb521.LinkFileList
+        
+        CompileC /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/build/cmTC_eb521.build/Debug/Objects-normal/x86_64/src.o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/src.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'cmTC_eb521' from project 'CMAKE_TRY_COMPILE')
+            cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU
+            /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -ivfsstatcache /var/folders/pr/qvrw9qhn1xx23jv83y8x0x200000gn/C/com.apple.DeveloperTools/14.3.1-14E300c/Xcode/SDKStatCaches.noindex/macosx13.3-22E245-.sdkstatcache -target x86_64-apple-macos13.3 -fmessage-length\\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\\=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-implicit-fallthrough -DCMAKE_INTDIR\\=\\"Debug\\" -DCMAKE_HAVE_LIBC_PTHREAD -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/Debug/include -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/build/cmTC_eb521.build/Debug/DerivedSources-normal/x86_64 -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/build/cmTC_eb521.build/Debug/DerivedSources/x86_64 -I/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/build/cmTC_eb521.build/Debug/DerivedSources -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/Debug -MMD -MT dependencies -MF /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/build/cmTC_eb521.build/Debug/Objects-normal/x86_64/src.d --serialize-diagnostics /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/build/cmTC_eb521.build/Debug/Objects-normal/x86_64/src.dia -c /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/src.c -o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/build/cmTC_eb521.build/Debug/Objects-normal/x86_64/src.o
+        
+        Ld /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/Debug/cmTC_eb521 normal (in target 'cmTC_eb521' from project 'CMAKE_TRY_COMPILE')
+            cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU
+            /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target x86_64-apple-macos13.3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -L/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/build/EagerLinkingTBDs/Debug -L/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/Debug -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/build/EagerLinkingTBDs/Debug -F/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/Debug -filelist /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/build/cmTC_eb521.build/Debug/Objects-normal/x86_64/cmTC_eb521.LinkFileList -Xlinker -object_path_lto -Xlinker /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/build/cmTC_eb521.build/Debug/Objects-normal/x86_64/cmTC_eb521_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/build/cmTC_eb521.build/Debug/Objects-normal/x86_64/cmTC_eb521_dependency_info.dat -o /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/Debug/cmTC_eb521
+        
+        RegisterExecutionPolicyException /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/Debug/cmTC_eb521 (in target 'cmTC_eb521' from project 'CMAKE_TRY_COMPILE')
+            cd /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU
+            builtin-RegisterExecutionPolicyException /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/CMakeScratch/TryCompile-5imnqU/Debug/cmTC_eb521
+        
+        ** BUILD SUCCEEDED **
+        
+        
+      exitCode: 0
+...

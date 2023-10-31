@@ -47,7 +47,7 @@ namespace blink2dgui
         Uint32 currentTick;
         Uint32 lag = 0;
 
-        bool skip;
+        bool skip = false;
     };
 }
 

@@ -22,8 +22,8 @@ void GameGui::setGrid(int gridSize)
     squareGui_ = SquareGui(gridSize);
     snakeModel_ = SnakeModel(gridSize, gridSize);
     snakeModel_.listeners.push_back(this);
-    skip = true;
-    snakeModel_.start();
+    //skip = true;
+    //snakeModel_.start();
     previousTick = SDL_GetTicks();
 }
 
@@ -54,7 +54,8 @@ void GameGui::render() {
 
     if (snakeModel_.snake.size() > 0)
         squareGui_.updateShapeMovement(snakeModel_.snake.front(), (float)lag/(float)gameSpeed_);
-        squareGui_.updateShapeMovement(snakeModel_.snake.back(), (float)lag/(float)gameSpeed_);
+        if (snakeModel_.snake.size() > 1)
+            squareGui_.updateShapeMovement(snakeModel_.snake.back(), (float)lag/(float)gameSpeed_);
 
     if (lag >= gameSpeed_) {
         if (snakeModel_.snake.size() > 0) 
