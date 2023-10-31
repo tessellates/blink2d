@@ -1,7 +1,6 @@
 // main_tests.cpp
 #include <gtest/gtest.h>
 #include <SnakeModel.hpp>
-#include <Command.hpp>
 
 TEST(SnakeModel, Constructor) {
     SnakeModel snakeModel{};
@@ -9,8 +8,7 @@ TEST(SnakeModel, Constructor) {
 
 TEST(SnakeModel, nextStep) {
     SnakeModel snakeModel{8, 8};
-    CompositeStateCommand gameCycle = CompositeStateCommand();
-    snakeModel.nextStep(gameCycle);
+    snakeModel.nextStep();
 }
 
 

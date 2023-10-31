@@ -33,9 +33,6 @@ namespace blink2dgui
         void setGrid(int gridSize);
 
     private:
-        std::vector<Command*> commandHistory;
-        CompositeStateCommand gameCycle;
-
         SquareGui squareGui_;
         SnakeModel snakeModel_;
         Coordinate oldHead;

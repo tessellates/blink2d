@@ -60,7 +60,7 @@ void GameGui::render() {
     if (lag >= gameSpeed_) {
         if (snakeModel_.snake.size() > 0) 
             oldHead = snakeModel_.snake.front();
-        snakeModel_.nextStep(gameCycle);
+        snakeModel_.nextStep();
         
         lag -= gameSpeed_;
     }

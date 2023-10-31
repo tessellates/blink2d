@@ -1,7 +1,6 @@
 #include "Command.hpp"
-#include "GameState.hpp"
 
-Command* Command::Command(std::function<void> forward, std::function<void> back) foward(foward), back(back) {}
+Command::Command(const std::function<void()>& forward, const std::function<void()>& back) : forward(forward), back(back) {}
 
 void Command::execute() const
 {
@@ -19,7 +18,6 @@ void Cycle::execute() const {
     for(auto it = commands.begin(); it != commands.end(); ++it) {
         (*it).execute();
     }
-    return true; // Assuming the method should return true on successful execution
 }
 
 void Cycle::rewind() const {
