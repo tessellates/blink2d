@@ -17,6 +17,7 @@ public:
     std::vector<int> intProperties = std::vector<int>();
     std::vector<Cycle> gameCycles = std::vector<Cycle>();
     Cycle activeCycle = Cycle();
+    int activeIndex = -1;
 
 
 public:
@@ -56,5 +57,34 @@ public:
         auto remove = Command([cor, ent, this](){this->fireRemoveEntity(cor, ent);}, [cor, ent, this](){this->fireAddEntity(cor, ent);});
         remove.execute();
         activeCycle.addCommand(remove);
+    }
+
+    void saveCycle()
+    {
+        if (gameCycles.size() - 1 > activeIndex)
+        {
+            gameCycles.erase(gameCycles.begin() + activeIndex + 1, gameCycles.end());
+        }
+        gameCycles.push_back(activeCycle);
+        activeCycle = Cycle();
+        activeIndex++;
+    }
+
+    void backward()
+    {
+        if (activeIndex >= 0)
+        {
+            gameCycles[activeIndex].rewind();
+            activeIndex--;
+        }
+    }
+
+    void forward()
+    {
+        if (gameCycles.size() - 1 > activeIndex)
+        {
+            activeIndex++;
+            gameCycles[activeIndex].execute();
+        }
     }
 };

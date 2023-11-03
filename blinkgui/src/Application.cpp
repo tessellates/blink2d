@@ -30,7 +30,7 @@ namespace blink2dgui
         IMGUI_CHECKVERSION();
         ImGui::CreateContext();
         io_ = &ImGui::GetIO();
-        io_->ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
+        //io_->ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
         io_->ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
 
         // Setup Dear ImGui style

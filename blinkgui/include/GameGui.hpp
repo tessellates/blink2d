@@ -14,6 +14,8 @@
 
 #include <SquareGui.hpp>
 #include <SnakeModel.hpp>
+#include "GameState.hpp"
+#include "GameClock.hpp"
 
 namespace blink2dgui
 {
@@ -29,22 +31,21 @@ namespace blink2dgui
         void onRemoveEntity(const Coordinate& pos,  const GridEntity& entity) override;
         void onModelPropertyChange(int, int) override;
 
-        void changeGameSpeed(int gameSpeed);
+        void changeGameSpeed(float gameSpeed);
         void setGrid(int gridSize);
+        void nextStep();
+        void backward();
+        void forward();
 
+        bool play = false;
+
+        GameClock gameClock;
     private:
         SquareGui squareGui_;
         SnakeModel snakeModel_;
         Coordinate oldHead;
         Coordinate tail;
 
-        int gameSpeed_ = 200;
-        Uint32 previousTick;
-        Uint32 elapsed;
-        Uint32 currentTick;
-        Uint32 lag = 0;
-
-        bool skip = false;
     };
 }
 
