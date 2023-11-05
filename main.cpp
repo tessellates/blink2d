@@ -13,6 +13,7 @@
 int main(int, char**)
 {
     blink2dgui::Application& app = *blink2dgui::Application::instance();
+    app.init();
     while (app.isRunning())
     {
         app.loop();

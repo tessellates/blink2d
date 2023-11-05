@@ -1,5 +1,7 @@
 #include <iostream>
-#include <Application.hpp>
+#include "Application.hpp"
+#include "SnakeGui.hpp"
+#include "ConnectGui.hpp"
 #include <cmath>
 
 namespace blink2dgui
@@ -60,6 +62,19 @@ namespace blink2dgui
         clear_color_ = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
     }
 
+    void Application::init(int option)
+    {
+        if (gui_ != nullptr)
+        {
+            delete gui_;
+            gui_ = nullptr;
+        }
+        if (option == 1)
+            gui_ = new SnakeGui();
+        if (option == 2)
+            gui_ = new ConnectGui();
+    }
+
     Application::~Application()
     {
         // Cleanup
@@ -95,7 +110,9 @@ namespace blink2dgui
 
         controllerWindow_.renderWindow();
         shapeSelector_.renderWindow();
-        gui_.render();
+
+        if (gui_ != nullptr)
+            getGui().render();
 
         // Rendering
         ImGui::Render();
@@ -113,6 +130,18 @@ namespace blink2dgui
 
     void Application::changeGameSpeed(int gameSpeed)
     {
-        gui_.changeGameSpeed(gameSpeed);
+        getGui().changeGameSpeed(gameSpeed);
     }
+
+    SDL_Renderer* Application::getRenderer() const 
+    {
+        return renderer_;
+    }
+
+    GameGui& Application::getGui() const 
+    {
+        assert(gui_ != nullptr);
+        return *gui_;
+    }
+
 }

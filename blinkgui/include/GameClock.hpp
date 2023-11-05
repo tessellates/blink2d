@@ -5,6 +5,7 @@ class GameClock {
 public:
     GameClock(float gameSpeed);
     void update(); // Call this once per frame
+    void reset(); 
     float getDeltaTime() const; // Get the time elapsed since last frame in seconds
     float getIntervalTime() const; // Get the time elapsed since last frame in seconds
     float getIntervalProgress() const; // Get the time elapsed since last frame in seconds

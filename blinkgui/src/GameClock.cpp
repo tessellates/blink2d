@@ -12,6 +12,11 @@ GameClock::GameClock(float gameSpeed) : gameSpeed(gameSpeed) {
 void GameClock::setGameSpeed(float gameSpeed)
 {
     this->gameSpeed = gameSpeed;
+    reset();
+}
+
+void GameClock::reset()
+{
     intervalTick = SDL_GetTicks();
 }
 

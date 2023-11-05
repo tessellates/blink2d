@@ -37,23 +37,23 @@ void ControllerWindow::renderWindow()
     // Draw each shape with the hover effect.
     if (drawShapeWithHover(drawSquare, pos - padding * 2, size, baseColor, hoverColor))
     {
-        Application::instance()->gui_.setGrid(8);
+        Application::instance()->getGui().setGrid(8);
     }
     if (drawShapeWithHover(drawLongTriangleLeft, pos - padding, size, baseColor, hoverColor))
     {
-        Application::instance()->gui_.backward();
+        Application::instance()->getGui().backward();
     }
     if (drawShapeWithHover(drawLongTriangleRight, pos , size, baseColor, hoverColor))
     {
-        Application::instance()->gui_.forward();
+        Application::instance()->getGui().forward();
     }
     if (drawShapeWithHover(drawTwoVerticalLines, pos + padding, size, baseColor, hoverColor))
     {
-        Application::instance()->gui_.play = false;
+        Application::instance()->getGui().play = false;
     }
     if (drawShapeWithHover(drawInverseTriangle, pos + padding * 2, size, baseColor, hoverColor))
     {
-        Application::instance()->gui_.play = true;
+        Application::instance()->getGui().play = true;
     }
 
     // End the ImGui window

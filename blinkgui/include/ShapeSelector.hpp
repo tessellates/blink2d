@@ -26,6 +26,7 @@ namespace blink2dgui
     private:
         int gameSpeed = 200; 
         int gridSize = 8; 
+        int selectedItem = 0;
     };
 }
 

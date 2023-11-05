@@ -21,12 +21,12 @@ void SnakeModel::start() {
 
 bool SnakeModel::changeDirection(Direction direction) {
     if (snake.size() <= 1) {
-        intProperties[DIRECTION] = direction;
+        changeProperty(DIRECTION, direction);
         return true;
     }
     auto c = snake.front().getNeighbor(direction);
     if (std::find(snake.cbegin(), snake.cbegin() + 2, c) == snake.cbegin() + 2) {
-        intProperties[DIRECTION] = direction;
+        changeProperty(DIRECTION, direction);
         return true;
     }
     return false;

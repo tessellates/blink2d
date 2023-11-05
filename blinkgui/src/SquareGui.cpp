@@ -1,14 +1,15 @@
 #include <iostream>
-#include <SquareGui.hpp>
-#include <Application.hpp>
-#include <ShapeType.hpp>
+#include "SquareGui.hpp"
+#include "Application.hpp"
+#include "ShapeType.hpp"
+#include "BackgroundTexture.hpp"
 
 namespace blink2dgui
 {
     SquareGui::SquareGui(int gridSize)
     {
         squareSize_ = (float) nPixels_ / (gridSize + 1);
-        window_flags_ = ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse;
+        window_flags_ = ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse;
 
         windowPos_ = ImVec2((1280- nPixels_) * 0.5, (800 - nPixels_) * 0.5);
 
@@ -20,6 +21,8 @@ namespace blink2dgui
         // Centering adjustments
         float startX = squareSize_;
         float startY = squareSize_;
+        texture_id = CreateBackgroundTexture(Application::instance()->getRenderer(), squareSize_,  nPixels_, nPixels_);
+
         for (int y = 0; y < gridHeight_; ++y) 
         {
             for (int x = 0; x < gridWidth_; ++x) 
@@ -43,16 +46,16 @@ namespace blink2dgui
         ImGui::SetNextWindowPos(windowPos_);
 
         ImGui::Begin("Square Grid", nullptr, window_flags_);
+        ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(0, 0));
+        ImGui::Image(texture_id, windowSize);
 
-        ImVec2 mousePos = ImGui::GetMousePos();
-        
         for (size_t i = 0; i < shapes_.size(); ++i) 
         {
             // Translate the local square center to global screen position
             shapes_[i].draw();
             
         }
-        
+
         ImGui::End();
     }
 

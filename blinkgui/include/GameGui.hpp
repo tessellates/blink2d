@@ -12,39 +12,32 @@
 #include <SDL.h>
 #include <vector>
 
-#include <SquareGui.hpp>
-#include <SnakeModel.hpp>
+#include "SquareGui.hpp"
 #include "GameState.hpp"
 #include "GameClock.hpp"
 
 namespace blink2dgui
 {
-    class GameGui : public GameStateListener
+    class GameGui
     {
     public:
         GameGui();    // Constructor
-        ~GameGui();   // Destructor
+        virtual ~GameGui() = default;   // Destructor
 
         void render();
-
-        void onAddEntity(const Coordinate& pos, const GridEntity& entity) override;
-        void onRemoveEntity(const Coordinate& pos,  const GridEntity& entity) override;
-        void onModelPropertyChange(int, int) override;
-
         void changeGameSpeed(float gameSpeed);
-        void setGrid(int gridSize);
-        void nextStep();
+        virtual void setGrid(int gridSize);
+        virtual void gameTick() = 0;
         void backward();
         void forward();
+        virtual void clicked(const Coordinate& clickedPos);
 
         bool play = false;
-
         GameClock gameClock;
-    private:
+        
+    protected:
         SquareGui squareGui_;
-        SnakeModel snakeModel_;
-        Coordinate oldHead;
-        Coordinate tail;
+        GameState* gameState_;
 
     };
 }

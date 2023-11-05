@@ -8,7 +8,7 @@ namespace blink2dgui
     {
         nPixels_ = 720.0f;
         hexRadius_ = 30.0f;
-        window_flags_ = ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse;
+        window_flags_ = ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse;
 
         windowPos_ = ImVec2((1280- nPixels_) * 0.5, (800 - nPixels_) * 0.5);
 

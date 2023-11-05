@@ -40,8 +40,24 @@ namespace blink2dgui
         if (ImGui::Button("Confirm")) {
             // Handle the confirmation action
             // This is where you'd put code to use the selected grid size
-            Application::instance()->gui_.setGrid(gridSize);
+            if (Application::instance()->gui_)
+                Application::instance()->getGui().setGrid(gridSize);
         }
+
+        if (Application::instance()->gui_)
+            ImGui::Text("FPS: %.3f", 1.0f / Application::instance()->getGui().gameClock.getDeltaTime() * 1000);
+        
+        const char* items[] = { "None", "Snake", "Connect" };
+        ImGui::Combo("Game", &selectedItem, items, IM_ARRAYSIZE(items));
+
+        ImGui::Spacing();
+
+        // Confirm button
+        if (ImGui::Button("Confirm##game")) {
+            Application::instance()->init(selectedItem);
+        }
+
+
         ImGui::End();
 /*
         ImGui::SetNextWindowSize(windowSize);

@@ -13,6 +13,8 @@
 #include <vector>
 #include "Shape.hpp"
 #include "GridEntity.hpp"
+#include <SDL.h>
+#include <SDL_image.h>
 
 namespace blink2dgui
 {
@@ -33,9 +35,11 @@ namespace blink2dgui
         void stopMovement(const Coordinate& pos);
         void clearPos(const Coordinate& pos);
         Shape& getShape(const Coordinate& pos);
-
+        
         int gridHeight_;           
         int gridWidth_;  
+        SDL_Texture* texture_id;
+
     private:
         float nPixels_ = 720.0f;               // Size of the window in pixels
         float squareSize_;            // Size of each square

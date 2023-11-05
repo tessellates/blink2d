@@ -12,6 +12,6 @@ public:
     Coordinate position;
     EntityType type;
     Properties properties;
-    GridEntity(const Coordinate& pos) : position(pos) {}
+    GridEntity(const Coordinate& pos, EntityType type = 0) : position(pos), type(type) {}
 };
 

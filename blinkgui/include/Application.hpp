@@ -38,12 +38,15 @@ namespace blink2dgui
             void operator=(const Application &) = delete;
 
             void loop();
+            void init(int option = 0);
             bool isRunning();
             void changeGameSpeed(int gameSpeed);
+            SDL_Renderer* getRenderer() const;
+            GameGui& getGui() const;
 
             int WIDTH = 1280;
             int HEIGHT = 800;
-            GameGui gui_;
+            GameGui* gui_ = nullptr;
 
         private:
             Application();
