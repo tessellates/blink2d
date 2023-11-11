@@ -42,6 +42,7 @@ void GameState::removeEntity(const Coordinate& cor, const GridEntity& ent) {
 
 void GameState::saveCycle() {
     if (gameCycles.size() - 1 > activeIndex) {
+
         gameCycles.erase(gameCycles.begin() + activeIndex + 1, gameCycles.end());
     }
     gameCycles.push_back(activeCycle);
@@ -49,15 +50,17 @@ void GameState::saveCycle() {
     activeIndex++;
 }
 
-void GameState::backward() {
+void GameState::backward() 
+{
     if (activeIndex >= 0) {
+
         gameCycles[activeIndex].rewind();
         activeIndex--;
     }
 }
 
 void GameState::forward() {
-    if (gameCycles.size() - 1 > activeIndex) {
+    if (activeIndex + 1 < gameCycles.size()) {
         activeIndex++;
         gameCycles[activeIndex].execute();
     }

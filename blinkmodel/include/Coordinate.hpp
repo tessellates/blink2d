@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <functional> 
 
 class Coordinate {
 public:
@@ -28,4 +29,16 @@ public:
 
     // Print the coordinate (for debugging)
     void print() const;
+};
+
+/*
+Specialize std::hash for the Coordinate class. A common approach is to combine the hashes of individual members (in this case, x and y) using a bitwise XOR (^) operation, often combined with a bitwise left shift (<<). This helps in generating a unique hash value for each unique combination of x and y.
+*/
+template <>
+struct std::hash<Coordinate> 
+{
+    std::size_t operator()(const Coordinate& coord) const {
+        // Combine the hash of the individual members using XOR and bit shifting
+        return std::hash<int>()(coord.x) ^ (std::hash<int>()(coord.y) << 1);
+    }
 };

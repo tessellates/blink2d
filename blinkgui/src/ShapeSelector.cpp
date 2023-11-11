@@ -44,9 +44,6 @@ namespace blink2dgui
                 Application::instance()->getGui().setGrid(gridSize);
         }
 
-        if (Application::instance()->gui_)
-            ImGui::Text("FPS: %.3f", 1.0f / Application::instance()->getGui().gameClock.getDeltaTime() * 1000);
-        
         const char* items[] = { "None", "Snake", "Connect" };
         ImGui::Combo("Game", &selectedItem, items, IM_ARRAYSIZE(items));
 
@@ -57,6 +54,8 @@ namespace blink2dgui
             Application::instance()->init(selectedItem);
         }
 
+        if (Application::instance()->gui_)
+            ImGui::Text("FPS: %.3f", 1.0f / Application::instance()->getGui().gameClock.getDeltaTime() * 1000);
 
         ImGui::End();
 /*

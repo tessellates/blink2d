@@ -11,7 +11,7 @@ namespace blink2dgui
         squareSize_ = (float) nPixels_ / (gridSize + 1);
         window_flags_ = ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse;
 
-        windowPos_ = ImVec2((1280- nPixels_) * 0.5, (800 - nPixels_) * 0.5);
+        windowPos_ = ImVec2((1280 - nPixels_) * 0.5, (800 - nPixels_) * 0.5);
 
         gridWidth_ = gridSize;
         gridHeight_ = gridSize;
@@ -45,8 +45,12 @@ namespace blink2dgui
         ImGui::SetNextWindowSize(windowSize);
         ImGui::SetNextWindowPos(windowPos_);
 
+        ImGuiStyle originalStyle = ImGui::GetStyle();
+
+        // Modify the style for a specific window
+        ImGui::GetStyle().WindowPadding = ImVec2(0.0f, 0.0f);
+
         ImGui::Begin("Square Grid", nullptr, window_flags_);
-        ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(0, 0));
         ImGui::Image(texture_id, windowSize);
 
         for (size_t i = 0; i < shapes_.size(); ++i) 
@@ -57,6 +61,7 @@ namespace blink2dgui
         }
 
         ImGui::End();
+        ImGui::GetStyle() = originalStyle;
     }
 
     void SquareGui::colorLocation(const Coordinate& pos, const ImVec4& color, bool addLayer)
