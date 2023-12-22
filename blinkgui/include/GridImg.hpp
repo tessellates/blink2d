@@ -16,6 +16,7 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include "TextureVector.hpp"
+#include "BlinkTexture.hpp"
 #include <functional>
 
 namespace blink2dgui
@@ -23,43 +24,26 @@ namespace blink2dgui
     class GridImg
     {
     public:
-        GridImg(const ImVec2& size, const ImVec2& pos, SDL_Texture* texture) : size(size), position(pos), renderPosition(pos), texture(texture) {}
+        GridImg(const ImVec2& size, const ImVec2& pos, const BlinkTexture& texture);
         GridImg() = default;    // Constructor
 
         GridImg(const GridImg&) = default; 
         GridImg& operator=(const GridImg&) = default;  // Copy assignment operator
 
-        void render()
-        {
-            if (renderAction) { renderAction(); }
-            ImGui::SetCursorPos(renderPosition);
-            ImGui::Image(texture, size);
-        }
-
-        void enableMovement(const imVec2& sourcePosition)
-        {
-            renderAction = [this, sourcePosition] 
-            { 
-                float factor = Application::instance()->getGui().GameClock.getIntervalProgress();
-                if (factor => 1)
-                {
-                    factor == 1;
-                }
-                this->renderPosition = sourcePosition - (sourcePosition - this->position) * factor;
-                if (factor == 1)
-                {
-                    this->renderAction = nullptr;
-                }
-            }
-        }
+        void render();
+        void enableMovement(const ImVec2& sourcePosition, bool defaultAction = false);
+        void setDefaultAction(const bool& defaultAction);
 
     private:
         ImVec2 size;           
         ImVec2 position;
         ImVec2 renderPosition;
 
-        std::function<void()> renderAction;
-        SDL_Texture* texture;
+        std::function<void()> moveAction;
+        bool defaultAction = true;
+        BlinkTexture texture;
+
+        bool start = false;
     };
 }
 

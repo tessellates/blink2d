@@ -12,9 +12,9 @@
 #include <SDL.h>
 #include <vector>
 
-#include "SquareGui.hpp"
 #include "GameState.hpp"
 #include "GameClock.hpp"
+#include "GridEntityManager.hpp"
 
 namespace blink2dgui
 {
@@ -35,8 +35,8 @@ namespace blink2dgui
         bool play = false;
         GameClock gameClock;
         
-    protected:
-        SquareGui squareGui_;
+    public:
+        GridEntityManager gem_;
         GameState* gameState_;
 
     };

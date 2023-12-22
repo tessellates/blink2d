@@ -12,7 +12,6 @@
 #include <SDL.h>
 #include <vector>
 
-#include "SquareGui.hpp"
 #include "SnakeModel.hpp"
 #include "GameState.hpp"
 #include "GameClock.hpp"

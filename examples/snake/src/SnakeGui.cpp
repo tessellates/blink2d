@@ -5,6 +5,7 @@
  */
 #include "SnakeGui.hpp"
 #include "SnakeModel.hpp"
+#include "ConnectTextures.hpp"
 
 namespace blink2dgui {
 
@@ -22,7 +23,9 @@ void SnakeGui::setGrid(int gridSize)
     gameState_ = new SnakeModel(gridSize, gridSize);
     snakeModel_ = dynamic_cast<SnakeModel*>(gameState_);
     snakeModel_->listeners.push_back(this);
-    squareGui_ = SquareGui(gridSize);
+    gem_ = GridEntityManager(gridSize, gridSize);
+    gem_.getLayer().setTextureVector(createConnectTextureVector(gem_.squareSize.x));
+    gem_.getLayer().defaultInit();
     //GameGui::setGrid(gridSize);
 }
 
@@ -42,21 +45,9 @@ void SnakeGui::gameTick() {
 
     if (play)
     {
-        if (snakeModel_->snake.size() > 0)
-            squareGui_.updateShapeMovement(snakeModel_->snake.front(), gameClock.getIntervalProgress());
-            if (snakeModel_->snake.size() > 1)
-                squareGui_.updateShapeMovement(snakeModel_->snake.back(), gameClock.getIntervalProgress());
-
         if (gameClock.getIntervalProgress() >= 1) {
             nextStep();
         }
-    }
-    else
-    {
-        if (snakeModel_->snake.size() > 0)
-            squareGui_.updateShapeMovement(snakeModel_->snake.front(), 1);
-            if (snakeModel_->snake.size() > 1)
-                squareGui_.updateShapeMovement(snakeModel_->snake.back(), 1);
     }
 }
 
@@ -73,36 +64,32 @@ void SnakeGui::onAddEntity(const Coordinate& pos, const GridEntity& entity)
     {
         oldHead = snakeModel_->snake.front(); // this causes the head to not be animated on placement, however it will be animated after because once the head starts moving it becomes size 2 in between the add and remove of the tails steps. 
     }
-    ImVec4 color;
     if (entity.type == 0 || entity.type == 2)
     {
-        color = ImVec4(0, 0.5f, 0, 1);
-        squareGui_.colorLocation(entity.position, color);
+        gem_.getLayer().renderOn(entity.position, 0);
         if (snakeModel_->snake.size() > 0 && play && entity.type == 0)
         {
-            squareGui_.moveAnimate(oldHead, entity.position);
+            gem_.getLayer().setMoveTarget(oldHead, entity.position, false);
         }
     }
     else
     {
-        color = ImVec4(0.5f, 0, 0, 1);
-        squareGui_.colorLocation(entity.position, color);
+        gem_.getLayer().renderOn(entity.position, 1);
     }
 }
 
 void SnakeGui::onRemoveEntity(const Coordinate& pos, const GridEntity& entity) 
 {
-    ImVec4 color = ImVec4(0, 0, 0, 0);
     if (entity.type == 2)
     {
         if (snakeModel_->snake.size() >= 3)
         {
-            squareGui_.colorLocation(snakeModel_->snake.back(), ImVec4(0, 0.5f, 0, 1), true);
+            gem_.getLayer().renderOn(snakeModel_->snake.back(), 0);
         }
-        if (play && entity.type == 2)
-            squareGui_.moveAnimate(pos, snakeModel_->snake.back());
+        if (play && entity.type == 2 && snakeModel_->snake.size() > 1) 
+            gem_.getLayer().setMoveTarget(pos, snakeModel_->snake.back(), true);
     }
-    squareGui_.clearPos(pos);
+    gem_.getLayer().clearPos(pos);
 }
 
 void SnakeGui::onModelPropertyChange(int, int) {}

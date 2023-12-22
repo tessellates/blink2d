@@ -12,7 +12,6 @@
 #include <SDL.h>
 #include <vector>
 
-#include "SquareGui.hpp"
 #include "ConnectModel.hpp"
 #include "GameState.hpp"
 #include "GameClock.hpp"
@@ -36,9 +35,8 @@ namespace blink2dgui
         
     private:
         ConnectModel* connectModel_;
-        Coordinate fallingPiece_;
         bool allowPlay_ = true;
-
+        int tickCount = 0;
     };
 }
 

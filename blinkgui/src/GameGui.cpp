@@ -13,13 +13,13 @@ GameGui::GameGui() : gameClock(200)
 
 void GameGui::setGrid(int gridSize)
 {
-    squareGui_ = SquareGui(gridSize);
+    gem_ = GridEntityManager(gridSize, gridSize);
 }
 
 void GameGui::render() {
     gameClock.update();
     this->gameTick();
-    squareGui_.renderGrid();
+    gem_.renderGrid();
 }
 
 void GameGui::backward()

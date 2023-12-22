@@ -20,8 +20,11 @@ namespace blink2dgui
 {
     class TextureVector {
     public:
+        // Type definitions for the iterator and const_iterator
+        using iterator = std::vector<SDL_Texture*>::iterator;
+        using const_iterator = std::vector<SDL_Texture*>::const_iterator;
 
-        destroy() 
+        void destroy() 
         {
             for (SDL_Texture* texture : textures) 
             {
@@ -41,6 +44,26 @@ namespace blink2dgui
 
         const SDL_Texture* operator[](size_t index) const {
             return textures[index];
+        }
+
+        // Method to get the beginning iterator
+        iterator begin() {
+            return textures.begin();
+        }
+
+        // Method to get the beginning const_iterator
+        const_iterator begin() const {
+            return textures.begin();
+        }
+
+        // Method to get the end iterator
+        iterator end() {
+            return textures.end();
+        }
+
+        // Method to get the end const_iterator
+        const_iterator end() const {
+            return textures.end();
         }
 
     private:

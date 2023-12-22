@@ -42,6 +42,7 @@ set(CMAKE_BINARY_DIR "/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject")
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/examples/snake/cmake_install.cmake")
+  include("/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/examples/connect/cmake_install.cmake")
 
 endif()
 

@@ -5,6 +5,7 @@
  */
 #include "ConnectGui.hpp"
 #include "ConnectModel.hpp"
+#include "ConnectTextures.hpp"
 
 namespace blink2dgui {
 
@@ -20,7 +21,14 @@ ConnectGui::~ConnectGui() {
 void ConnectGui::setGrid(int gridSize)
 {
     gridSize = 7;
-    squareGui_ = SquareGui(7);
+    gem_ = GridEntityManager(7, 7);
+    
+    gem_.getLayer().setTextureVector(createConnectTextureVector(gem_.squareSize.x));
+    std::vector<BlinkTexture> vector;
+    vector.push_back(BlinkTexture(CreateTextureFromFile(Application::instance()->getRenderer(), "/Users/tobiash/Projects/DearUI/Blink2D/examples/connect/include/towerbigs.png")));
+    SDL_SetTextureAlphaMod(vector[0].m_texture, 60);
+    gem_.getLayer(1).addBackgroundTextures(vector);
+    gem_.getLayer().defaultInit();
     gameState_ = new ConnectModel();
     connectModel_ = dynamic_cast<ConnectModel*>(gameState_);
     connectModel_->listeners.push_back(this);
@@ -28,12 +36,15 @@ void ConnectGui::setGrid(int gridSize)
 
 void ConnectGui::gameTick() {
 
-    if (play)
-    {
-        squareGui_.updateShapeMovement(fallingPiece_, gameClock.getIntervalProgress());
-        if (gameClock.getIntervalProgress() >= 1) 
-        {
-            allowPlay_ = true;
+    if (play) {
+        if (gameClock.getIntervalProgress() >= 1) {
+            tickCount++;
+
+            if (tickCount >= 2) { // Check if gameTick has been called twice after the condition is met
+                allowPlay_ = true;
+                tickCount = 0; // Reset the counter for the next round
+                connectModel_->fireWin();
+            }
         }
     }
 }
@@ -42,36 +53,26 @@ void ConnectGui::clicked(const Coordinate& clickedPos)
 {
     if (allowPlay_)
     {
-        play = true;
-        connectModel_->play(clickedPos.x);
         allowPlay_ = false;
+        play = true;
         gameClock.reset();
+        connectModel_->play(clickedPos.x);
     }
 }
 
 void ConnectGui::onAddEntity(const Coordinate& pos, const GridEntity& entity) 
 {
-    ImVec4 color;
-    if (entity.type == 0)
-    {
-        color = ImVec4(0, 0.5f, 0, 1);
-    }
-    else
-    {
-        color = ImVec4(0.5f, 0, 0, 1);
-    }
-    squareGui_.colorLocation(entity.position, color);
-    fallingPiece_ = entity.position;
-    if (play)
+    gem_.getLayer().renderOn(entity.position, entity.type % 3);
+    if (play && entity.type < 2)
     {
         Coordinate top = Coordinate(pos.x, 0);
-        squareGui_.moveAnimate(top, entity.position);
+        gem_.getLayer().setMoveTarget(top, entity.position);
     }
 }
 
 void ConnectGui::onRemoveEntity(const Coordinate& pos, const GridEntity& entity) 
 {
-    squareGui_.clearPos(pos);
+    gem_.getLayer().clearPos(pos);
 }
 
 void ConnectGui::onModelPropertyChange(int, int) {}

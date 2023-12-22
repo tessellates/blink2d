@@ -116,10 +116,15 @@ namespace blink2dgui
 
         // Rendering
         ImGui::Render();
+
         SDL_RenderSetScale(renderer_, io_->DisplayFramebufferScale.x, io_->DisplayFramebufferScale.y);
         SDL_SetRenderDrawColor(renderer_, (Uint8)(clear_color_.x * 255), (Uint8)(clear_color_.y * 255), (Uint8)(clear_color_.z * 255), (Uint8)(clear_color_.w * 255));
         SDL_RenderClear(renderer_);
         ImGui_ImplSDLRenderer2_RenderDrawData(ImGui::GetDrawData());
+
+        if (gui_ != nullptr)
+            getGui().gem_.renderSDL();
+
         SDL_RenderPresent(renderer_);
     }
 

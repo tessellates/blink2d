@@ -17,6 +17,7 @@
 #include <SDL_image.h>
 #include "TextureVector.hpp"
 #include "GridImg.hpp"
+#include "GridLayer.hpp"
 #include <unordered_map>
 
 namespace blink2dgui
@@ -24,39 +25,37 @@ namespace blink2dgui
     class GridEntityManager
     {
     public:
-        GridEntityManager(int height, int width);    // Constructor
-        GridEntityManager(int height, int width, const ImVec2& windowSize, const ImVec2& windowPos);    // Constructor
+        GridEntityManager(int width, int height);    // Constructor
+        GridEntityManager(int width, int height, const ImVec2& windowSize, const ImVec2& windowPos);    // Constructor
         GridEntityManager() = default;    // Constructor
         ~GridEntityManager();   // Destructor
 
-        GridEntityManager(const GridEntityManager&) = default;             // Copy constructor
-        GridEntityManager& operator=(const GridEntityManager&) = default;  // Copy assignment operator
-
-        void setTextureVector(const TextureVector& textureVector);
-
-        void renderOn(const Coordinate& pos, const int& textureId);
-        void setMoveTarget(const Coordinate& from, const Coordinate& to);
-        void clearPos(const Coordinate& pos);
-
         void renderGrid();
+        void renderSDL();
 
         ImVec2 absolutePosition(const Coordinate& pos) const;
+        ImVec2 relativePosition(const Coordinate& pos) const;
         Coordinate gridPosition(const ImVec2& pos) const;
 
-    private:
-        int height;           
-        int width;  
+        GridLayer& getLayer(int i = 0);
+
+    public:
+        int width;           
+        int height;  
 
         ImVec2 windowSize;
         ImVec2 windowPos;
+        ImVec2 boardSize;
 
         ImVec2 squareSize;
         ImVec2 padding;
 
-        SDL_Texture* backgroundTexture;
+        TextureVector backgroundTexture;
         TextureVector textureVector;
-
-        std::unordered_map<Coordinate, Img> imgMap;    
+        
+        ImGuiWindowFlags windowFlags;
+        
+        std::vector<GridLayer> layers;
 };
 }
 

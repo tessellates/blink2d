@@ -20,6 +20,10 @@
 /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/examples/snake/CMakeFiles/install.dir
 /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/examples/snake/src/CMakeFiles/RUN_TESTS.dir
 /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/examples/snake/src/CMakeFiles/install.dir
+/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/examples/connect/CMakeFiles/RUN_TESTS.dir
+/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/examples/connect/CMakeFiles/install.dir
+/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/examples/connect/src/CMakeFiles/RUN_TESTS.dir
+/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/examples/connect/src/CMakeFiles/install.dir
 /Users/tobiash/Projects/DearUI/Blink2D/tests/CMakeFiles/RUN_TESTS.dir
 /Users/tobiash/Projects/DearUI/Blink2D/tests/CMakeFiles/install.dir
 /Users/tobiash/Projects/DearUI/Blink2D/tests/CMakeFiles/ALL_BUILD.dir

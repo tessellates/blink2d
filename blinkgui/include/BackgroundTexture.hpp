@@ -3,6 +3,7 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include "imgui.h"
+#include "BlinkTexture.hpp"
 
 inline SDL_Texture* CreateBackgroundTexture(SDL_Renderer* renderer, float spacing, float textureHeight, float textureWidth)
 {
@@ -30,12 +31,14 @@ inline SDL_Texture* CreateBackgroundTexture(SDL_Renderer* renderer, float spacin
         SDL_RenderDrawLine(renderer,  spacing/2, y, textureWidth -  spacing/2, y);
     }
 
+    //SDL_RenderClear(renderer);
+
     // Reset the rendering target to the default
     SDL_SetRenderTarget(renderer, NULL);
     return gridTexture;
 }
 
-inline SDL_Texture* CreateColorTexture(SDL_Renderer* renderer, const ImVec4& color, int textureWidth, int textureHeight) {
+inline BlinkTexture CreateColorTexture(SDL_Renderer* renderer, const ImVec4& color, int textureWidth, int textureHeight) {
     // Create a texture that will be used as a render target
     SDL_Texture* colorTexture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, textureWidth, textureHeight);
 
@@ -57,5 +60,30 @@ inline SDL_Texture* CreateColorTexture(SDL_Renderer* renderer, const ImVec4& col
 
     // Reset the rendering target to the default
     SDL_SetRenderTarget(renderer, NULL);
-    return colorTexture;
+    return BlinkTexture(colorTexture);
 }
+
+inline SDL_Texture* CreateTextureFromFile(SDL_Renderer* renderer, const char* filePath) {
+    // Load the image into an SDL_Surface
+    SDL_Surface* surface = IMG_Load(filePath);
+    if (surface == nullptr) {
+        SDL_Log("Unable to load image %s! SDL_image Error: %s\n", filePath, IMG_GetError());
+        return nullptr;
+    }
+
+
+    // Convert the surface to a texture
+    SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
+    if (texture == nullptr) {
+        SDL_Log("Unable to create texture from %s! SDL Error: %s\n", filePath, SDL_GetError());
+    }
+
+    // Set blend mode to blend for transparency
+    SDL_SetTextureBlendMode(texture, SDL_BLENDMODE_BLEND);
+
+    // Free the surface as it's no longer needed
+    SDL_FreeSurface(surface);
+    
+    return texture;
+}
+
