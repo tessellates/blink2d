@@ -3,18 +3,49 @@
 #include <algorithm> // For std::find
 #include <random>
 
+void printBoard(const std::vector<std::stack<int>>& board)
+{
+    std::cout << "\n" << std::endl;
+    auto x = std::vector<std::string>(6, "-------");
+    int dex = 0;
+    for (auto q : board)
+    {
+        int qs = q.size();
+        for (int i = 0; i < qs; ++i) {
+            int p = q.top();
+            q.pop();
+            char strr = '-';
+            if (p == 0)
+            {
+                strr = 'R';
+            }
+            else
+            {
+                strr = 'G';
+            }
+            x[6-qs+i][dex] = strr;
+        }
+        dex++;
+    }
+    for (auto& l : x)
+    {
+        std::cout << l << std::endl;
+    }
+}
+
 // Constructors
 ConnectModel::ConnectModel()
 {
     intProperties.push_back(0);
     intProperties.push_back(0);
-    board = std::vector<std::queue<int>>(7);
+    board = std::vector<std::stack<int>>(7);
 }
 
 void ConnectModel::fireRemoveEntity(const Coordinate& cor, const GridEntity& ent) {
     if (ent.type < 2)
     {
         board[cor.x].pop();
+        //printBoard(board);
     }
     GameState::fireRemoveEntity(cor, ent);
 }
@@ -48,7 +79,6 @@ void ConnectModel::fireWin()
     }
 }
 
-
 void ConnectModel::play(int column)
 {
     if (checkWin(board, !intProperties[ConnectProperties::PLAYER]))
@@ -65,27 +95,28 @@ void ConnectModel::play(int column)
     addEntity(pos, ent);
     changeProperty(ConnectProperties::PLAYER, !intProperties[ConnectProperties::PLAYER]);
     saveCycle();
+    printBoard(board);
 }
 
-bool matchValue(int player, const std::vector<std::queue<int>>& board, int row, int col) {
+bool matchValue(int player, const std::vector<std::stack<int>>& board, int row, int col) {
     if (col < 0 || col >= board.size()) {
         return false; // Invalid column
     }
-    const std::queue<int>& q = board[col];
+    const std::stack<int>& q = board[col];
     if (row < 0 || row >= q.size()) {
         return false; // Invalid row
     }
 
-    // Copy the queue to access the desired element
-    std::queue<int> temp = q;
-    for (int i = 0; i < row; ++i) {
+    // Copy the stack to access the desired element
+    std::stack<int> temp = q;
+    for (int i = 1; i < q.size()-row; ++i) {
         temp.pop();
     }
-    return player == temp.front();
+    return player == temp.top();
 }
 
-std::optional<std::vector<Coordinate>> ConnectModel::checkWin(const std::vector<std::queue<int>>& board, int player) {
-    int rows = board.size();
+std::optional<std::vector<Coordinate>> ConnectModel::checkWin(const std::vector<std::stack<int>>& board, int player) {
+    int rows = 6;
     int cols = 7;
     std::vector<Coordinate> winningPositions;
     std::vector<std::vector<int>> grid(rows, std::vector<int>(cols, 0));
