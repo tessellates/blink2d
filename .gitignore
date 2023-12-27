@@ -1,3 +1,7 @@
+## Xcode
+xcodeproject/*
+!*.xcodeproj
+
 ## OSX artifacts
 .DS_Store
 build/*

@@ -1,6 +1,0 @@
-# Ignore everything
-*
-
-# But do not ignore .gitignore and xproject file
-!.gitignore
-!*.xcodeproj
