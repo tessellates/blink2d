@@ -1,4 +1,4 @@
-#include "BlinkTexture.hpp"
+#include "rendering/BlinkTexture.hpp"
 #include "Application.hpp"
 
 BlinkTexture::BlinkTexture(SDL_Renderer* renderer, SDL_Texture* texture)

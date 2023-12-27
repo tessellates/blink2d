@@ -1,6 +1,6 @@
 #include "GridImg.hpp"
 #include "Application.hpp"
-
+#include "RenderManager.hpp"
 namespace blink2dgui
 {
     GridImg::GridImg(const ImVec2& size, const ImVec2& pos, const BlinkTexture& texture) : size(size), position(pos), renderPosition(pos), texture(texture) {}
@@ -10,7 +10,8 @@ namespace blink2dgui
         if (moveAction) {  moveAction(); }
         if (this->defaultAction) 
         {
-            texture.render(position.x, position.y, nullptr, 0.0, nullptr, SDL_FLIP_NONE);
+            RenderManager::instance()->addRenderAction(texture, position.x, position.y, 0);
+            //texture.render(position.x, position.y, nullptr, 0.0, nullptr, SDL_FLIP_NONE);
         }
     }
 
@@ -34,7 +35,7 @@ namespace blink2dgui
                 }
             }
             this->renderPosition = sourcePosition - (sourcePosition - this->position) * factor;
-            texture.render(renderPosition.x, renderPosition.y, nullptr, 0.0, nullptr, SDL_FLIP_NONE);
+            RenderManager::instance()->addRenderAction(texture, renderPosition.x, renderPosition.y, 0);
             if (factor == 1)
             {
                 this->moveAction = nullptr;

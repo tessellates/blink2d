@@ -1,18 +1,22 @@
 
-#include "RenderManager.hpp"
+#include "rendering/RenderManager.hpp"
 
-void RenderManager::renderSDL()
-{
-    for (const auto& layer : layers)
-    {
-        for (const auto& action : layer)
-        {
-            action.render();
-        }
-    }
+template<typename T>
+T* getOptionalPtr(std::optional<T>& opt) {
+    return opt.has_value() ? &*opt : nullptr;
 }
 
-void addRenderAction(const BlinkTexture& texture, int x, int y, int layerID) 
+RenderAction::RenderAction(int x, int y, const BlinkTexture& texture) : x(x), y(y), texture(texture)
 {
-    layers[layerID].emplace_back(texture, x, y);
+
+}
+
+RenderAction::RenderAction(int x, int y, const BlinkTexture& texture, double angle, const SDL_Point& center, const SDL_RendererFlip& flip) : x(x), y(y), texture(texture), angle(angle), center(center), flip(flip)
+{
+
+}
+
+void RenderAction::render()
+{
+    texture.render(x, y, getOptionalPtr(clip), angle, getOptionalPtr(center), flip);
 }

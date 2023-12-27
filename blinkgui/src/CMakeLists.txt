@@ -1,7 +1,8 @@
+add_subdirectory(rendering) 
+
 target_sources(${PROJECT_NAME}
     PRIVATE 
         ${CMAKE_CURRENT_SOURCE_DIR}/Application.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/BlinkTexture.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/ControllerWindow.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/GameClock.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/GameGui.cpp
@@ -13,4 +14,3 @@ target_sources(${PROJECT_NAME}
         ${CMAKE_CURRENT_SOURCE_DIR}/ShapeSelector.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/ShapeType.cpp
 )
-

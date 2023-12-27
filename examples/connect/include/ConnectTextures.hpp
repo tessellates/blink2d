@@ -1,7 +1,7 @@
 #include "BackgroundTexture.hpp"
 #include "TextureVector.hpp"
 #include "Application.hpp"
-#include "BlinkTexture.hpp"
+#include "rendering/BlinkTexture.hpp"
 
 namespace blink2dgui
 {

@@ -3,6 +3,7 @@
 #include "SnakeGui.hpp"
 #include "ConnectGui.hpp"
 #include <cmath>
+#include "RenderManager.hpp"
 
 namespace blink2dgui
 {
@@ -124,6 +125,7 @@ namespace blink2dgui
 
         if (gui_ != nullptr)
             getGui().gem_.renderSDL();
+            RenderManager::instance()->renderSDL();
 
         SDL_RenderPresent(renderer_);
     }

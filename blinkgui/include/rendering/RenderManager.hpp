@@ -1,7 +1,9 @@
 #pragma once
 
 #include "Singleton.hpp"
-#include "BlinkTexture.hpp"
+#include "rendering/RenderAction.hpp"
+
+#include <deque>
 
 class RenderManager : public Singleton<RenderManager>
 {

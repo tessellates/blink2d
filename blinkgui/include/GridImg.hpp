@@ -16,7 +16,7 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include "TextureVector.hpp"
-#include "BlinkTexture.hpp"
+#include "rendering/BlinkTexture.hpp"
 #include <functional>
 
 namespace blink2dgui
