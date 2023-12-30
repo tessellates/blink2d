@@ -1,6 +1,6 @@
 ## Gtest
-tests/*.make
-tests/*.cmake
+/tests/**/*.cmake
+/tests/**/*.make
 
 ## Xcode
 xcodeproject/*
