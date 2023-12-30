@@ -1,3 +1,6 @@
+## Gtest
+tests/*.make
+
 ## Xcode
 xcodeproject/*
 !*.xcodeproj

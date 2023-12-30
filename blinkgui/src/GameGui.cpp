@@ -13,7 +13,7 @@ GameGui::GameGui() : gameClock(200)
 
 void GameGui::setGrid(int gridSize)
 {
-    gem_ = GridEntityManager(gridSize, gridSize);
+    gem_ = std::move(GridEntityManager(gridSize, gridSize));
 }
 
 void GameGui::render() {

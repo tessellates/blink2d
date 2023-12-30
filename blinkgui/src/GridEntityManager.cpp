@@ -21,6 +21,11 @@ namespace blink2dgui
 
     GridEntityManager::GridEntityManager(int height, int width) : GridEntityManager(height, width, ImVec2(720, 720), ImVec2(280, 40)) {}
 
+    GridEntityManager::GridEntityManager()
+    {
+
+    }
+
     GridEntityManager::~GridEntityManager()
     {
 
@@ -73,6 +78,11 @@ namespace blink2dgui
         for (auto& layer : layers) 
         {
             layer.renderGrid();
+        }
+        
+        for (auto& [key, val] : visualEntityMap)
+        {
+            val.render();
         }
 
     }

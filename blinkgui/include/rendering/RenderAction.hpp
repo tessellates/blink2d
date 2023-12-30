@@ -1,6 +1,7 @@
 #pragma once
 
 #include "BlinkTexture.hpp"
+#include "Transform.hpp"
 #include <optional>
 
 class RenderAction 
@@ -8,6 +9,7 @@ class RenderAction
 public:
     RenderAction(int x, int y, const BlinkTexture& texture);
     RenderAction(int x, int y, const BlinkTexture& texture, double angle, const SDL_Point& center, const SDL_RendererFlip& flip);
+    RenderAction(const Transform& transform, const BlinkTexture& texture);
     void render();
     
 private:

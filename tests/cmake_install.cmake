@@ -37,6 +37,8 @@ if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/objdump")
 endif()
 
+set(CMAKE_BINARY_DIR "/Users/tobiash/Projects/DearUI/Blink2D/xcodeproject")
+
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/Users/tobiash/Projects/DearUI/Blink2D/tests/googlemock/cmake_install.cmake")

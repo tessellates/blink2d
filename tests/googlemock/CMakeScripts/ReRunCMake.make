@@ -26,5 +26,5 @@ TARGETS += $(subst $(space),$(spaceplus),$(wildcard /usr/local/Cellar/cmake/3.27
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/Internal/CheckSourceCompiles.cmake))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/WriteBasicConfigVersionFile.cmake))
 
-/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/cmake.check_cache: $(TARGETS)
-	/usr/local/Cellar/cmake/3.27.6/bin/cmake -S/Users/tobiash/Projects/DearUI/Blink2D -B/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject
+/Users/tobiash/Projects/DearUI/Blink2D/xcodeproject/CMakeFiles/cmake.check_cache: $(TARGETS)
+	/usr/local/Cellar/cmake/3.27.6/bin/cmake -S/Users/tobiash/Projects/DearUI/Blink2D -B/Users/tobiash/Projects/DearUI/Blink2D/xcodeproject

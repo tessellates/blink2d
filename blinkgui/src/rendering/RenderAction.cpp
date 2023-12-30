@@ -1,10 +1,6 @@
 
-#include "rendering/RenderManager.hpp"
-
-template<typename T>
-T* getOptionalPtr(std::optional<T>& opt) {
-    return opt.has_value() ? &*opt : nullptr;
-}
+#include "RenderAction.hpp"
+#include "Utility.hpp"
 
 RenderAction::RenderAction(int x, int y, const BlinkTexture& texture) : x(x), y(y), texture(texture)
 {
@@ -15,6 +11,12 @@ RenderAction::RenderAction(int x, int y, const BlinkTexture& texture, double ang
 {
 
 }
+
+RenderAction::RenderAction(const Transform& transform, const BlinkTexture& texture) : x(transform.position.x), y(transform.position.y), texture(texture), angle(transform.rotation), flip(transform.flip)
+{
+
+}
+
 
 void RenderAction::render()
 {

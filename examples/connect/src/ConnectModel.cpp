@@ -45,7 +45,6 @@ void ConnectModel::fireRemoveEntity(const Coordinate& cor, const GridEntity& ent
     if (ent.type < 2)
     {
         board[cor.x].pop();
-        //printBoard(board);
     }
     GameState::fireRemoveEntity(cor, ent);
 }
@@ -95,7 +94,6 @@ void ConnectModel::play(int column)
     addEntity(pos, ent);
     changeProperty(ConnectProperties::PLAYER, !intProperties[ConnectProperties::PLAYER]);
     saveCycle();
-    printBoard(board);
 }
 
 bool matchValue(int player, const std::vector<std::stack<int>>& board, int row, int col) {

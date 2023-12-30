@@ -5,7 +5,6 @@ empty:=
 space:= $(empty) $(empty)
 spaceplus:= $(empty)\ $(empty)
 
-TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/3.27.6/CMakeCCompiler.cmake))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/CMakeLists.txt))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock/CMakeLists.txt))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googlemock/cmake/gmock.pc.in))
@@ -15,6 +14,7 @@ TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/tobiash/Projects/Dear
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/cmake/gtest.pc.in))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/cmake/gtest_main.pc.in))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/cmake/internal_utils.cmake))
+TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/tobiash/Projects/DearUI/Blink2D/xcodeproject/CMakeFiles/3.27.6/CMakeCCompiler.cmake))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeCInformation.cmake))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/CMakeCommonLanguageInclude.cmake))
@@ -38,5 +38,5 @@ TARGETS += $(subst $(space),$(spaceplus),$(wildcard /usr/local/Cellar/cmake/3.27
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/Platform/Apple-Clang.cmake))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /usr/local/Cellar/cmake/3.27.6/share/cmake/Modules/WriteBasicConfigVersionFile.cmake))
 
-/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject/CMakeFiles/cmake.check_cache: $(TARGETS)
-	/usr/local/Cellar/cmake/3.27.6/bin/cmake -S/Users/tobiash/Projects/DearUI/Blink2D -B/Users/tobiash/Projects/DearUI/Blink2D/XcodeProject
+/Users/tobiash/Projects/DearUI/Blink2D/xcodeproject/CMakeFiles/cmake.check_cache: $(TARGETS)
+	/usr/local/Cellar/cmake/3.27.6/bin/cmake -S/Users/tobiash/Projects/DearUI/Blink2D -B/Users/tobiash/Projects/DearUI/Blink2D/xcodeproject

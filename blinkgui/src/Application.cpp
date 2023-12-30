@@ -4,6 +4,7 @@
 #include "ConnectGui.hpp"
 #include <cmath>
 #include "RenderManager.hpp"
+#include <cassert>
 
 namespace blink2dgui
 {
@@ -124,8 +125,10 @@ namespace blink2dgui
         ImGui_ImplSDLRenderer2_RenderDrawData(ImGui::GetDrawData());
 
         if (gui_ != nullptr)
+        {
             getGui().gem_.renderSDL();
             RenderManager::instance()->renderSDL();
+        }
 
         SDL_RenderPresent(renderer_);
     }

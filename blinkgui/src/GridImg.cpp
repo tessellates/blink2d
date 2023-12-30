@@ -10,7 +10,7 @@ namespace blink2dgui
         if (moveAction) {  moveAction(); }
         if (this->defaultAction) 
         {
-            RenderManager::instance()->addRenderAction(texture, position.x, position.y, 0);
+            RenderManager::instance()->addRenderAction(texture, position.x, position.y, 1);
             //texture.render(position.x, position.y, nullptr, 0.0, nullptr, SDL_FLIP_NONE);
         }
     }

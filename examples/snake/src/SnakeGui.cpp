@@ -23,7 +23,7 @@ void SnakeGui::setGrid(int gridSize)
     gameState_ = new SnakeModel(gridSize, gridSize);
     snakeModel_ = dynamic_cast<SnakeModel*>(gameState_);
     snakeModel_->listeners.push_back(this);
-    gem_ = GridEntityManager(gridSize, gridSize);
+    gem_ = std::move(GridEntityManager(gridSize, gridSize));
     gem_.getLayer().setTextureVector(createConnectTextureVector(gem_.squareSize.x));
     gem_.getLayer().defaultInit();
     //GameGui::setGrid(gridSize);

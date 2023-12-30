@@ -17,6 +17,10 @@
 #include "GameClock.hpp"
 #include "BackgroundTexture.hpp"
 #include "GameGui.hpp"
+#include "VisualEntity.hpp"
+
+#include "RenderAction.hpp"
+#include "GridEntityBuilder.hpp"
 
 namespace blink2dgui
 {
@@ -37,6 +41,8 @@ namespace blink2dgui
         ConnectModel* connectModel_;
         bool allowPlay_ = true;
         int tickCount = 0;
+        std::map<int, VisualEntity> visualEntityMap;
+        GridEntityBuilder builder;
     };
 }
 

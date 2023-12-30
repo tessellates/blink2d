@@ -15,6 +15,12 @@ void GameClock::setGameSpeed(float gameSpeed)
     reset();
 }
 
+float GameClock::getGameSpeed() const
+{
+    return this->gameSpeed;
+}
+
+
 void GameClock::reset()
 {
     intervalTick = SDL_GetTicks();
@@ -25,6 +31,11 @@ void GameClock::reset()
 float GameClock::getIntervalProgress() const
 {
     return intervalTime/gameSpeed;
+}
+
+float GameClock::getProgress() const
+{
+    return deltaTime/gameSpeed;
 }
 
 void GameClock::update() {

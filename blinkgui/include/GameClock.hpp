@@ -8,8 +8,10 @@ public:
     void reset(); 
     float getDeltaTime() const; // Get the time elapsed since last frame in seconds
     float getIntervalTime() const; // Get the time elapsed since last frame in seconds
-    float getIntervalProgress() const; // Get the time elapsed since last frame in seconds
+    float getIntervalProgress() const; 
+    float getProgress() const;
     void setGameSpeed(float gameSpeed); // Get the time elapsed since last frame in seconds
+    float getGameSpeed() const; // Get the time elapsed since last frame in seconds
     Uint32 getTotalTime() const; // Get the total elapsed time since the start of the clock in milliseconds
 
 private:
