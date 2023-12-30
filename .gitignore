@@ -1,7 +1,9 @@
 ## Gtest
 tests/**/*.cmake
 tests/**/*.make
-tests/**/*.marks
+tests/**/*.ts
+tests/**/*.o.d
+tests/**/Makefile
 
 ## Xcode
 xcodeproject/*
