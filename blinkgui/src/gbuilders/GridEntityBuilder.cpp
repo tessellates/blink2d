@@ -78,7 +78,6 @@ VisualEntity quadEntryAnimatedEntity(GridEntityBuilder& builder, const Coordinat
     return std::move(builder.atLocation(pos).build());
 }
 
-
 VisualEntity staticEntity(GridEntityBuilder& builder, const Coordinate& pos, const BlinkTexture& texture, int layer)
 {
     return std::move(builder.instructionLayer(layer).instructionTexture(texture).addInstruction().atLocation(pos).build());
