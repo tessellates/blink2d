@@ -2,6 +2,7 @@
 #include "Application.hpp"
 #include "SnakeGui.hpp"
 #include "ConnectGui.hpp"
+#include "RockSolidGui.hpp"
 #include <cmath>
 #include "RenderManager.hpp"
 #include <cassert>
@@ -75,6 +76,11 @@ namespace blink2dgui
             gui_ = new SnakeGui();
         if (option == 2)
             gui_ = new ConnectGui();
+        if (option == 3)
+        {
+            gui_ = new RockSolidGui();
+            //sideGui_ = 
+        }
     }
 
     Application::~Application()
@@ -128,6 +134,11 @@ namespace blink2dgui
         {
             getGui().gem_.renderSDL();
             RenderManager::instance()->renderSDL();
+        }
+
+        if (sideGui_ != nullptr)
+        {
+            
         }
 
         SDL_RenderPresent(renderer_);

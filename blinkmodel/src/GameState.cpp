@@ -21,6 +21,12 @@ void GameState::fireModelPropertyChange(int propertyIndex, int propertyValue) {
     }
 }
 
+void GameState::fireReplaceEntity(const Coordinate& cor, const GridEntity& replaced, const GridEntity& added) {
+    for(auto listener : listeners) {
+        listener->onReplaceEntity(cor, replaced, added);
+    }
+}
+
 void GameState::addEntity(const Coordinate& cor, const GridEntity& ent) {
     auto add = Command([cor, ent, this](){this->fireAddEntity(cor, ent);}, [cor, ent, this](){this->fireRemoveEntity(cor, ent);});
     add.execute();
@@ -39,6 +45,13 @@ void GameState::removeEntity(const Coordinate& cor, const GridEntity& ent) {
     remove.execute();
     activeCycle.addCommand(remove);
 }
+
+void GameState::replaceEntity(const Coordinate& cor, const GridEntity& replaced, const GridEntity& added) {
+    auto replace = Command([cor, replaced, added, this](){this->fireReplaceEntity(cor, replaced, added);}, [cor, replaced, added, this](){this->fireReplaceEntity(cor, added, replaced);});
+    replace.execute();
+    activeCycle.addCommand(replace);
+}
+
 
 void GameState::saveCycle() {
     if (gameCycles.size() - 1 > activeIndex) {

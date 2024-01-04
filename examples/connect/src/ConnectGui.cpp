@@ -69,7 +69,7 @@ void ConnectGui::onAddEntity(const Coordinate& pos, const GridEntity& entity)
         
         Coordinate top = Coordinate(pos.x, 0);
         Coordinate top2 = Coordinate(0, -pos.y);
-        VisualEntity ve = quadEntryAnimatedEntity(builder, pos, 7, gem_.getLayer().textureVector[entity.type % 3], 0.5, 0);
+        VisualEntity ve = quadEntryAnimatedEntity(builder, pos, 7, gem_.getLayer().textureVector[entity.type % 3], 1.0/7.0, 0);
         gem_.visualEntityMap.insert(std::make_pair(pos.x  + pos.y * 7, std::move(ve)));
         //gem_.getLayer().setMoveTarget(top, entity.position);
     }

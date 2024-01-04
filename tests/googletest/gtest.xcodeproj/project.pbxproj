@@ -9,33 +9,33 @@
 /* Begin PBXAggregateTarget section */
 		26CE3B6D516047BDB0D8A60A /* install */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 1D07F2361E7A4B7B88781824 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildConfigurationList = A896E5413E4B4017A8DC1726 /* Build configuration list for PBXAggregateTarget "install" */;
 			buildPhases = (
 				93426DA6A4AC2C2AC9CE883C /* CMake PostBuild Rules */,
 			);
 			dependencies = (
-				B2A9896300214E4CAC8D0EE8 /* PBXTargetDependency */,
+				BA8DB4CE4C5543559539693E /* PBXTargetDependency */,
 			);
 			name = install;
 			productName = install;
 		};
 		33EF81706D2A4C64A6EFFE90 /* ALL_BUILD */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 9C3E340F53D94E26AC973FBF /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildConfigurationList = 8315441C1A824208A2A8E004 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
 			buildPhases = (
 				1E36C6291701C5A33D3E19C1 /* Generate CMakeFiles/ALL_BUILD */,
 			);
 			dependencies = (
-				65D13500C7634634866E0CFA /* PBXTargetDependency */,
-				E2497CEBD5DB42F8B055E017 /* PBXTargetDependency */,
-				CCB183789ECF40768874D1EA /* PBXTargetDependency */,
+				323121CF764948F0B0F5AFB1 /* PBXTargetDependency */,
+				A1D94CDC6EF64BE1905E4771 /* PBXTargetDependency */,
+				171AB4B5D71541E1AC21757D /* PBXTargetDependency */,
 			);
 			name = ALL_BUILD;
 			productName = ALL_BUILD;
 		};
 		6D5AE773B9B2498F9303FFE5 /* ZERO_CHECK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = A60F6BDC77954D7F9F9F5538 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildConfigurationList = 0D6210279F3F47C5A9F430D8 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
 			buildPhases = (
 				E4CE50E099490838E5D444A9 /* Generate CMakeFiles/ZERO_CHECK */,
 			);
@@ -46,7 +46,7 @@
 		};
 		CF659F64D5DF4798A9982DE3 /* RUN_TESTS */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = B4D29D1E587D48DEA2341FC9 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */;
+			buildConfigurationList = 7664AF911535411694F49702 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */;
 			buildPhases = (
 				003C8D08B0008F35F218E126 /* CMake PostBuild Rules */,
 			);
@@ -58,87 +58,87 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0316010CEAFE41EDA03D8C5E /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/src/gtest_main.cc */ = {isa = PBXBuildFile; fileRef = 97F273B088BC49489ED71360 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/src/gtest_main.cc */; };
-		108C202CEEA74F5EAF586A9D /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = BD1AD945A7AD485E92570500 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/CMakeLists.txt */; };
-		5945CCBF556B470B9EB7E37F /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 6465FE3506EF46808CBD3A2A /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/CMakeLists.txt */; };
-		89FA02A63C084377B6D83A9C /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/src/gtest-all.cc */ = {isa = PBXBuildFile; fileRef = E71ADE976C1C4757B6224163 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/src/gtest-all.cc */; };
+		060F9C9B7839490FA6835BA7 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = CEBA07CB6B27426592B68EE2 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/CMakeLists.txt */; };
+		0F78AB20BF6D479E8F0075D4 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 6E5CD8AABFC44C959A254D23 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/CMakeLists.txt */; };
+		85F1817C58FC403B848211DD /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/src/gtest_main.cc */ = {isa = PBXBuildFile; fileRef = 5CA602DC794D48A991DE97E3 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/src/gtest_main.cc */; };
+		DA33EF2199D244F5A6D5ED30 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/src/gtest-all.cc */ = {isa = PBXBuildFile; fileRef = 09866050254A413E87338C04 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/src/gtest-all.cc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildStyle section */
-		425092AC648B455CB93B9CDD /* Debug */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Debug;
-		};
-		9CE4E5C9EEF241DFBFEC4588 /* RelWithDebInfo */ = {
+		005787D997A4438BBB437301 /* RelWithDebInfo */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = RelWithDebInfo;
 		};
-		A17B18BE75D340CB8A3F6EE5 /* Release */ = {
+		B4B1683CD16F47658D5B1630 /* Debug */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
-			name = Release;
+			name = Debug;
 		};
-		DF4DFECF263E4E8AA6146DEF /* MinSizeRel */ = {
+		D60163B476EA428197A143BE /* MinSizeRel */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = MinSizeRel;
 		};
+		FF0F90DD4237460297B60E75 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
 /* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
-		11C418A177E641C08D8298B9 /* PBXContainerItemProxy */ = {
+		964DD645E3394B0DB963CF5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F19BE4C12DA2492FA28DD553 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6D5AE773B9B2498F9303FFE5;
 			remoteInfo = ZERO_CHECK;
 		};
-		27CADF5E1C024DD6AF2F8D3C /* PBXContainerItemProxy */ = {
+		AB784B49FD8446F4B323658E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F19BE4C12DA2492FA28DD553 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 33EF81706D2A4C64A6EFFE90;
 			remoteInfo = ALL_BUILD;
 		};
-		36124EAED4B24C688F328600 /* PBXContainerItemProxy */ = {
+		AD5A4DD78BB447798C79EE83 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F19BE4C12DA2492FA28DD553 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 89E0E89CE7FB493EA2FCBBAA;
 			remoteInfo = gtest;
 		};
-		775C35836AFA4668AE4EE5F7 /* PBXContainerItemProxy */ = {
+		E9ABD1CF8D814C7597D3CD38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F19BE4C12DA2492FA28DD553 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D5AE773B9B2498F9303FFE5;
+			remoteInfo = ZERO_CHECK;
+		};
+		EBE30F3FA707425DBA798D8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F19BE4C12DA2492FA28DD553 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D5AE773B9B2498F9303FFE5;
+			remoteInfo = ZERO_CHECK;
+		};
+		F9D54989A2784AE2A24566DD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F19BE4C12DA2492FA28DD553 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6561B06474A1436C8EA0F1ED;
 			remoteInfo = gtest_main;
 		};
-		B55BE1FEA23F447FA71F76B3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F19BE4C12DA2492FA28DD553 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6D5AE773B9B2498F9303FFE5;
-			remoteInfo = ZERO_CHECK;
-		};
-		C2206ABB307442218430BE73 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F19BE4C12DA2492FA28DD553 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6D5AE773B9B2498F9303FFE5;
-			remoteInfo = ZERO_CHECK;
-		};
-		E4025C1CA36C44EBAF709C8B /* PBXContainerItemProxy */ = {
+		FAE7A0DD933D49CB83809EB4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F19BE4C12DA2492FA28DD553 /* Project object */;
 			proxyType = 1;
@@ -148,24 +148,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		51B87513F8FD437BBD58CA49 /* gtest_main */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libgtest_main.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		6465FE3506EF46808CBD3A2A /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		97F273B088BC49489ED71360 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/src/gtest_main.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = gtest_main.cc; path = src/gtest_main.cc; sourceTree = SOURCE_ROOT; };
-		BD1AD945A7AD485E92570500 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		E51E27847A2F4D52AD857031 /* gtest */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libgtest.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		E71ADE976C1C4757B6224163 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/src/gtest-all.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = "gtest-all.cc"; path = "src/gtest-all.cc"; sourceTree = SOURCE_ROOT; };
-		FB792104ED9A4E50B00937F1 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		09866050254A413E87338C04 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/src/gtest-all.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = "gtest-all.cc"; path = "src/gtest-all.cc"; sourceTree = SOURCE_ROOT; };
+		3240EC16584E49EABD94BF0B /* gtest */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libgtest.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CA602DC794D48A991DE97E3 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/src/gtest_main.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = gtest_main.cc; path = src/gtest_main.cc; sourceTree = SOURCE_ROOT; };
+		6E5CD8AABFC44C959A254D23 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		B19C691F38524546886D6F14 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		CEBA07CB6B27426592B68EE2 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		FE179D5093B44865A54CCC4D /* gtest_main */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libgtest_main.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		47D97567B8094018A925ABAB /* Frameworks */ = {
+		47D89E23770A4F00BE5E00CE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B8C9B09535D840998A73C068 /* Frameworks */ = {
+		68AC4DCA591B44459EFAA9ED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -175,81 +175,81 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2A44FBD0CE0A44F08988DA51 /* ALL_BUILD */ = {
+		0F4A6F33F15E405199EA37DD /* ALL_BUILD */ = {
 			isa = PBXGroup;
 			children = (
-				B3D25181CBA747EB86619CD4 /* CMake Rules */,
-				FB792104ED9A4E50B00937F1 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/CMakeLists.txt */,
+				87BA679A34AE48E49520F207 /* CMake Rules */,
+				B19C691F38524546886D6F14 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/CMakeLists.txt */,
 			);
 			name = ALL_BUILD;
 			sourceTree = "<group>";
 		};
-		2D69387BB87A4B0E9B052DF8 /* gtest */ = {
+		362FFBCBE9A24E4D85E02329 /* gtest_main */ = {
 			isa = PBXGroup;
 			children = (
-				9D528AFA831A4E23BB7527F0 /* Source Files */,
-				6465FE3506EF46808CBD3A2A /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/CMakeLists.txt */,
-			);
-			name = gtest;
-			sourceTree = "<group>";
-		};
-		32FFD7B1BFA9434E9903EE79 /* gtest_main */ = {
-			isa = PBXGroup;
-			children = (
-				8C9FE71030FF44678DC88812 /* Source Files */,
-				BD1AD945A7AD485E92570500 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/CMakeLists.txt */,
+				C148CC7BEA7E4902B66DF10D /* Source Files */,
+				6E5CD8AABFC44C959A254D23 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/CMakeLists.txt */,
 			);
 			name = gtest_main;
 			sourceTree = "<group>";
 		};
-		853D0A540F1C4855B3531650 /* Frameworks */ = {
+		66A95F4C4B344AEA88AB8E03 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8C9FE71030FF44678DC88812 /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				97F273B088BC49489ED71360 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/src/gtest_main.cc */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		9D528AFA831A4E23BB7527F0 /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				E71ADE976C1C4757B6224163 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/src/gtest-all.cc */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		AAEC8CDD357A4B06902EC092 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E51E27847A2F4D52AD857031 /* gtest */,
-				51B87513F8FD437BBD58CA49 /* gtest_main */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		B3D25181CBA747EB86619CD4 /* CMake Rules */ = {
+		87BA679A34AE48E49520F207 /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = "CMake Rules";
 			sourceTree = "<group>";
 		};
-		C19A5558C5054D23983510DD = {
+		A76E893F94364BE3B336F4BC = {
 			isa = PBXGroup;
 			children = (
-				2D69387BB87A4B0E9B052DF8 /* gtest */,
-				32FFD7B1BFA9434E9903EE79 /* gtest_main */,
-				2A44FBD0CE0A44F08988DA51 /* ALL_BUILD */,
-				AAEC8CDD357A4B06902EC092 /* Products */,
-				853D0A540F1C4855B3531650 /* Frameworks */,
+				C388D6EF33254E6984055428 /* gtest */,
+				362FFBCBE9A24E4D85E02329 /* gtest_main */,
+				0F4A6F33F15E405199EA37DD /* ALL_BUILD */,
+				C8085CA2C79442A792CF8EE5 /* Products */,
+				66A95F4C4B344AEA88AB8E03 /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		B49D7CA7DAEF40BAAAD55792 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				09866050254A413E87338C04 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/src/gtest-all.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		C148CC7BEA7E4902B66DF10D /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				5CA602DC794D48A991DE97E3 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/src/gtest_main.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		C388D6EF33254E6984055428 /* gtest */ = {
+			isa = PBXGroup;
+			children = (
+				B49D7CA7DAEF40BAAAD55792 /* Source Files */,
+				CEBA07CB6B27426592B68EE2 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/CMakeLists.txt */,
+			);
+			name = gtest;
+			sourceTree = "<group>";
+		};
+		C8085CA2C79442A792CF8EE5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3240EC16584E49EABD94BF0B /* gtest */,
+				FE179D5093B44865A54CCC4D /* gtest_main */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,37 +257,37 @@
 /* Begin PBXNativeTarget section */
 		6561B06474A1436C8EA0F1ED /* gtest_main */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3CE81CBDC8E04EE69DE52637 /* Build configuration list for PBXNativeTarget "gtest_main" */;
+			buildConfigurationList = 2FECF9BFB2104B4EACD93493 /* Build configuration list for PBXNativeTarget "gtest_main" */;
 			buildPhases = (
-				1A749288AC774040AB8E7A06 /* Sources */,
-				47D97567B8094018A925ABAB /* Frameworks */,
+				A562B1095043435EADC90AFE /* Sources */,
+				47D89E23770A4F00BE5E00CE /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F469B396F0A24543A45D99D8 /* PBXTargetDependency */,
-				DF38424F59084914A80DC73B /* PBXTargetDependency */,
+				848262F94DD4487A942F56B2 /* PBXTargetDependency */,
+				710FF5567192425996FD8E55 /* PBXTargetDependency */,
 			);
 			name = gtest_main;
 			productName = gtest_main;
-			productReference = 51B87513F8FD437BBD58CA49 /* gtest_main */;
+			productReference = FE179D5093B44865A54CCC4D /* gtest_main */;
 			productType = "com.apple.product-type.library.static";
 		};
 		89E0E89CE7FB493EA2FCBBAA /* gtest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 47E82D50F9BD48F686EBA3D4 /* Build configuration list for PBXNativeTarget "gtest" */;
+			buildConfigurationList = 012DEEA01EE64116A76B96BF /* Build configuration list for PBXNativeTarget "gtest" */;
 			buildPhases = (
-				A4752D652B2944C482B9588F /* Sources */,
-				B8C9B09535D840998A73C068 /* Frameworks */,
+				B7154ED78B974553BD8FA663 /* Sources */,
+				68AC4DCA591B44459EFAA9ED /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				04B272B12FC4470CB313F14C /* PBXTargetDependency */,
+				19C6C0FDEAFA4B3E8AAF8BDB /* PBXTargetDependency */,
 			);
 			name = gtest;
 			productName = gtest;
-			productReference = E51E27847A2F4D52AD857031 /* gtest */;
+			productReference = 3240EC16584E49EABD94BF0B /* gtest */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -299,18 +299,18 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
 			};
-			buildConfigurationList = 5940E8F9F96C4A1E81B14FA8 /* Build configuration list for PBXProject "gtest" */;
+			buildConfigurationList = 15E6855FA086471AA5AB7AF6 /* Build configuration list for PBXProject "gtest" */;
 			buildSettings = {
 			};
 			buildStyles = (
-				425092AC648B455CB93B9CDD /* Debug */,
-				A17B18BE75D340CB8A3F6EE5 /* Release */,
-				DF4DFECF263E4E8AA6146DEF /* MinSizeRel */,
-				9CE4E5C9EEF241DFBFEC4588 /* RelWithDebInfo */,
+				B4B1683CD16F47658D5B1630 /* Debug */,
+				FF0F90DD4237460297B60E75 /* Release */,
+				D60163B476EA428197A143BE /* MinSizeRel */,
+				005787D997A4438BBB437301 /* RelWithDebInfo */,
 			);
 			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 0;
-			mainGroup = C19A5558C5054D23983510DD;
+			mainGroup = A76E893F94364BE3B336F4BC;
 			projectDirPath = /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest;
 			projectRoot = "";
 			targets = (
@@ -516,84 +516,92 @@ fi
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1A749288AC774040AB8E7A06 /* Sources */ = {
+		A562B1095043435EADC90AFE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0316010CEAFE41EDA03D8C5E /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/src/gtest_main.cc */,
+				85F1817C58FC403B848211DD /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/src/gtest_main.cc */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A4752D652B2944C482B9588F /* Sources */ = {
+		B7154ED78B974553BD8FA663 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89FA02A63C084377B6D83A9C /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/src/gtest-all.cc */,
+				DA33EF2199D244F5A6D5ED30 /* /Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/src/gtest-all.cc */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		04B272B12FC4470CB313F14C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6D5AE773B9B2498F9303FFE5 /* ZERO_CHECK */;
-			targetProxy = C2206ABB307442218430BE73 /* PBXContainerItemProxy */;
-		};
-		65D13500C7634634866E0CFA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 89E0E89CE7FB493EA2FCBBAA /* gtest */;
-			targetProxy = E4025C1CA36C44EBAF709C8B /* PBXContainerItemProxy */;
-		};
-		B2A9896300214E4CAC8D0EE8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 33EF81706D2A4C64A6EFFE90 /* ALL_BUILD */;
-			targetProxy = 27CADF5E1C024DD6AF2F8D3C /* PBXContainerItemProxy */;
-		};
-		CCB183789ECF40768874D1EA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6D5AE773B9B2498F9303FFE5 /* ZERO_CHECK */;
-			targetProxy = B55BE1FEA23F447FA71F76B3 /* PBXContainerItemProxy */;
-		};
-		DF38424F59084914A80DC73B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6D5AE773B9B2498F9303FFE5 /* ZERO_CHECK */;
-			targetProxy = 11C418A177E641C08D8298B9 /* PBXContainerItemProxy */;
-		};
-		E2497CEBD5DB42F8B055E017 /* PBXTargetDependency */ = {
+		171AB4B5D71541E1AC21757D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6561B06474A1436C8EA0F1ED /* gtest_main */;
-			targetProxy = 775C35836AFA4668AE4EE5F7 /* PBXContainerItemProxy */;
+			targetProxy = F9D54989A2784AE2A24566DD /* PBXContainerItemProxy */;
 		};
-		F469B396F0A24543A45D99D8 /* PBXTargetDependency */ = {
+		19C6C0FDEAFA4B3E8AAF8BDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D5AE773B9B2498F9303FFE5 /* ZERO_CHECK */;
+			targetProxy = E9ABD1CF8D814C7597D3CD38 /* PBXContainerItemProxy */;
+		};
+		323121CF764948F0B0F5AFB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D5AE773B9B2498F9303FFE5 /* ZERO_CHECK */;
+			targetProxy = EBE30F3FA707425DBA798D8E /* PBXContainerItemProxy */;
+		};
+		710FF5567192425996FD8E55 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 89E0E89CE7FB493EA2FCBBAA /* gtest */;
-			targetProxy = 36124EAED4B24C688F328600 /* PBXContainerItemProxy */;
+			targetProxy = AD5A4DD78BB447798C79EE83 /* PBXContainerItemProxy */;
+		};
+		848262F94DD4487A942F56B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D5AE773B9B2498F9303FFE5 /* ZERO_CHECK */;
+			targetProxy = 964DD645E3394B0DB963CF5B /* PBXContainerItemProxy */;
+		};
+		A1D94CDC6EF64BE1905E4771 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 89E0E89CE7FB493EA2FCBBAA /* gtest */;
+			targetProxy = FAE7A0DD933D49CB83809EB4 /* PBXContainerItemProxy */;
+		};
+		BA8DB4CE4C5543559539693E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33EF81706D2A4C64A6EFFE90 /* ALL_BUILD */;
+			targetProxy = AB784B49FD8446F4B323658E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		02871BE25D8C46F6823C68CD /* RelWithDebInfo */ = {
+		1514E33B06AF44ACA915AA60 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/xcodeproject/lib/Release;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,"$(inherited)");
 				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++20'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
+				PRODUCT_NAME = gtest_main;
 				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/xcodeproject/build/gtest_main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = RelWithDebInfo;
+			name = Release;
 		};
-		05FDDE71522B491C9EA14E81 /* Debug */ = {
+		16F74AE3ED52495F9CE46BC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -621,17 +629,7 @@ fi
 			};
 			name = Debug;
 		};
-		07F7C87030F445A3AD19EBF5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk;
-				SYMROOT = /Users/tobiash/Projects/DearUI/Blink2D/xcodeproject/build;
-			};
-			name = Debug;
-		};
-		194C734584924F52B54A8CAE /* MinSizeRel */ = {
+		1C1987135EF648BEB7150F64 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
@@ -640,29 +638,9 @@ fi
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SYMROOT = /Users/tobiash/Projects/DearUI/Blink2D/xcodeproject/build;
 			};
-			name = MinSizeRel;
-		};
-		2104B5F3BBC24AA4A33AF0BF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
 			name = Release;
 		};
-		2A3ACF8A71B64512B08E6790 /* RelWithDebInfo */ = {
+		1E029C8C2238476BAA5FFDFB /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -680,9 +658,47 @@ fi
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
+			name = MinSizeRel;
+		};
+		1FBABEBFE7324F769DCACE19 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Users/tobiash/Projects/DearUI/Blink2D/xcodeproject/build;
+			};
 			name = RelWithDebInfo;
 		};
-		2F305773135D4DCEA6BDCD45 /* Release */ = {
+		2B6E0055AEE74FF28BF91159 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/xcodeproject/lib/RelWithDebInfo;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,"$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=c++20'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/xcodeproject/build/gtest.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		2FBAC8E2C72649A0BD185629 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -700,9 +716,56 @@ fi
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
+			name = MinSizeRel;
+		};
+		31700D204FE445ACBF47F4A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/xcodeproject/lib/Release;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,"$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++20'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/xcodeproject/build/gtest.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
 			name = Release;
 		};
-		30F2421AEE254994A2452BFA /* Debug */ = {
+		3FCC4536DECD4F988E1F4A6B /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		42659A11A728428581AD0B33 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -722,18 +785,55 @@ fi
 			};
 			name = Debug;
 		};
-		44696093D4DA481B9B67421F /* Release */ = {
+		43486B1ECB7A449391BCE805 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SYMROOT = /Users/tobiash/Projects/DearUI/Blink2D/xcodeproject/build;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = Release;
+			name = MinSizeRel;
 		};
-		46E21231FB0F4C8C94BF7755 /* RelWithDebInfo */ = {
+		577917C609BF430DAE8F1894 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/xcodeproject/lib/RelWithDebInfo;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,"$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=c++20'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest_main;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/xcodeproject/build/gtest_main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		6400A8D843734CE3891EEEDA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -751,9 +851,9 @@ fi
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = RelWithDebInfo;
+			name = Release;
 		};
-		46F185E3059B445BA37B002B /* Debug */ = {
+		69119C9C6C89405CB205390E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -780,7 +880,7 @@ fi
 			};
 			name = Debug;
 		};
-		4A47752F2139442CBD68DFC1 /* MinSizeRel */ = {
+		69DBD8DBBBCD4DBDB59A961D /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -798,75 +898,9 @@ fi
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = MinSizeRel;
-		};
-		5D1D06EBC92D4E6B8B36D8BF /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/xcodeproject/lib/RelWithDebInfo;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,"$(inherited)");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=c++20'  -DGTEST_HAS_PTHREAD=1   ";
-				OTHER_LIBTOOLFLAGS = ("");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = gtest_main;
-				SECTORDER_FLAGS = "";
-				SYSTEM_HEADER_SEARCH_PATHS = (/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,"$(inherited)");
-				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/xcodeproject/build/gtest_main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
 			name = RelWithDebInfo;
 		};
-		629328C3C5364C3D97C72A36 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SYMROOT = /Users/tobiash/Projects/DearUI/Blink2D/xcodeproject/build;
-			};
-			name = RelWithDebInfo;
-		};
-		6DB3D326B2234BE4814BF414 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/xcodeproject/lib/RelWithDebInfo;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,"$(inherited)");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=c++20'  -DGTEST_HAS_PTHREAD=1   ";
-				OTHER_LIBTOOLFLAGS = ("");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = gtest;
-				SECTORDER_FLAGS = "";
-				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/xcodeproject/build/gtest.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		7CE132E78E4A4C52AFE2291E /* Debug */ = {
+		734DA530A1A44907A2CAA328 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -884,103 +918,9 @@ fi
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = Debug;
+			name = RelWithDebInfo;
 		};
-		90AD2A8F36B4481784BB927C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/xcodeproject/lib/Release;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,"$(inherited)");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++20'  -DGTEST_HAS_PTHREAD=1   ";
-				OTHER_LIBTOOLFLAGS = ("");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = gtest;
-				SECTORDER_FLAGS = "";
-				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/xcodeproject/build/gtest.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		956756FBCD664027A684034F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = install;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		9FDAB6F091EC46D0BE9A2D3C /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/xcodeproject/lib/MinSizeRel;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,"$(inherited)");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++20'  -DGTEST_HAS_PTHREAD=1   ";
-				OTHER_LIBTOOLFLAGS = ("");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = gtest;
-				SECTORDER_FLAGS = "";
-				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/xcodeproject/build/gtest.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		B9ACB0EE8DD2435D9A79B760 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		BC5ADA91AF1447CAA6586614 /* MinSizeRel */ = {
+		867D5D72BB9F48F3B8890F93 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -998,9 +938,47 @@ fi
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
+			name = Release;
+		};
+		88688BECC7DB4A6398A82C25 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Users/tobiash/Projects/DearUI/Blink2D/xcodeproject/build;
+			};
 			name = MinSizeRel;
 		};
-		C4243B1A60CC4B80A923C871 /* Release */ = {
+		8BA1AD36EDF74361B46129CB /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/xcodeproject/lib/MinSizeRel;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,"$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++20'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/xcodeproject/build/gtest.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		C25A7A112DE849A3BDDF9994 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1020,27 +998,7 @@ fi
 			};
 			name = Release;
 		};
-		C8FD6474C8E94281B77E2EF1 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = install;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		D60BC34BAA0946669EDD6074 /* RelWithDebInfo */ = {
+		C84C2C427ECE4A8FA08E9E0C /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1060,7 +1018,7 @@ fi
 			};
 			name = RelWithDebInfo;
 		};
-		DC62D6CF754F4BF3B68A3CC3 /* Debug */ = {
+		CC9CC16853344050A101C540 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1080,7 +1038,27 @@ fi
 			};
 			name = Debug;
 		};
-		DCE67A7120CF4AA18BF10B28 /* MinSizeRel */ = {
+		D8C455FD5E0A48F6848333E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		DCBBA219971A45CBA65E9BDA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1098,9 +1076,9 @@ fi
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = MinSizeRel;
+			name = Release;
 		};
-		EBE48C51B7FC41CF87B9FC79 /* MinSizeRel */ = {
+		DF2E7CC081F645E2B1AF0222 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1128,110 +1106,132 @@ fi
 			};
 			name = MinSizeRel;
 		};
-		EDCAB5A1DC9E47E3AE7D38A4 /* Release */ = {
+		E0323623E41A49509AACA6ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk;
+				SYMROOT = /Users/tobiash/Projects/DearUI/Blink2D/xcodeproject/build;
+			};
+			name = Debug;
+		};
+		F145EBC6A1D04CDBBFC08460 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/tobiash/Projects/DearUI/Blink2D/xcodeproject/lib/Release;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,"$(inherited)");
 				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++20'  -DGTEST_HAS_PTHREAD=1   ";
-				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_LDFLAGS = ("","$(inherited)");
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = gtest_main;
+				PRODUCT_NAME = ZERO_CHECK;
 				SECTORDER_FLAGS = "";
-				SYSTEM_HEADER_SEARCH_PATHS = (/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest/include,/Users/tobiash/Projects/DearUI/Blink2D/extern/googletest/googletest,"$(inherited)");
-				TARGET_TEMP_DIR = "/Users/tobiash/Projects/DearUI/Blink2D/xcodeproject/build/gtest_main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = Release;
+			name = Debug;
+		};
+		F167703EFA6F46CF990E2176 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D07F2361E7A4B7B88781824 /* Build configuration list for PBXAggregateTarget "install" */ = {
+		012DEEA01EE64116A76B96BF /* Build configuration list for PBXNativeTarget "gtest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				956756FBCD664027A684034F /* Debug */,
-				C4243B1A60CC4B80A923C871 /* Release */,
-				C8FD6474C8E94281B77E2EF1 /* MinSizeRel */,
-				D60BC34BAA0946669EDD6074 /* RelWithDebInfo */,
+				69119C9C6C89405CB205390E /* Debug */,
+				31700D204FE445ACBF47F4A1 /* Release */,
+				8BA1AD36EDF74361B46129CB /* MinSizeRel */,
+				2B6E0055AEE74FF28BF91159 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		3CE81CBDC8E04EE69DE52637 /* Build configuration list for PBXNativeTarget "gtest_main" */ = {
+		0D6210279F3F47C5A9F430D8 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				05FDDE71522B491C9EA14E81 /* Debug */,
-				EDCAB5A1DC9E47E3AE7D38A4 /* Release */,
-				EBE48C51B7FC41CF87B9FC79 /* MinSizeRel */,
-				5D1D06EBC92D4E6B8B36D8BF /* RelWithDebInfo */,
+				F145EBC6A1D04CDBBFC08460 /* Debug */,
+				DCBBA219971A45CBA65E9BDA /* Release */,
+				1E029C8C2238476BAA5FFDFB /* MinSizeRel */,
+				734DA530A1A44907A2CAA328 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		47E82D50F9BD48F686EBA3D4 /* Build configuration list for PBXNativeTarget "gtest" */ = {
+		15E6855FA086471AA5AB7AF6 /* Build configuration list for PBXProject "gtest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				46F185E3059B445BA37B002B /* Debug */,
-				90AD2A8F36B4481784BB927C /* Release */,
-				9FDAB6F091EC46D0BE9A2D3C /* MinSizeRel */,
-				6DB3D326B2234BE4814BF414 /* RelWithDebInfo */,
+				E0323623E41A49509AACA6ED /* Debug */,
+				1C1987135EF648BEB7150F64 /* Release */,
+				88688BECC7DB4A6398A82C25 /* MinSizeRel */,
+				1FBABEBFE7324F769DCACE19 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		5940E8F9F96C4A1E81B14FA8 /* Build configuration list for PBXProject "gtest" */ = {
+		2FECF9BFB2104B4EACD93493 /* Build configuration list for PBXNativeTarget "gtest_main" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				07F7C87030F445A3AD19EBF5 /* Debug */,
-				44696093D4DA481B9B67421F /* Release */,
-				194C734584924F52B54A8CAE /* MinSizeRel */,
-				629328C3C5364C3D97C72A36 /* RelWithDebInfo */,
+				16F74AE3ED52495F9CE46BC0 /* Debug */,
+				1514E33B06AF44ACA915AA60 /* Release */,
+				DF2E7CC081F645E2B1AF0222 /* MinSizeRel */,
+				577917C609BF430DAE8F1894 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		9C3E340F53D94E26AC973FBF /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		7664AF911535411694F49702 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				30F2421AEE254994A2452BFA /* Debug */,
-				2104B5F3BBC24AA4A33AF0BF /* Release */,
-				BC5ADA91AF1447CAA6586614 /* MinSizeRel */,
-				02871BE25D8C46F6823C68CD /* RelWithDebInfo */,
+				CC9CC16853344050A101C540 /* Debug */,
+				6400A8D843734CE3891EEEDA /* Release */,
+				2FBAC8E2C72649A0BD185629 /* MinSizeRel */,
+				69DBD8DBBBCD4DBDB59A961D /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		A60F6BDC77954D7F9F9F5538 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		8315441C1A824208A2A8E004 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7CE132E78E4A4C52AFE2291E /* Debug */,
-				B9ACB0EE8DD2435D9A79B760 /* Release */,
-				DCE67A7120CF4AA18BF10B28 /* MinSizeRel */,
-				2A3ACF8A71B64512B08E6790 /* RelWithDebInfo */,
+				42659A11A728428581AD0B33 /* Debug */,
+				867D5D72BB9F48F3B8890F93 /* Release */,
+				43486B1ECB7A449391BCE805 /* MinSizeRel */,
+				F167703EFA6F46CF990E2176 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		B4D29D1E587D48DEA2341FC9 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */ = {
+		A896E5413E4B4017A8DC1726 /* Build configuration list for PBXAggregateTarget "install" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DC62D6CF754F4BF3B68A3CC3 /* Debug */,
-				2F305773135D4DCEA6BDCD45 /* Release */,
-				4A47752F2139442CBD68DFC1 /* MinSizeRel */,
-				46E21231FB0F4C8C94BF7755 /* RelWithDebInfo */,
+				D8C455FD5E0A48F6848333E5 /* Debug */,
+				C25A7A112DE849A3BDDF9994 /* Release */,
+				3FCC4536DECD4F988E1F4A6B /* MinSizeRel */,
+				C84C2C427ECE4A8FA08E9E0C /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

@@ -47,6 +47,7 @@ namespace blink2dgui
             int WIDTH = 1280;
             int HEIGHT = 800;
             GameGui* gui_ = nullptr;
+            SideGui* sideGui_ = nullptr;
 
         private:
             Application();

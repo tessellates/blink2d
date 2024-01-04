@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <functional> 
+#include "Direction.hpp"
 
 class Coordinate {
 public:

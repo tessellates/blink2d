@@ -68,3 +68,6 @@ target_link_libraries(main PUBLIC ${PROJECT_NAME})
 
 #Enable imgui default math operator
 add_compile_definitions(IMGUI_DEFINE_MATH_OPERATORS)
+
+
+file(COPY assets/ DESTINATION ${CMAKE_BINARY_DIR}/assets)

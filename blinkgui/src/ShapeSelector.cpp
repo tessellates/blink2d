@@ -44,7 +44,7 @@ namespace blink2dgui
                 Application::instance()->getGui().setGrid(gridSize);
         }
 
-        const char* items[] = { "None", "Snake", "Connect" };
+        const char* items[] = { "None", "Snake", "Connect", "Rocksolid" };
         ImGui::Combo("Game", &selectedItem, items, IM_ARRAYSIZE(items));
 
         ImGui::Spacing();

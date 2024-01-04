@@ -13,6 +13,10 @@ BlinkTexture::BlinkTexture(SDL_Texture* texture) : BlinkTexture(blink2dgui::Appl
     SDL_QueryTexture(m_texture, NULL, NULL, &m_width, &m_height);
 }
 
+BlinkTexture::BlinkTexture(SDL_Texture* texture, int width, int height) : m_renderer(blink2dgui::Application::instance()->getRenderer()), m_texture(texture), m_width(width), m_height(height)
+{
+
+}
 
 BlinkTexture::~BlinkTexture() {
     if (m_texture) {
