@@ -17,6 +17,7 @@
 #include <ShapeSelector.hpp>
 #include <ControllerWindow.hpp>
 #include <Singleton.hpp>
+#include "BlinkGame.hpp"
 
 #if !SDL_VERSION_ATLEAST(2,0,17)
 #error This backend requires SDL 2.0.17+ because of SDL_RenderGeometry() function
@@ -65,5 +66,6 @@ namespace blink2dgui
             
             ShapeSelector shapeSelector_;
             ControllerWindow controllerWindow_;
+            BlinkGame* game;
     };
 }
