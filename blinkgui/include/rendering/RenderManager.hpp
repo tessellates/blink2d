@@ -21,5 +21,6 @@ private:
     RenderManager() = default;
     ~RenderManager() = default;   
 
+    std::deque<RenderAction> baseLayer;
     std::array<std::deque<RenderAction>, 10> layers;
 };

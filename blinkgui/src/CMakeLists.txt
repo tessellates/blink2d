@@ -16,5 +16,6 @@ target_sources(${PROJECT_NAME}
         ${CMAKE_CURRENT_SOURCE_DIR}/ShapeType.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/Transform.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/TransformStrategy.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/TextureGeneration.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/VisualEntity.cpp
 )

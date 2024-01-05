@@ -35,6 +35,8 @@ inline SDL_Texture* CreateBackgroundTexture(SDL_Renderer* renderer, float spacin
 
     // Reset the rendering target to the default
     SDL_SetRenderTarget(renderer, NULL);
+    SDL_RenderClear(renderer);
+    
     return gridTexture;
 }
 

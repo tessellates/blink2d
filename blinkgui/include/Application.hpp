@@ -22,6 +22,8 @@
 #error This backend requires SDL 2.0.17+ because of SDL_RenderGeometry() function
 #endif
 
+class SideGui;
+
 namespace blink2dgui
 {
     /**
