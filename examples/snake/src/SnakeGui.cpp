@@ -3,9 +3,13 @@
  * Unauthorized copying of this file, via any medium is strictly prohibited
  * Proprietary and confidential
  */
+
+#include <map>
+
 #include "SnakeGui.hpp"
 #include "SnakeModel.hpp"
 #include "ConnectTextures.hpp"
+
 
 namespace blink2dgui {
 

@@ -1,6 +1,8 @@
 #include "GameClock.hpp"
 #include <iostream>
 
+GameClock::GameClock() : GameClock(1000) {}
+
 GameClock::GameClock(float gameSpeed) : gameSpeed(gameSpeed) {
     lastTick = SDL_GetTicks();
     startTick = lastTick;

@@ -5,6 +5,8 @@ tests/**/*.marks
 tests/**/*.ts
 tests/**/*.o.d
 tests/**/Makefile
+tests/**/*.pbxproj
+tests/**/*.xcodeproj
 
 ## Xcode
 xcodeproject/*

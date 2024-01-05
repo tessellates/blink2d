@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include <SDL.h>
 #include <vector>
+#include <map>
 
 #include "ConnectModel.hpp"
 #include "GameState.hpp"

@@ -11,22 +11,27 @@
 #include <stdio.h>
 #include <SDL.h>
 #include <vector>
+#include <optional>
+
+#include "GameSettings.hpp"
 
 namespace blink2dgui
 {
-    class ShapeSelector
+    class SettingsPanel
     {
     public:
-        ShapeSelector();    // Constructor
-        ~ShapeSelector();   // Destructor
+        SettingsPanel() = default;    // Constructor
+        ~SettingsPanel() = default;   // Destructor
 
         // Render the shape selector window
         void renderWindow();
+        void enableSettings(const GameSettings& settings);
 
     private:
-        int gameSpeed = 200; 
-        int gridSize = 8; 
-        int selectedItem = 0;
+        int selectedItem;
+        int gameSpeed;
+        int gridSize;
+        std::optional<GameSettings> settings;
     };
 }
 

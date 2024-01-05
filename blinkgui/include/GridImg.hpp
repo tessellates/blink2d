@@ -11,7 +11,6 @@
 #include <stdio.h>
 #include <SDL.h>
 #include <vector>
-#include "Shape.hpp"
 #include "GridEntity.hpp"
 #include <SDL.h>
 #include <SDL_image.h>

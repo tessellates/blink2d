@@ -4,6 +4,7 @@
 
 class GameClock {
 public:
+    GameClock();
     GameClock(float gameSpeed);
     void update(); // Call this once per frame
     void reset(); 

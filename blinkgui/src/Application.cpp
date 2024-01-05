@@ -73,14 +73,22 @@ namespace blink2dgui
             gui_ = nullptr;
         }
         if (option == 1)
+        {
             gui_ = new SnakeGui();
+            panel_.enableSettings(GameSettings{true, true});
+        }
+            
         if (option == 2)
+        {
             gui_ = new ConnectGui();
+            panel_.enableSettings(GameSettings{});
+        }
         if (option == 3)
         {
             gui_ = new RockSolidGui();
-            //sideGui_ = 
+            panel_.enableSettings(GameSettings{});
         }
+        
     }
 
     Application::~Application()
@@ -117,7 +125,7 @@ namespace blink2dgui
         ImGui::NewFrame();
 
         controllerWindow_.renderWindow();
-        shapeSelector_.renderWindow();
+        panel_.renderWindow();
 
         if (gui_ != nullptr)
             getGui().render();
@@ -163,6 +171,19 @@ namespace blink2dgui
     {
         assert(gui_ != nullptr);
         return *gui_;
+    }
+    
+    //STATIC
+    BlinkGame* Application::activeGame()
+    {
+        return Application::instance()->game;
+    }
+
+
+    GameClock& Application::activeGameClock()
+    {
+        assert(Application::instance()->game != nullptr);
+        return Application::instance()->game->getClock();
     }
 
 }

@@ -13,10 +13,10 @@
 #include <stdio.h>
 #include <SDL.h>
 
-#include <GameGui.hpp>
-#include <ShapeSelector.hpp>
-#include <ControllerWindow.hpp>
-#include <Singleton.hpp>
+#include "GameGui.hpp"
+#include "SettingsPanel.hpp"
+#include "ControllerWindow.hpp"
+#include "Singleton.hpp"
 #include "BlinkGame.hpp"
 
 #if !SDL_VERSION_ATLEAST(2,0,17)
@@ -51,6 +51,8 @@ namespace blink2dgui
             int HEIGHT = 800;
             GameGui* gui_ = nullptr;
             SideGui* sideGui_ = nullptr;
+            static GameClock& activeGameClock();
+            static BlinkGame* activeGame();
 
         private:
             Application();
@@ -64,7 +66,7 @@ namespace blink2dgui
 
             bool done_ = false;
             
-            ShapeSelector shapeSelector_;
+            SettingsPanel panel_;
             ControllerWindow controllerWindow_;
             BlinkGame* game;
     };

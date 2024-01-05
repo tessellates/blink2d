@@ -19,7 +19,6 @@ public:
     const GameClock& getClock() const;
 
     const GameSettings& getGameSettings() const;
-
 private:
     GameSettings settings;
     GameParameters parameters;

@@ -3,7 +3,7 @@
 
 void BlinkGame::init(const GameParameters& parameters)
 {
-    parameters = parameters;
+    this->parameters = parameters;
 }
 
 void BlinkGame::clicked(const ImVec2& position, int id)
