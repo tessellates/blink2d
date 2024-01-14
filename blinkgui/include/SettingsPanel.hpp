@@ -24,7 +24,7 @@ namespace blink2dgui
         ~SettingsPanel() = default;   // Destructor
 
         // Render the shape selector window
-        void renderWindow();
+        void renderWindow(float scale = 1);
         void enableSettings(const GameSettings& settings);
 
     private:

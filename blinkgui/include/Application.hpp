@@ -43,14 +43,17 @@ namespace blink2dgui
             void loop();
             void init(int option = 0);
             bool isRunning();
-            void changeGameSpeed(int gameSpeed);
             SDL_Renderer* getRenderer() const;
-            GameGui& getGui() const;
 
             int WIDTH = 1280;
             int HEIGHT = 800;
-            GameGui* gui_ = nullptr;
-            SideGui* sideGui_ = nullptr;
+
+            int WIDTH_DEFAULT = 1280;
+            int HEIGHT_DEFAULT = 800;
+
+            float HEIGHT_MOD = 1;
+            
+            
             static GameClock& activeGameClock();
             static BlinkGame* activeGame();
 

@@ -1,32 +1,29 @@
 #pragma once
 
 #include "Coordinate.hpp"
-#include "GameState.hpp"
 #include "RockSolidLevel.hpp"
+#include "CommandHistory.hpp"
 #include "RockSolidNode.hpp"
 
 
-enum RockSolidModelNodeProperties
-{
-    GEM_COUNT
-};
-
 // Forward declaration of classes used in the header
-class RockSolidModel : public GameState
+class RockSolidModel : public CommandHistory
 {
 public:
     RockSolidModel() = default;
     
-    std::vector<std::vector<RockSolidNode>> nodeGrid;
+    std::vector<RockSolidNode> nodeGrid;
+    std::vector<std::function<void>(const Coordinate&, const RockSolidNodeType&)> replaceEmissions; 
+    std::vector<std::function<void>(const Coordinate&, const Direction&)> directionEmissions; 
+    std::vector<std::function<void>(const Coordinate&, const Coordinate&, int)> gemEmissions; 
+
+    int height;
+    int width;
 
     RockSolidNode& getNode(const Coordinate& position);
     const RockSolidNode& getNode(const Coordinate& position) const;
-
     bool inModel(const Coordinate& position) const;
     
-    int height() const;
-    int width() const;
-
     void placeNodeAtPosition(const Coordinate& position, RockSolidNodeType type);
     bool canPlaceNodeAtPosition(const Coordinate& position, RockSolidNodeType type) const;
 
@@ -37,13 +34,9 @@ public:
     void nextTick();
     void loadLevel(const RockSolidLevel& level);
 
-
-    void fireRemoveEntity(const Coordinate& cor, const GridEntity& ent) override;
-    void fireAddEntity(const Coordinate& cor, const GridEntity& ent) override;
-    void fireReplaceEntity(const Coordinate&, const GridEntity&, const GridEntity&) override;
-
     float playerMoney;
     int gemTarget;
+    int gemPerTick;
 
     std::unordered_map<RockSolidNodeType, float> nodeCosts = 
     {
@@ -57,15 +50,4 @@ public:
         {RockSolidNodeType::CONSTRUCT_B, 100.0f},
         {RockSolidNodeType::CONSTRUCT_C, 100.0f}
     };
-
-    /*
-    void play(int column);
-    void fireRemoveEntity(const Coordinate& cor, const GridEntity& ent) override;
-    void fireAddEntity(const Coordinate& cor, const GridEntity& ent) override;
-    void fireWin();
-    std::optional<std::vector<Coordinate>> checkWin(const std::vector<std::stack<int>>& board, int player);
-
-public:
-    std::vector<std::stack<int>> board;
-    std::optional<std::vector<Coordinate>> win;*/
 };

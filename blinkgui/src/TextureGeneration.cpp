@@ -19,11 +19,11 @@ BlinkTexture CreateGrid(float squareSize, float textureHeight, float textureWidt
 
     // Draw the grid lines
     SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); // White lines, or any color you choose
-    for (float x = 0; x <= textureWidth; x += squareSize) {
+    for (float x = 0; x <= textureWidth+1; x += squareSize) {
         SDL_RenderDrawLine(renderer, x-1,  0, x-1, textureHeight);
         SDL_RenderDrawLine(renderer, x,  0, x, textureHeight);
     }
-    for (float y =  0; y <= textureHeight; y += squareSize) {
+    for (float y =  0; y <= textureHeight+1; y += squareSize) {
         SDL_RenderDrawLine(renderer,  0, y-1, textureWidth, y-1);
         SDL_RenderDrawLine(renderer,  0, y, textureWidth, y);
     }

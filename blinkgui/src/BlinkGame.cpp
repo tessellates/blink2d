@@ -20,6 +20,16 @@ void BlinkGame::updateSDL()
 {
 
 }
+
+void BlinkGame::forward()
+{
+
+}
+
+void BlinkGame::backward()
+{
+
+}
     
 GameClock& BlinkGame::getClock()
 {

@@ -27,6 +27,7 @@ public:
     Coordinate operator-(const Coordinate& other) const;
 
     Coordinate getNeighbor(int direction) const;
+    Direction getDirection(const Coordinate&) const;
 
     // Print the coordinate (for debugging)
     void print() const;

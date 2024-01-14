@@ -26,7 +26,9 @@ public:
     GridEntityBuilder& addInstruction(); 
 
     ImVec2 absolutePosition(const Coordinate& pos) const;
+    ImVec2 absolutePosition(const ImVec2& pos) const;
     ImVec2 relativePosition(const Coordinate& pos) const;
+    Coordinate gridPosition(const ImVec2& pos) const;
 
 public:
     int nx;

@@ -10,7 +10,8 @@ enum DemolitionThreshold
     INDESTRUCTABLE
 };
 
-enum RockSolidNodeType {
+enum RockSolidNodeType 
+{
     EMPTY = 1 << 0,              // 1
     DIRT = 1 << 1,               // 2
     ROCK = 1 << 2,               // 4
@@ -29,24 +30,24 @@ enum RockSolidNodeType {
 };
 
 // Forward declaration of classes used in the header
+class RockSolidModel;
+
 class RockSolidNode 
 {
 public:
-    RockSolidNode() = default;
+    RockSolidNode();
     RockSolidNode(RockSolidNodeType type, int gemCount = 0);
-    RockSolidNode(const GridEntity& entity);
-
     void change(RockSolidNodeType type);
+    void changeGemCount(int amount);
 
-    GridEntity entity(const Coordinate& position) const;
-
-    void onGameTick();
-    std::function<void(RockSolidNode&)>* gameTickBehaviour;
+    void onGameTick(RockSolidModel&, const Coordinate&);
+    std::function<void(RockSolidNode&, RockSolidModel&, const Coordinate&)>* gameTickBehaviour;
     
     DemolitionThreshold demolitionThreshold = INDESTRUCTABLE;
     RockSolidNodeType type = EMPTY;
     int gemCount = 0;
     int canPlace = 0;
+    Direction direction = NONE;
 
     // STATIC
     static std::unordered_map<RockSolidNodeType, std::function<void(RockSolidNode&)>> initMap;
@@ -70,4 +71,6 @@ public:
     static int isGround;
     static int needsVertical;
     static int isVertical;
+
+    static void behave(RockSolidNode&, RockSolidModel&, const Coordinate&);
 };

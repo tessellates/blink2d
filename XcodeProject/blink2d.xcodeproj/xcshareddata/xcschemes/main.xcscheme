@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9EF5D58F506F484CA8A08D1D"
+               BlueprintIdentifier = "3C59631E81514EF698221CF1"
                BuildableName = "main"
                BlueprintName = "main"
                ReferencedContainer = "container:xcodeproject/blink2d.xcodeproj">
@@ -45,7 +45,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9EF5D58F506F484CA8A08D1D"
+            BlueprintIdentifier = "3C59631E81514EF698221CF1"
             BuildableName = "main"
             BlueprintName = "main"
             ReferencedContainer = "container:xcodeproject/blink2d.xcodeproj">
@@ -62,7 +62,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9EF5D58F506F484CA8A08D1D"
+            BlueprintIdentifier = "3C59631E81514EF698221CF1"
             BuildableName = "main"
             BlueprintName = "main"
             ReferencedContainer = "container:xcodeproject/blink2d.xcodeproj">

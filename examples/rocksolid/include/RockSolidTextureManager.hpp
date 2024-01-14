@@ -18,8 +18,10 @@ public:
 
     std::unordered_map<std::string, int> nameToType
     {
-        {"gems", GEM_DEPOSIT},
+        {"gemdeposit", GEM_DEPOSIT},
         {"dirt", DIRT},
-        {"metal", ROCK}
+        {"rock", ROCK},
+        {"extractor", HORIZONTAL_EXTRACTOR},
+        {"engine", HORIZONTAL_ENGINE}
     };
 };

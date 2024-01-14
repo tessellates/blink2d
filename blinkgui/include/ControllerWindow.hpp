@@ -21,7 +21,7 @@ namespace blink2dgui
         ~ControllerWindow();   // Destructor
 
         // Render the shape selector window
-        void renderWindow();
+        void renderWindow(float scale = 1);
 
         // Check if square or hexagon is selected
 

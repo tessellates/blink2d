@@ -17,11 +17,11 @@ namespace blink2dgui
 
     void GridImg::enableMovement(const ImVec2& sourcePosition, bool defaultAction)
     {
-        if (Application::instance()->getGui().gameClock.getIntervalProgress() >= 1) this->start = true;
+        if (Application::activeGameClock().getIntervalProgress() >= 1) this->start = true;
         this->defaultAction = defaultAction;        
         moveAction = [this, sourcePosition] 
         { 
-            float factor = Application::instance()->getGui().gameClock.getIntervalProgress();
+            float factor = Application::activeGameClock().getIntervalProgress();
             if (factor >= 1)
             {
                 if (this->start)

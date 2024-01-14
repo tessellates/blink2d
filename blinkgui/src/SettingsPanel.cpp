@@ -3,12 +3,12 @@
 
 namespace blink2dgui
 {
-    void SettingsPanel::renderWindow()
+    void SettingsPanel::renderWindow(float scale)
     {
         ImGuiWindowFlags flags =  ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize;
-        ImVec2 windowSize = ImVec2(280, 720);  // Example size
-        ImVec2 pos = ImVec2(0, 40);  // Example size
-        ImVec2 pos2 = ImVec2(1000, 40);  // Example size
+        ImVec2 windowSize = ImVec2(280, 720)*scale;  // Example size
+        ImVec2 pos = ImVec2(0, 40)*scale;  // Example size
+        ImVec2 pos2 = ImVec2(1000, 40)*scale;  // Example size
         ImGui::SetNextWindowSize(windowSize);
         ImGui::SetNextWindowPos(pos);
 
@@ -34,7 +34,7 @@ namespace blink2dgui
         {
             if(ImGui::SliderInt("Game Speed", &gameSpeed, 25, 1000))
             {
-                Application::instance()->changeGameSpeed(gameSpeed);
+                //Application::instance()->changeGameSpeed(gameSpeed);
             }
         }
 
@@ -48,15 +48,12 @@ namespace blink2dgui
 
             // Confirm button
             if (ImGui::Button("Confirm##grid")) {
-                // Handle the confirmation action
-                // This is where you'd put code to use the selected grid size
-                if (Application::instance()->gui_)
-                    Application::instance()->getGui().setGrid(gridSize);
+
             }
         }
 
-        if (Application::instance()->gui_)
-            ImGui::Text("FPS: %.3f", 1.0f / Application::instance()->getGui().gameClock.getDeltaTime() * 1000);
+        //if (Application::instance()->gui_)
+        //    ImGui::Text("FPS: %.3f", 1.0f / Application::instance()->getGui().gameClock.getDeltaTime() * 1000);
 
         ImGui::End();
 
@@ -64,6 +61,7 @@ namespace blink2dgui
     void SettingsPanel::enableSettings(const GameSettings& settings)
     {
         this->settings = settings;
+        //gameSpeed = Application::activeGameClock().getGameSpeed();
     }
 }
 

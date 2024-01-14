@@ -5,45 +5,34 @@
  */
  #pragma once
 
-#include "imgui.h"
-#include "imgui_impl_sdl2.h"
-#include "imgui_impl_sdlrenderer2.h"
-#include <stdio.h>
-#include <SDL.h>
 #include <vector>
-#include <map>
+#include <unordered_map>
 
-#include "ConnectModel.hpp"
-#include "GameState.hpp"
-#include "GameClock.hpp"
-#include "BackgroundTexture.hpp"
-#include "GameGui.hpp"
-#include "VisualEntity.hpp"
-
-#include "RenderAction.hpp"
+#include "TextureGeneration.hpp"
 #include "GridEntityBuilder.hpp"
 
-namespace blink2dgui
+class ConnectGui
 {
-    class ConnectGui : public GameGui, public GameStateListener
-    {
-    public:
-        ConnectGui();    // Constructor
-        ~ConnectGui();   // Destructor
+public:
+    ConnectGui() = default;    // Constructor
+    ~ConnectGui() = default;   // Destructor
+    
+    void init(const ImVec2& position, const ImVec2& size);
+    void addConnectEntity(const Coordinate& postion, int color);
+    void removeConnectEntity(const Coordinate& postion);
+    void changeConnectEntity(const Coordinate& postion, int color);
 
-        void onAddEntity(const Coordinate& pos, const GridEntity& entity) override;
-        void onRemoveEntity(const Coordinate& pos,  const GridEntity& entity) override;
-        void onModelPropertyChange(int, int) override;
-        void gameTick() override;
-        void setGrid(int size) override;
-        void clicked(const Coordinate& pos) override;
-        
-    private:
-        ConnectModel* connectModel_;
-        bool allowPlay_ = true;
-        int tickCount = 0;
-        std::map<int, VisualEntity> visualEntityMap;
-        GridEntityBuilder builder;
-    };
-}
+    Coordinate gridPosition(const ImVec2& pos) const;
+    bool isInGui(const ImVec2& pos) const;
+
+    void updateSDL();
+    
+    std::unordered_map<Coordinate, VisualEntity> visualEntityMap;
+    VisualEntity backgroundEntity;
+    GridEntityBuilder builder;
+
+    BlinkTexture background;
+    std::vector<BlinkTexture> squareTextures;
+};
+
 

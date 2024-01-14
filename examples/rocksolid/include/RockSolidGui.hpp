@@ -27,22 +27,14 @@
 
 namespace blink2dgui
 {
-    class RockSolidGui : public GameGui, public GameStateListener
+    class RockSolidGui
     {
     public:
         RockSolidGui();    // Constructor
         ~RockSolidGui();   // Destructor
 
-        void onAddEntity(const Coordinate& pos, const GridEntity& entity) override;
-        void onRemoveEntity(const Coordinate& pos,  const GridEntity& entity) override;
-        void onReplaceEntity(const Coordinate&, const GridEntity&,  const GridEntity&) override;
-    
-        void gameTick() override;
-        void setGrid(int size) override;
-        void clicked(const Coordinate& pos) override;
-        
+
     private:
-        RockSolidModel* solidModel_;
         std::map<int, VisualEntity> visualEntityMap;
         GridEntityBuilder builder;
         RockSolidTextureManager manager;

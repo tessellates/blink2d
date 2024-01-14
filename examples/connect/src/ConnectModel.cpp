@@ -36,51 +36,33 @@ void printBoard(const std::vector<std::stack<int>>& board)
 // Constructors
 ConnectModel::ConnectModel()
 {
-    intProperties.push_back(0);
-    intProperties.push_back(0);
+    player = 0;
+    gameOver = false;
     board = std::vector<std::stack<int>>(7);
-}
-
-void ConnectModel::fireRemoveEntity(const Coordinate& cor, const GridEntity& ent) {
-    if (ent.type < 2)
-    {
-        board[cor.x].pop();
-    }
-    GameState::fireRemoveEntity(cor, ent);
-}
-
-void ConnectModel::fireAddEntity(const Coordinate& cor, const GridEntity& ent) {
-    if (ent.type < 2)
-    {
-        board[cor.x].push(ent.type);
-    }
-    GameState::fireAddEntity(cor, ent);
+    previewBoard = std::vector<std::stack<int>>(7);
+    currentPreview = -1;
 }
 
 void ConnectModel::fireWin() 
 {
-    if (intProperties[ConnectProperties::END] > 0)
+    if (gameOver)
     {
         return;
     }
-    win = checkWin(board, !intProperties[ConnectProperties::PLAYER]);
+    win = checkWin(board, !player);
     if (win)
     {
         for (auto& pos : *win)
         {
-            GridEntity ent = GridEntity(pos, !intProperties[ConnectProperties::PLAYER]+3);
-            removeEntity(pos, ent);
-            ent.type = 2;
-            addEntity(pos, ent);
-            changeProperty(ConnectProperties::END, 1);
+            injectCommand(Command([&, pos](){this->change(pos, 2);}, [this, pos](){this->change(pos, !player);}));
         }
-        saveCycle();
+        injectCommand(Command([&](){this->gameOver = true;}, [this](){this->gameOver = false;}));
     }
 }
 
 void ConnectModel::play(int column)
 {
-    if (checkWin(board, !intProperties[ConnectProperties::PLAYER]))
+    if (checkWin(board, !player))
     {
         return;
     }
@@ -89,12 +71,102 @@ void ConnectModel::play(int column)
     {
         return;
     }
-    Coordinate pos = Coordinate(column, 6 - board[column].size());
-    GridEntity ent = GridEntity(pos, intProperties[ConnectProperties::PLAYER]);
-    addEntity(pos, ent);
-    changeProperty(ConnectProperties::PLAYER, !intProperties[ConnectProperties::PLAYER]);
+    removePreview();
+    injectCommand(Command([column, this](){this->add(column);}, [column, this](){this->remove(column);}));
+
+
+    fireWin();
+    previewBoard = board;
     saveCycle();
 }
+
+void ConnectModel::removePreview()
+{
+    if (currentPreview == -1)
+        return;
+    for (auto& emit : removeConnectEntity)
+    {
+        emit({currentPreview, 7 - static_cast<int>(previewBoard[currentPreview].size())});
+    }
+    previewBoard[currentPreview].pop();
+    currentPreview = -1;
+}
+
+void ConnectModel::addPreview()
+{
+    previewBoard[currentPreview].push(player);
+    for (auto& emit : addConnectEntity)
+    {
+        emit({currentPreview, 7 - static_cast<int>(previewBoard[currentPreview].size())}, player+3);
+    }
+}
+
+void ConnectModel::preview(int column)
+{
+    if (gameOver)
+    {
+        if (currentPreview > -1)
+        {
+            removePreview();
+            return;
+        }
+        return;
+    }
+
+    if (currentPreview == column)
+    {
+        return;
+    }
+
+    if (currentPreview > -1)
+    {
+        if (currentPreview != column)
+        {
+            removePreview();
+        }
+    }
+
+    if (currentPreview == -1)
+    {
+        if (column > -1 && static_cast<int>(previewBoard[column].size()) < 6)
+        {
+            currentPreview = column;
+            addPreview();
+        }
+        return;
+    }
+
+}
+
+
+void ConnectModel::add(int column)
+{
+    board[column].push(player);
+    for (auto& emit : addConnectEntity)
+    {
+        emit({column, 7 - static_cast<int>(board[column].size())}, player);
+    }
+    player = !player;
+}
+
+void ConnectModel::remove(int column)
+{
+    for (auto& emit : removeConnectEntity)
+    {
+        emit({column, 7 - static_cast<int>(board[column].size())});
+    }
+    board[column].pop();
+    player = !player;
+}
+
+void ConnectModel::change(const Coordinate& position, int color)
+{
+    for (auto& emit : changeConnectEntity)
+    {
+        emit(position, color);
+    }
+}
+
 
 bool matchValue(int player, const std::vector<std::stack<int>>& board, int row, int col) {
     if (col < 0 || col >= board.size()) {

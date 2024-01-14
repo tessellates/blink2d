@@ -32,40 +32,35 @@ RockSolidNode::RockSolidNode(RockSolidNodeType type, int gemCount) : type(type),
     }
 }
 
-RockSolidNode::RockSolidNode(const GridEntity& entity) : RockSolidNode(static_cast<RockSolidNodeType>(entity.type), entity.properties[GEM_COUNT])
+RockSolidNode::RockSolidNode() : type(EMPTY), gemCount(0) 
 {
-
-}
-
-GridEntity RockSolidNode::entity(const Coordinate& position) const
-{
-    GridEntity ent{position, type};
-    ent.properties.push_back(gemCount);
-    return ent;
+    change(EMPTY);
 }
 
 void RockSolidNode::change(RockSolidNodeType type)
 {
+    this->direction = NONE;
     this->canPlace = 0; // default
+    gameTickBehaviour = nullptr;
     auto it = initMap.find(type);
     if (it != initMap.end()) 
     {
         it->second(*this);
     } else {
-        std::cout <<type<<std::endl;
         throw std::invalid_argument("Invalid RockSolidNodeType");
     }
 }
 
-void RockSolidNode::onGameTick()
+void RockSolidNode::onGameTick(RockSolidModel& model, const Coordinate& position)
 {
     if (gameTickBehaviour != nullptr)
-        (*gameTickBehaviour)(*this);
+        (*gameTickBehaviour)(*this, model, position);
 }
 
 
 void RockSolidNode::initializeEmpty(RockSolidNode& node) {
     node.canPlace = (1 << 14) - 1 - (1 << 5) - (1 << 6);
+    this->direction = DOWN;
 }
 
 void RockSolidNode::initializeDirt(RockSolidNode& node) {
@@ -131,3 +126,63 @@ int RockSolidNode::needsGround = (HORIZONTAL_BELT | HORIZONTAL_ENGINE | CONSTRUC
 
 int RockSolidNode::isVertical = (VERTICAL_BELT | VERTICAL_ENGINE | VERTICAL_EXTRACTOR);
 int RockSolidNode::needsVertical = (VERTICAL_BELT | VERTICAL_ENGINE);
+
+void RockSolidNode::behave(RockSolidNode& node, RockSolidModel& model, const Coordinate& position)
+{
+    if (node.direction != NONE)
+    {
+        auto target = position.getNeighbor(direction);
+        if (model.inModel(target) && node.gemCount > 0)
+        {
+            model.bufferCommand([position, target, &model](){model->transferGems(position, target);}, [position, target, &model](){model->transferGems(target, position);});
+        }
+    }
+}
+
+void RockSolidNode::behaveHorizontal(RockSolidNode& node, RockSolidModel& model, const Coordinate& position)
+{
+    auto oldDirection = node.direction;
+    auto left = position.getNeighbor(LEFT);
+    auto right = position.getNeighbor(RIGHT);
+    if (node.direction != NONE)
+    {
+        if (model.inModel(left))
+        {
+            if (model.getNode(left).direction == node.direction || (model.getNode(target).type == HORIZONTAL_BELT || model.getNode(target).type == HORIZONTAL_ENGINE))
+            {
+                return;
+            }
+        }
+
+        if (model.inModel(right))
+        {
+            if (model.getNode(right).direction == node.direction || (model.getNode(target).type == HORIZONTAL_BELT || model.getNode(target).type == HORIZONTAL_ENGINE))
+            {
+                return;
+            }
+        }
+
+        model.bufferCommand([position, &model](){model->changeDirection(position, NONE);}, [position, oldDirection, &model](){model->changeDirection(position, oldDirection);});
+        return;
+    }
+
+    if (model.inModel(left))
+    {
+        if (model.getNode(left).type == HORIZONTAL_BELT || model.getNode(left).type == HORIZONTAL_ENGINE)
+        {
+            auto direction = model.getNode(left).direction;
+            model.bufferCommand([position, direction, &model](){model->changeDirection(position, direction);}, [position, oldDirection, &model](){model->changeDirection(position, oldDirection);});
+            return;
+        }
+    }
+
+    if (model.inModel(right))
+    {
+        if (model.getNode(right).type == HORIZONTAL_BELT || model.getNode(right).type == HORIZONTAL_ENGINE)
+        {
+            auto direction = model.getNode(right).direction;
+            model.bufferCommand([position, direction, &model](){model->changeDirection(position, direction);}, [position, oldDirection, &model](){model->changeDirection(position, oldDirection);});
+            return;
+        }
+    }
+};

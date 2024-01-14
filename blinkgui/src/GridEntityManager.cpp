@@ -61,7 +61,7 @@ namespace blink2dgui
             ImVec2 clickPosInWindow = ImVec2(mousePos.x - windowPos.x, mousePos.y - windowPos.y);
             if (clickPosInWindow.x >= padding.x && clickPosInWindow.x < windowSize.x - padding.x && clickPosInWindow.y >= padding.y && clickPosInWindow.y < windowSize.y - padding.y)
             {
-                blink2dgui::Application::instance()->getGui().clicked(gridPosition(clickPosInWindow));
+                //blink2dgui::Application::instance()->getGui().clicked(gridPosition(clickPosInWindow));
             }
         }
 

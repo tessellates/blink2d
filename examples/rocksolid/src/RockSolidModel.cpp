@@ -4,26 +4,13 @@
 #include <random>
 
 
-int RockSolidModel::height() const
-{
-    if (width() > 0)
-        return nodeGrid[0].size();
-    else
-        return 0;
-}
-
-int RockSolidModel::width() const
-{
-    return nodeGrid.size();
-}
-
 bool RockSolidModel::inModel(const Coordinate& position) const
 {
-    if (position.x < 0 || position.x >= width())
+    if (position.x < 0 || position.x >= width)
     {
         return false;
     }
-    if (position.y < 0 || position.x >= height())
+    if (position.y < 0 || position.x >= height)
     {
         return false;
     }
@@ -32,12 +19,12 @@ bool RockSolidModel::inModel(const Coordinate& position) const
 
 RockSolidNode& RockSolidModel::getNode(const Coordinate& position)
 {
-    return nodeGrid[position.x][position.y];
+    return nodeGrid[position.x + width * position.y];
 }
 
 const RockSolidNode& RockSolidModel::getNode(const Coordinate& position) const
 {
-    return nodeGrid[position.x][position.y];
+    return nodeGrid[position.x + width * position.y];
 }
 
 
@@ -46,31 +33,22 @@ void RockSolidModel::placeNodeAtPosition(const Coordinate& position, RockSolidNo
     if (!canPlaceNodeAtPosition(position, type))
         return;
 
-    replaceEntity(position, getNode(position).entity(position), GridEntity(position, type));
+    auto oldType = getNode(position).type;
+    injectCommand(Command([position, type, this](){this->replaceNode(position, type);}, [position, oldType, this](){this->replaceNode(position, oldType);}));
     saveCycle();
 }
 
-void RockSolidModel::fireReplaceEntity(const Coordinate& position, const GridEntity& replaced, const GridEntity& added) 
+void RockSolidModel::replaceNode(const Coordinate& position, RockSolidNodeType type)
 {
-    getNode(position).change(static_cast<RockSolidNodeType>(added.type));
-    GameState::fireReplaceEntity(position, replaced, added);
-}
-
-void RockSolidModel::fireAddEntity(const Coordinate& position, const GridEntity& ent) 
-{
-    nodeGrid[position.x][position.y] = RockSolidNode(ent);
-    GameState::fireAddEntity(position, ent);
-}
-
-void RockSolidModel::fireRemoveEntity(const Coordinate& position, const GridEntity& ent) 
-{
-    nodeGrid[position.x][position.y] = RockSolidNode(EMPTY, 0);
-    GameState::fireRemoveEntity(position, ent);
+    getNode(position).change(type);
+    for (auto& emit : replaceEmissions)
+    {
+        emit(position, type);
+    }
 }
 
 bool RockSolidModel::canPlaceNodeAtPosition(const Coordinate& position, RockSolidNodeType type) const
 {
-    return true;
     if (!(getNode(position).canPlace | type))
         return false;
     
@@ -122,7 +100,8 @@ float RockSolidModel::demolitionCost(const Coordinate& position) const
         default:
             std::cout << "Unknown demolition threshold." << std::endl;
             return -1;
-    }}
+    }
+}
 
 float RockSolidModel::placeCost(const Coordinate& position, RockSolidNodeType type) const
 {
@@ -140,36 +119,61 @@ float RockSolidModel::typeCost(RockSolidNodeType type) const
 
 void RockSolidModel::nextTick()
 {
+    for (int x = 0; x < width: ++x)
+    {
+        for (int y = 0; y < height; ++y)
+        {
+            auto& node.onGameTick(this, {x, y});
+        }
+    }
+    triggerBuffer();
+}
 
+void RockSolidModel::transferGems(const Coordinate& from, const Coordinate& to)
+{
+    getNode(from).gemCount -= gemPerTick;
+    {
+        for (auto& emit : gemEmissions)
+        {
+            emit(position, to, +1);
+        }
+    }
+    getNode(to).gemCount += gemPerTick;
+}
+
+void RockSolidModel::changeDirection(const Coordinate& target, const Direction& direction)
+{
+    if (getNode(target).direction == direction)
+    {
+        return;
+    }
+
+    getNode(target).direction = direction;
+    for (auto& emit : directionEmissions)
+    {
+        emit(target, direction);
+    }
 }
 
 void RockSolidModel::loadLevel(const RockSolidLevel& level)
 {
-
     int x = 0;
     int y = 0;
-    int total = 0;
-
-    nodeGrid.resize(level.layoutNodes.size());
-    for (size_t i = 0; i < level.layoutNodes.size(); ++i) {
-        nodeGrid[i].resize(level.layoutNodes[i].size(), RockSolidNode{EMPTY, 0});
-    }
-
-    for (const auto& nodeRows : level.layoutNodes)
+    width = level.width;
+    height = level.header;
+    nodeGrid = {level.layoutNodes.size(), {}};
+    for (const auto& layoutNode : level.layoutNodes)
     {
-        for (const auto& layoutNode : nodeRows)
+        Coordinate position{x, y};
+        replaceNode({x, y}, layoutNode.type);
+        getNode({x, y}).gemCount = layoutNode.gemCount;
+        x++;
+        if (x => width)
         {
-            Coordinate position{x, y};
-            GridEntity entity{position, layoutNode.type};
-            entity.properties.push_back(layoutNode.gemCount);
-            this->addEntity(position, entity);
-            x++;
-            total++;
+            y++;
+            x = 0;
         }
-        y++;
-        x = 0;
     }
-
     gemTarget = level.gemTarget;
     playerMoney = level.budget;
 }

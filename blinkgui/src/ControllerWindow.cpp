@@ -14,12 +14,12 @@ namespace blink2dgui
 
 
 // This function should be placed in your application's rendering loop.
-void ControllerWindow::renderWindow()
+void ControllerWindow::renderWindow(float scale)
 {
     ImGuiWindowFlags flags =  ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse;
     int width = 1280;
     int height = 40;
-    ImVec2 windowSize = ImVec2(width, height);
+    ImVec2 windowSize = ImVec2(width, height) * scale;
     ImVec2 pos = ImVec2(0, 0); 
     ImGui::SetNextWindowSize(windowSize);
     ImGui::SetNextWindowPos(pos);
@@ -29,31 +29,38 @@ void ControllerWindow::renderWindow()
     const float iconSize = 20.0f;
 
     float size = 22;
-    pos = ImVec2(640 - size/2 , 10);
+    pos = ImVec2(640 - size/2 , 10) * scale;
 
     ImU32 baseColor = IM_COL32(255, 255, 255, 255);
     ImU32 hoverColor = IM_COL32(100, 100, 255, 255);
     ImVec2 padding = ImVec2(40, 0);
+
+    if (Application::activeGame() == nullptr)
+    {
+        ImGui::End();
+        return;
+    }
     // Draw each shape with the hover effect.
     if (drawShapeWithHover(drawSquare, pos - padding * 2, size, baseColor, hoverColor))
     {
-        Application::instance()->getGui().setGrid(8);
+        Application::activeGame()->init(connectParameters(scale));
+        //Application::instance()->getGui().setGrid(8);
     }
     if (drawShapeWithHover(drawLongTriangleLeft, pos - padding, size, baseColor, hoverColor))
     {
-        Application::instance()->getGui().backward();
+        Application::activeGame()->backward();
     }
     if (drawShapeWithHover(drawLongTriangleRight, pos , size, baseColor, hoverColor))
     {
-        Application::instance()->getGui().forward();
+        Application::activeGame()->forward();
     }
     if (drawShapeWithHover(drawTwoVerticalLines, pos + padding, size, baseColor, hoverColor))
     {
-        Application::instance()->getGui().play = false;
+        //Application::instance()->getGui().play = false;
     }
     if (drawShapeWithHover(drawInverseTriangle, pos + padding * 2, size, baseColor, hoverColor))
     {
-        Application::instance()->getGui().play = true;
+        //Application::instance()->getGui().play = true;
     }
 
     // End the ImGui window

@@ -58,11 +58,27 @@ ImVec2 GridEntityBuilder::absolutePosition(const Coordinate& pos) const
     return ImVec2(gridLocation.x + pos.x * entitySize.x, gridLocation.y + pos.y * entitySize.y);
 }
 
+ImVec2 GridEntityBuilder::absolutePosition(const ImVec2& pos) const
+{
+
+    return ImVec2(gridLocation.x + pos.x * entitySize.x, gridLocation.y + pos.y * entitySize.y);
+}
+
+
 ImVec2 GridEntityBuilder::relativePosition(const Coordinate& pos) const
 {
     return ImVec2(pos.x * entitySize.x, pos.y * entitySize.y);
 }
 
+Coordinate GridEntityBuilder::gridPosition(const ImVec2& pos) const
+{
+    ImVec2 relative = pos - gridLocation;
+    int x = (relative.x) / entitySize.x;
+    int y = (relative.y) / entitySize.y;
+    return Coordinate(x, y);
+}
+
+// PRE SETS
 VisualEntity entryAnimatedEntity(GridEntityBuilder& builder, const Coordinate& pos, const Coordinate& relativeEntry, const BlinkTexture& texture, float gameTicks, int layer)
 {
     return std::move(builder.instructionLayer(layer).instructionTexture(texture).instructionMoveStrategy(gameTicks).instructionLocation(relativeEntry).atLocation(pos).addInstruction().build());

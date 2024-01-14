@@ -3,7 +3,7 @@
 
 bool moveTowards(ImVec2& source, const ImVec2& target, float speed)
 {
-    float deltaTime = blink2dgui::Application::instance()->getGui().gameClock.getProgress();
+    float deltaTime = blink2dgui::Application::activeGameClock().getProgress();
     float distanceToMove = speed * deltaTime;
 
     // Calculate the distance to the target
@@ -22,7 +22,7 @@ bool moveTowards(ImVec2& source, const ImVec2& target, float speed)
 
 void moveVec(const ImVec2& source, const ImVec2& target, ImVec2& currentShift, float speed) 
 {
-    float deltaTime = blink2dgui::Application::instance()->getGui().gameClock.getProgress();
+    float deltaTime = blink2dgui::Application::activeGameClock().getProgress();
     float distanceToMove = speed * deltaTime;
 
     // Calculate the distance to the target

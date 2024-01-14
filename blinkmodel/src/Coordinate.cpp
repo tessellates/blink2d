@@ -50,3 +50,22 @@ Coordinate Coordinate::getNeighbor(int direction) const
 
     return Coordinate(x + dx, y + dy);
 }
+
+Direction Coordinate::getDirection(const Coordinate& other) const {
+    int dx = other.x - x;
+    int dy = other.y - y;
+
+    // Normalize dx and dy to -1, 0, or 1
+    dx = (dx != 0) ? (dx / abs(dx)) : 0;
+    dy = (dy != 0) ? (dy / abs(dy)) : 0;
+
+    if (dx == 0 && dy == -1) return UP;
+    else if (dx == 1 && dy == -1) return UP_RIGHT;
+    else if (dx == 1 && dy == 0) return RIGHT;
+    else if (dx == 1 && dy == 1) return DOWN_RIGHT;
+    else if (dx == 0 && dy == 1) return DOWN;
+    else if (dx == -1 && dy == 1) return DOWN_LEFT;
+    else if (dx == -1 && dy == 0) return LEFT;
+    else if (dx == -1 && dy == -1) return UP_LEFT;
+    else return NONE; // Indicates no direction (same coordinate or not a direct neighbor)
+}

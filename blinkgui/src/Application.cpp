@@ -1,8 +1,8 @@
 #include <iostream>
 #include "Application.hpp"
-#include "SnakeGui.hpp"
-#include "ConnectGui.hpp"
-#include "RockSolidGui.hpp"
+//#include "SnakeGui.hpp"
+#include "ConnectGame.hpp"
+//#include "RockSolidGui.hpp"
 #include <cmath>
 #include "RenderManager.hpp"
 #include <cassert>
@@ -11,6 +11,9 @@ namespace blink2dgui
 {
     Application::Application()
     {
+        //HEIGHT = 1000;
+        //WIDTH = HEIGHT * 1.44;
+
         // Setup SDL
         if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER | SDL_INIT_GAMECONTROLLER) != 0)
         {
@@ -24,7 +27,9 @@ namespace blink2dgui
 
         // Create window with SDL_Renderer graphics context
         SDL_WindowFlags window_flags = (SDL_WindowFlags)(SDL_WINDOW_ALLOW_HIGHDPI);
-        window_ = SDL_CreateWindow("BLINK 2D", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 800, window_flags);
+        window_ = SDL_CreateWindow("BLINK 2D", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WIDTH, HEIGHT, window_flags);
+        //SDL_GetWindowSize(window_, &WIDTH, &HEIGHT);
+        HEIGHT_MOD = float(HEIGHT)/float(HEIGHT_DEFAULT);
         renderer_ = SDL_CreateRenderer(window_, -1, SDL_RENDERER_PRESENTVSYNC | SDL_RENDERER_ACCELERATED);
         if (renderer_ == nullptr)
         {
@@ -63,29 +68,31 @@ namespace blink2dgui
         //IM_ASSERT(font != nullptr);
 
         clear_color_ = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
+
     }
 
     void Application::init(int option)
     {
-        if (gui_ != nullptr)
+        if (game != nullptr)
         {
-            delete gui_;
-            gui_ = nullptr;
+            delete game;
+            game = nullptr;
         }
         if (option == 1)
         {
-            gui_ = new SnakeGui();
+            game = new ConnectGame();
             panel_.enableSettings(GameSettings{true, true});
         }
             
         if (option == 2)
         {
-            gui_ = new ConnectGui();
+            game = new ConnectGame();
+            game->init(connectParameters(HEIGHT_MOD));
             panel_.enableSettings(GameSettings{});
         }
         if (option == 3)
         {
-            gui_ = new RockSolidGui();
+            game = new ConnectGame();
             panel_.enableSettings(GameSettings{});
         }
         
@@ -124,11 +131,11 @@ namespace blink2dgui
         ImGui_ImplSDL2_NewFrame();
         ImGui::NewFrame();
 
-        controllerWindow_.renderWindow();
-        panel_.renderWindow();
+        controllerWindow_.renderWindow(HEIGHT_MOD);
+        panel_.renderWindow(HEIGHT_MOD);
 
-        if (gui_ != nullptr)
-            getGui().render();
+        if (game != nullptr)
+            game->renderImGui();
 
         // Rendering
         ImGui::Render();
@@ -138,15 +145,10 @@ namespace blink2dgui
         SDL_RenderClear(renderer_);
         ImGui_ImplSDLRenderer2_RenderDrawData(ImGui::GetDrawData());
 
-        if (gui_ != nullptr)
+        if (game != nullptr)
         {
-            getGui().gem_.renderSDL();
+            game->updateSDL();
             RenderManager::instance()->renderSDL();
-        }
-
-        if (sideGui_ != nullptr)
-        {
-            
         }
 
         SDL_RenderPresent(renderer_);
@@ -157,20 +159,9 @@ namespace blink2dgui
         return !done_;
     }
 
-    void Application::changeGameSpeed(int gameSpeed)
-    {
-        getGui().changeGameSpeed(gameSpeed);
-    }
-
     SDL_Renderer* Application::getRenderer() const 
     {
         return renderer_;
-    }
-
-    GameGui& Application::getGui() const 
-    {
-        assert(gui_ != nullptr);
-        return *gui_;
     }
     
     //STATIC
@@ -178,7 +169,6 @@ namespace blink2dgui
     {
         return Application::instance()->game;
     }
-
 
     GameClock& Application::activeGameClock()
     {

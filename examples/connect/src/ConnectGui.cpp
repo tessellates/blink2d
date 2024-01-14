@@ -4,88 +4,77 @@
  * Proprietary and confidential
  */
 #include "ConnectGui.hpp"
-#include "ConnectModel.hpp"
 #include "ConnectTextures.hpp"
 #include "GridEntityBuilder.hpp"
+#include "TextureGeneration.hpp"
 
-namespace blink2dgui {
-
-ConnectGui::ConnectGui()
+void ConnectGui::init(const ImVec2& position, const ImVec2& size)
 {
-    setGrid(7);
-}
-
-ConnectGui::~ConnectGui() {
-    delete gameState_;
-}
-
-void ConnectGui::setGrid(int gridSize)
-{
-    gridSize = 7;
-    gem_ = std::move(GridEntityManager(gridSize, gridSize));
-    builder = std::move(GridEntityBuilder(7, 7, ImVec2(720-90, 720-90), ImVec2(280+45, 40+45)));
-    gem_.getLayer().setTextureVector(createConnectTextureVector(builder.entitySize.x));
-    std::vector<BlinkTexture> vector;
-    vector.push_back(BlinkTexture(CreateTextureFromFile(Application::instance()->getRenderer(), "/Users/tobiash/Projects/DearUI/Blink2D/examples/connect/include/towerbigs.png")));
-    SDL_SetTextureAlphaMod(vector[0].m_texture, 210);
-    gem_.getLayer(1).addBackgroundTextures(vector);
-    gem_.getLayer().defaultInit();
-    gameState_ = new ConnectModel();
-    connectModel_ = dynamic_cast<ConnectModel*>(gameState_);
-    connectModel_->listeners.push_back(this);
-}
-
-void ConnectGui::gameTick() {
-
-    if (play) {
-        if (gameClock.getIntervalProgress() >= 1) {
-            tickCount++;
-
-            if (tickCount >= 1) { // Check if gameTick has been called twice after the condition is met
-                allowPlay_ = true;
-                tickCount = 0; // Reset the counter for the next round
-                connectModel_->fireWin();
-            }
-        }
-    }
-}
-
-void ConnectGui::clicked(const Coordinate& clickedPos)
-{
-    if (allowPlay_)
+    visualEntityMap.clear();
+    builder = std::move(GridEntityBuilder(7, 7, size, position));
+    background = CreateGrid(builder.entitySize.x, size.y - builder.entitySize.x, size.x);
+    squareTextures = blink2dgui::createConnectTextureVector(builder.entitySize.x);
+    auto previewTextures =  blink2dgui::createConnectTextureVector(builder.entitySize.x);
+    for (auto& bt : previewTextures)
     {
-        //allowPlay_ = false;
-        play = true;
-        //gameClock.reset();
-        connectModel_->play(clickedPos.x);
+        SDL_SetTextureAlphaMod(bt.m_texture, 80);
+        squareTextures.push_back(bt);
     }
+    backgroundEntity = staticEntity(builder, {0,1}, background, 2);
 }
 
-void ConnectGui::onAddEntity(const Coordinate& pos, const GridEntity& entity) 
+void ConnectGui::addConnectEntity(const Coordinate& position, int color)
 {
-    //gem_.getLayer().renderOn(entity.position, entity.type % 3);
-    if (play && entity.type < 2)
+    Coordinate topDrop{0, -position.y};
+    VisualEntity ve;
+    if (color <= 2)
     {
-        
-        Coordinate top = Coordinate(pos.x, 0);
-        Coordinate top2 = Coordinate(0, -pos.y);
-        VisualEntity ve = quadEntryAnimatedEntity(builder, pos, 7, gem_.getLayer().textureVector[entity.type % 3], 1.0/7.0, 0);
-        gem_.visualEntityMap.insert(std::make_pair(pos.x  + pos.y * 7, std::move(ve)));
-        //gem_.getLayer().setMoveTarget(top, entity.position);
+       // ve = quadEntryAnimatedEntity(builder, position, 1, squareTextures[color], 1.0/5.0, 0);
+        ve = entryAnimatedEntity(builder, position, topDrop, squareTextures[color], 1.0/10, 0);
+
     }
     else
+        ve = staticEntity(builder, position, squareTextures[color], 0);
+
+    //VisualEntity ve = entryAnimatedEntity(builder, position, topDrop, squareTextures[color], 1.0/7.0, 1);
+    //VisualEntity ve = staticEntity(builder, position, squareTextures[color], 1);
+    visualEntityMap.insert({position, std::move(ve)});
+}
+
+void ConnectGui::removeConnectEntity(const Coordinate& position)
+{
+    visualEntityMap.erase(position);
+}
+
+void ConnectGui::changeConnectEntity(const Coordinate& position, int color)
+{
+    for (auto& instruction : visualEntityMap[position].renderInstructions)
     {
-        VisualEntity ve = staticEntity(builder, pos, gem_.getLayer().textureVector[entity.type % 3], 0);
-        gem_.visualEntityMap.insert(std::make_pair(pos.x  + pos.y * 7, std::move(ve)));
+        instruction.setTextureStrategy(std::make_unique<StaticTextureStrategy>(squareTextures[color]));
     }
 }
 
-void ConnectGui::onRemoveEntity(const Coordinate& pos, const GridEntity& entity) 
+bool ConnectGui::isInGui(const ImVec2& pos) const
 {
-    gem_.visualEntityMap.erase(pos.x  + pos.y * 7);
-    gem_.getLayer().clearPos(pos);
+    ImVec2 relative = pos - builder.gridLocation;
+    if (relative.x >= 0 && relative.x < builder.gridSize.x && relative.y >= 0 && relative.y < builder.gridSize.y) {
+        return true;
+    }
+    return false;
 }
 
-void ConnectGui::onModelPropertyChange(int, int) {}
+Coordinate ConnectGui::gridPosition(const ImVec2& pos) const
+{
+    ImVec2 relative = pos - builder.gridLocation;
+    int x = (relative.x) / builder.entitySize.x;
+    int y = (relative.y) / builder.entitySize.y;
+    return Coordinate(x, y);
+}
 
-}  // namespace blink2dgui
+void ConnectGui::updateSDL()
+{
+    backgroundEntity.render();
+    for (auto& [key, value] : visualEntityMap) {
+        value.render();
+    }
+}
