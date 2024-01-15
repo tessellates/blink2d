@@ -28,4 +28,5 @@ public:
 
     ImVec2 padding;
     bool isHoverActive = false; // State variable to control hover
+    int currentPreview = -1;
 };

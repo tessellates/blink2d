@@ -18,10 +18,6 @@ public:
     void add(int column);
     void remove(int column);
     void change(const Coordinate&, int);
-
-
-    void addPreview();
-    void removePreview();
     
 public:
     std::vector<std::function<void(const Coordinate&, int)>> addConnectEntity;    
@@ -33,8 +29,4 @@ public:
 
     std::vector<std::stack<int>> board;
     std::optional<std::vector<Coordinate>> win;
-
-    int currentPreview = -1;
-    std::vector<std::stack<int>> previewBoard;
-
 };

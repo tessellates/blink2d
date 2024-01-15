@@ -34,7 +34,7 @@ namespace blink2dgui
         {
             if(ImGui::SliderInt("Game Speed", &gameSpeed, 25, 1000))
             {
-                //Application::instance()->changeGameSpeed(gameSpeed);
+                Application::instance()->activeGameClock().setGameSpeed(gameSpeed);
             }
         }
 

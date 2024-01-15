@@ -39,8 +39,6 @@ ConnectModel::ConnectModel()
     player = 0;
     gameOver = false;
     board = std::vector<std::stack<int>>(7);
-    previewBoard = std::vector<std::stack<int>>(7);
-    currentPreview = -1;
 }
 
 void ConnectModel::fireWin() 
@@ -71,73 +69,20 @@ void ConnectModel::play(int column)
     {
         return;
     }
-    removePreview();
     injectCommand(Command([column, this](){this->add(column);}, [column, this](){this->remove(column);}));
-
-
     fireWin();
-    previewBoard = board;
     saveCycle();
-}
-
-void ConnectModel::removePreview()
-{
-    if (currentPreview == -1)
-        return;
-    for (auto& emit : removeConnectEntity)
-    {
-        emit({currentPreview, 7 - static_cast<int>(previewBoard[currentPreview].size())});
-    }
-    previewBoard[currentPreview].pop();
-    currentPreview = -1;
-}
-
-void ConnectModel::addPreview()
-{
-    previewBoard[currentPreview].push(player);
-    for (auto& emit : addConnectEntity)
-    {
-        emit({currentPreview, 7 - static_cast<int>(previewBoard[currentPreview].size())}, player+3);
-    }
 }
 
 void ConnectModel::preview(int column)
 {
     if (gameOver)
     {
-        if (currentPreview > -1)
-        {
-            removePreview();
-            return;
-        }
         return;
     }
-
-    if (currentPreview == column)
-    {
-        return;
-    }
-
-    if (currentPreview > -1)
-    {
-        if (currentPreview != column)
-        {
-            removePreview();
-        }
-    }
-
-    if (currentPreview == -1)
-    {
-        if (column > -1 && static_cast<int>(previewBoard[column].size()) < 6)
-        {
-            currentPreview = column;
-            addPreview();
-        }
-        return;
-    }
-
+    injectCommand(Command([column, this](){this->add(column);}, [column, this](){this->remove(column);}));
+    fireWin();
 }
-
 
 void ConnectModel::add(int column)
 {

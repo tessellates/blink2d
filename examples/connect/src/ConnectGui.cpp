@@ -27,14 +27,14 @@ void ConnectGui::addConnectEntity(const Coordinate& position, int color)
 {
     Coordinate topDrop{0, -position.y};
     VisualEntity ve;
-    if (color <= 2)
+    if (!previewMode)
     {
        // ve = quadEntryAnimatedEntity(builder, position, 1, squareTextures[color], 1.0/5.0, 0);
         ve = entryAnimatedEntity(builder, position, topDrop, squareTextures[color], 1.0/10, 0);
 
     }
     else
-        ve = staticEntity(builder, position, squareTextures[color], 0);
+        ve = staticEntity(builder, position, squareTextures[color+3], 0);
 
     //VisualEntity ve = entryAnimatedEntity(builder, position, topDrop, squareTextures[color], 1.0/7.0, 1);
     //VisualEntity ve = staticEntity(builder, position, squareTextures[color], 1);
@@ -50,7 +50,7 @@ void ConnectGui::changeConnectEntity(const Coordinate& position, int color)
 {
     for (auto& instruction : visualEntityMap[position].renderInstructions)
     {
-        instruction.setTextureStrategy(std::make_unique<StaticTextureStrategy>(squareTextures[color]));
+        instruction.setTextureStrategy(std::make_unique<StaticTextureStrategy>(squareTextures[color + 3*previewMode]));
     }
 }
 

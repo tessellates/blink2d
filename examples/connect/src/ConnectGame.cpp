@@ -21,7 +21,9 @@ void ConnectGame::clicked(const ImVec2& position, int id)
     if (connectGui.isInGui(position) && play)
     {
         play = false;
+        resetCycle();
         connectModel.play(connectGui.builder.gridPosition(position).x);
+        currentPreview = -1;
         play = true;
     }
 }
@@ -30,11 +32,18 @@ void ConnectGame::hover(const ImVec2& position, int id)
 {
     if (connectGui.isInGui(position) && play)
     {
-        connectModel.preview(connectGui.builder.gridPosition(position).x);
+        if (currentPreview != connectGui.builder.gridPosition(position).x)
+        {
+            connectModel.resetCycle();
+            currentPreview = connectGui.builder.gridPosition(position).x;
+            connectGui.previewMode = true;
+            connectModel.preview(connectGui.builder.gridPosition(position).x);
+            connectGui.previewMode = false;
+        }
     }
     else
     {
-        connectModel.preview(-1);
+        connectModel.resetCycle();
     }
 }
 

@@ -33,6 +33,8 @@ public:
 
     BlinkTexture background;
     std::vector<BlinkTexture> squareTextures;
+
+    bool previewMode = false;
 };
 
 
