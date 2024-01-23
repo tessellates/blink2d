@@ -6,14 +6,14 @@
 
 struct Transform {
     ImVec2 position = {0,0};
-    float rotation = 0; // Rotation in degrees
+    double rotation = 0; // Rotation in degrees
     ImVec2 scale = {1, 1};
     SDL_RendererFlip flip = SDL_FLIP_NONE;
 
     //Transform() : position(0.0f, 0.0f), rotation(0.0f), scale(1.0f, 1.0f) {}
 };
 
-inline ImVec2 rotateVector(const ImVec2& v, float angleDegrees) {
+inline ImVec2 rotateVector(const ImVec2& v, double angleDegrees) {
     float angleRadians = angleDegrees * M_PI / 180.0f;
     float cosAngle = std::cos(angleRadians);
     float sinAngle = std::sin(angleRadians);

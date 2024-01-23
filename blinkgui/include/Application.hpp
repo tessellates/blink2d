@@ -62,8 +62,8 @@ namespace blink2dgui
             ~Application();   
 
             SDL_Event event_;
-            SDL_Window* window_;
-            SDL_Renderer* renderer_;
+            SDL_Window* window_ = nullptr;
+            SDL_Renderer* renderer_ = nullptr;
             ImGuiIO* io_;
             ImVec4 clear_color_;
 
@@ -71,6 +71,6 @@ namespace blink2dgui
             
             SettingsPanel panel_;
             ControllerWindow controllerWindow_;
-            BlinkGame* game;
+            BlinkGame* game = nullptr;
     };
 }

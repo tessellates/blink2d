@@ -4,6 +4,7 @@ add_subdirectory(gbuilders)
 target_sources(${PROJECT_NAME}
     PRIVATE 
         ${CMAKE_CURRENT_SOURCE_DIR}/Application.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/AnimationManager.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/BlinkGame.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/ControllerWindow.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/GameClock.cpp

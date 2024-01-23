@@ -19,6 +19,16 @@ void RenderManager::renderSDL()
     }
 }
 
+void RenderManager::reset()
+{
+    baseLayer.clear();
+    for (auto& layer : layers)
+    {
+        layer.clear();
+    }
+}
+
+
 void RenderManager::addRenderAction(const BlinkTexture& texture, int x, int y, int layerID) 
 {
     if (layerID == -1)

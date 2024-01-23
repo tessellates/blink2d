@@ -17,4 +17,13 @@ void VisualEntity::render()
     {
         ri.render(transform);
     }
+
+    clean();
+}
+
+void VisualEntity::clean()
+{
+    auto newEnd = std::remove_if(renderInstructions.begin(), renderInstructions.end(), 
+                                 [](const RenderInstruction& ri) { return ri.isDead(); });
+    renderInstructions.erase(newEnd, renderInstructions.end());
 }

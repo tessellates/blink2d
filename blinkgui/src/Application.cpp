@@ -2,6 +2,7 @@
 #include "Application.hpp"
 //#include "SnakeGui.hpp"
 #include "ConnectGame.hpp"
+#include "GemFallGame.hpp"
 //#include "RockSolidGui.hpp"
 #include <cmath>
 #include "RenderManager.hpp"
@@ -18,6 +19,11 @@ namespace blink2dgui
         if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER | SDL_INIT_GAMECONTROLLER) != 0)
         {
             printf("Error: %s\n", SDL_GetError());
+        }
+
+        int imgFlags = IMG_INIT_PNG;
+        if (!(IMG_Init(imgFlags) & imgFlags)) {
+            // Handle error
         }
 
         // From 2.0.18: Enable native IME.
@@ -75,6 +81,7 @@ namespace blink2dgui
     {
         if (game != nullptr)
         {
+            RenderManager::instance()->reset();
             delete game;
             game = nullptr;
         }
@@ -92,7 +99,8 @@ namespace blink2dgui
         }
         if (option == 3)
         {
-            game = new ConnectGame();
+            game = new GemFallGame();
+            game->init(connectParameters(HEIGHT_MOD));
             panel_.enableSettings(GameSettings{});
         }
         
@@ -135,10 +143,19 @@ namespace blink2dgui
         panel_.renderWindow(HEIGHT_MOD);
 
         if (game != nullptr)
+        {
+            //std::cout << "-tag1-";
+        }
+        if (game != nullptr)
             game->renderImGui();
 
         // Rendering
         ImGui::Render();
+
+        if (game != nullptr)
+        {
+            //std::cout << "-tag2-";
+        }
 
         SDL_RenderSetScale(renderer_, io_->DisplayFramebufferScale.x, io_->DisplayFramebufferScale.y);
         SDL_SetRenderDrawColor(renderer_, (Uint8)(clear_color_.x * 255), (Uint8)(clear_color_.y * 255), (Uint8)(clear_color_.z * 255), (Uint8)(clear_color_.w * 255));
@@ -151,6 +168,12 @@ namespace blink2dgui
             RenderManager::instance()->renderSDL();
         }
 
+        if (game != nullptr)
+        {
+            //std::cout << "-tag3-";
+        }
+
+        //std::cout << std::endl;
         SDL_RenderPresent(renderer_);
     }
 

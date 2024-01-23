@@ -1,7 +1,9 @@
 #include "CommandHistory.hpp"
 #include <iostream>
 
-CommandHistory::CommandHistory() : activeIndex(-1) {}
+CommandHistory::CommandHistory() : activeIndex(-1), isActionInProgress(false)
+{
+}
 
 void CommandHistory::injectCommand(const Command& command)
 {

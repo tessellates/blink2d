@@ -14,7 +14,7 @@ namespace blink2dgui
 
         ImGui::Begin("Game Settings", nullptr, flags);
 
-        const char* items[] = { "None", "Snake", "Connect", "Rocksolid" };
+        const char* items[] = { "None", "Snake", "Connect", "GemFall" };
         ImGui::Combo("Game", &selectedItem, items, IM_ARRAYSIZE(items));
 
         ImGui::Spacing();

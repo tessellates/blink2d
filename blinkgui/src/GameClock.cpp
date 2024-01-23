@@ -1,7 +1,7 @@
 #include "GameClock.hpp"
 #include <iostream>
 
-GameClock::GameClock() : GameClock(1000) {}
+GameClock::GameClock() : GameClock(250) {}
 
 GameClock::GameClock(float gameSpeed) : gameSpeed(gameSpeed) {
     lastTick = SDL_GetTicks();
@@ -44,7 +44,7 @@ void GameClock::update() {
     Uint32 currentTick = SDL_GetTicks();
     if (intervalTime >= gameSpeed)
     {
-        intervalTick = currentTick;
+        intervalTick = lastTick;
     }
     deltaTime = (currentTick - lastTick);
     lastTick = currentTick;

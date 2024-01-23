@@ -10,7 +10,7 @@ bool RockSolidModel::inModel(const Coordinate& position) const
     {
         return false;
     }
-    if (position.y < 0 || position.x >= height)
+    if (position.y < 0 || position.y >= height)
     {
         return false;
     }

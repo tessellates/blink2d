@@ -75,6 +75,8 @@ inline SDL_Texture* CreateTextureFromFile(SDL_Renderer* renderer, const char* fi
 
 
     // Convert the surface to a texture
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);  // RGBA: 0,0,0,0 for full transparency
+
     SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
     if (texture == nullptr) {
         SDL_Log("Unable to create texture from %s! SDL Error: %s\n", filePath, SDL_GetError());
@@ -89,3 +91,54 @@ inline SDL_Texture* CreateTextureFromFile(SDL_Renderer* renderer, const char* fi
     return texture;
 }
 
+inline std::vector<SDL_Texture*> CutTextureSheet(SDL_Renderer* renderer, SDL_Texture* spriteSheet, int textureWidth = 0) {
+    std::vector<SDL_Texture*> sprites;
+
+    // Get the width and height of the spriteSheet
+    int sheetWidth, sheetHeight;
+    SDL_QueryTexture(spriteSheet, nullptr, nullptr, &sheetWidth, &sheetHeight);
+
+    if (textureWidth == 0)
+    {
+        textureWidth = sheetHeight;
+    }
+
+    int spriteCount = sheetWidth / textureWidth;
+
+    for (int i = 0; i < spriteCount; ++i) {
+        // Define the portion of the sprite sheet to capture
+        SDL_Rect spriteRect = {i * textureWidth, 0, textureWidth, sheetHeight};
+
+        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);  // RGBA: 0,0,0,0 for full transparency
+
+        // Create a target texture (empty texture) to render to
+        SDL_Texture* targetTexture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA8888, 
+                                                      SDL_TEXTUREACCESS_TARGET, textureWidth, sheetHeight);
+        if (!targetTexture) {
+            continue; // Handle error
+        }
+
+        // Reset the rendering target
+        SDL_SetRenderTarget(renderer, nullptr);
+
+        // Important: Set the blend mode for transparency
+        SDL_SetTextureBlendMode(targetTexture, SDL_BLENDMODE_BLEND);
+
+        // Set the target texture as the rendering target
+        SDL_SetRenderTarget(renderer, targetTexture);
+
+        // Clear with transparent color (critical for preserving transparency)
+        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0); // Fully transparent
+        SDL_RenderClear(renderer);
+
+              // Copy the sprite from the sprite sheet to the target texture
+        SDL_RenderCopy(renderer, spriteSheet, &spriteRect, nullptr);
+
+        // Reset the rendering target
+        SDL_SetRenderTarget(renderer, nullptr);
+
+        sprites.push_back(targetTexture);
+    }
+
+    return sprites;
+}

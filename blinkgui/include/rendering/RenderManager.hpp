@@ -17,6 +17,8 @@ public:
     void addRenderAction(const BlinkTexture& texture, int x, int y, int layerID);
     void addRenderAction(const Transform& transform, const BlinkTexture& texture, int layerID);
 
+    void reset();
+
 private:
     RenderManager() = default;
     ~RenderManager() = default;   

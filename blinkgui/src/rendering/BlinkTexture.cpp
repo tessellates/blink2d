@@ -25,6 +25,8 @@ BlinkTexture::~BlinkTexture() {
 }
 
 void BlinkTexture::render(int x, int y, SDL_Rect* clip, double angle, SDL_Point* center, SDL_RendererFlip flip) const {
+    //std::cout << SDL_GetError() << std::endl;
+    
     SDL_SetRenderTarget(m_renderer, NULL);    
 
     SDL_Rect renderQuad = { x, y, m_width, m_height };

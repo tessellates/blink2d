@@ -21,7 +21,7 @@ void ConnectGame::clicked(const ImVec2& position, int id)
     if (connectGui.isInGui(position) && play)
     {
         play = false;
-        resetCycle();
+        connectModel.resetCycle();
         connectModel.play(connectGui.builder.gridPosition(position).x);
         currentPreview = -1;
         play = true;

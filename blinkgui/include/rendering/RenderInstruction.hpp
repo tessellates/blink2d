@@ -21,6 +21,7 @@ public:
 
     void render(const Transform& transform);
     void setTextureStrategy(std::unique_ptr<ITextureStrategy> strategy);
+    bool isDead() const;
     int layer;
     Transform relativeTransform;
     
