@@ -46,10 +46,10 @@ namespace blink2dgui
             SDL_Renderer* getRenderer() const;
 
             int WIDTH = 1280;
-            int HEIGHT = 800;
+            int HEIGHT = 945;
 
             int WIDTH_DEFAULT = 1280;
-            int HEIGHT_DEFAULT = 800;
+            int HEIGHT_DEFAULT = 720;
 
             float HEIGHT_MOD = 1;
             
@@ -72,5 +72,6 @@ namespace blink2dgui
             SettingsPanel panel_;
             ControllerWindow controllerWindow_;
             BlinkGame* game = nullptr;
+            bool alt = false;
     };
 }

@@ -65,6 +65,31 @@ inline BlinkTexture CreateColorTexture(SDL_Renderer* renderer, const ImVec4& col
     return BlinkTexture(colorTexture);
 }
 
+inline SDL_Texture* CreateColorTextureBasic(SDL_Renderer* renderer, const ImVec4& color, int textureWidth, int textureHeight) {
+    // Create a texture that will be used as a render target
+    SDL_Texture* colorTexture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, textureWidth, textureHeight);
+
+    // Set the texture as the current rendering target
+    SDL_SetRenderTarget(renderer, colorTexture);
+
+    // Set blend mode to blend for transparency
+    SDL_SetTextureBlendMode(colorTexture, SDL_BLENDMODE_NONE);
+
+    // Convert ImGui color (0.0-1.0 range) to SDL color (0-255 range)
+    SDL_SetRenderDrawColor(renderer, 
+                           static_cast<Uint8>(color.x * 255), 
+                           static_cast<Uint8>(color.y * 255), 
+                           static_cast<Uint8>(color.z * 255), 
+                           static_cast<Uint8>(color.w * 255));
+
+    // Clear the texture with the specified color
+    SDL_RenderClear(renderer);
+
+    // Reset the rendering target to the default
+    SDL_SetRenderTarget(renderer, NULL);
+    return colorTexture;
+}
+
 inline SDL_Texture* CreateTextureFromFile(SDL_Renderer* renderer, const char* filePath) {
     // Load the image into an SDL_Surface
     SDL_Surface* surface = IMG_Load(filePath);

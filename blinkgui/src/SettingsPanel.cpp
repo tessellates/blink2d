@@ -14,7 +14,7 @@ namespace blink2dgui
 
         ImGui::Begin("Game Settings", nullptr, flags);
 
-        const char* items[] = { "None", "Snake", "Connect", "GemFall" };
+        const char* items[] = { "None", "Snake", "Connect", "GemFall", "noita" };
         ImGui::Combo("Game", &selectedItem, items, IM_ARRAYSIZE(items));
 
         ImGui::Spacing();
@@ -52,8 +52,7 @@ namespace blink2dgui
             }
         }
 
-        //if (Application::instance()->gui_)
-        //    ImGui::Text("FPS: %.3f", 1.0f / Application::instance()->getGui().gameClock.getDeltaTime() * 1000);
+        ImGui::Text("FPS: %.3f", 1.0f / Application::instance()->activeGameClock().getDeltaTime() * 1000);
 
         ImGui::End();
 

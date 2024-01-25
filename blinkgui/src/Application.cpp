@@ -3,6 +3,7 @@
 //#include "SnakeGui.hpp"
 #include "ConnectGame.hpp"
 #include "GemFallGame.hpp"
+#include "NoitaSimGame.hpp"
 //#include "RockSolidGui.hpp"
 #include <cmath>
 #include "RenderManager.hpp"
@@ -33,9 +34,9 @@ namespace blink2dgui
 
         // Create window with SDL_Renderer graphics context
         SDL_WindowFlags window_flags = (SDL_WindowFlags)(SDL_WINDOW_ALLOW_HIGHDPI);
-        window_ = SDL_CreateWindow("BLINK 2D", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WIDTH, HEIGHT, window_flags);
-        //SDL_GetWindowSize(window_, &WIDTH, &HEIGHT);
         HEIGHT_MOD = float(HEIGHT)/float(HEIGHT_DEFAULT);
+        WIDTH = WIDTH_DEFAULT * HEIGHT_MOD;
+        window_ = SDL_CreateWindow("BLINK 2D", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WIDTH, HEIGHT, window_flags);
         renderer_ = SDL_CreateRenderer(window_, -1, SDL_RENDERER_PRESENTVSYNC | SDL_RENDERER_ACCELERATED);
         if (renderer_ == nullptr)
         {
@@ -79,6 +80,7 @@ namespace blink2dgui
 
     void Application::init(int option)
     {
+        alt = false;
         if (game != nullptr)
         {
             RenderManager::instance()->reset();
@@ -103,7 +105,13 @@ namespace blink2dgui
             game->init(connectParameters(HEIGHT_MOD));
             panel_.enableSettings(GameSettings{});
         }
-        
+        if (option == 4)
+        {
+            game = new NoitaSimGame();
+            game->init(NoitaParameters(HEIGHT_MOD));
+            panel_.enableSettings(GameSettings{});
+            alt = true;
+        }
     }
 
     Application::~Application()
@@ -162,10 +170,14 @@ namespace blink2dgui
         SDL_RenderClear(renderer_);
         ImGui_ImplSDLRenderer2_RenderDrawData(ImGui::GetDrawData());
 
-        if (game != nullptr)
+        if (game != nullptr && !alt)
         {
             game->updateSDL();
             RenderManager::instance()->renderSDL();
+        }
+        if (alt)
+        {
+            game->updateSDL();
         }
 
         if (game != nullptr)

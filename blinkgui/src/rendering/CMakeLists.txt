@@ -1,3 +1,5 @@
+add_subdirectory(rendermanagers)
+
 target_sources(${PROJECT_NAME}
     PRIVATE 
         ${CMAKE_CURRENT_SOURCE_DIR}/BlinkTexture.cpp
