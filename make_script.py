@@ -47,6 +47,7 @@ else:
 if tests:
     cmakeCommands.append("-DBUILD_TESTS=True")
 
+cmakeCommands.append("-DCMAKE_VERBOSE_MAKEFILE=ON")
 
 # We run cmake with working directory in the build folder
 subprocess.run(cmakeCommands, cwd=buildPath)

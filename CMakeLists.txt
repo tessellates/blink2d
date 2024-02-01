@@ -26,6 +26,7 @@ if (XCODE)
         ${CMAKE_SOURCE_DIR}/blinkgui/include/rendering/*.hpp  # This line will include all .hpp files in the include directory
         ${CMAKE_SOURCE_DIR}/blinkmodel/include/*.hpp  # This line will include all .hpp files in the include directory
         ${CMAKE_SOURCE_DIR}/examples/snake/include/*.hpp  # This line will include all .hpp files in the include directory
+        ${CMAKE_SOURCE_DIR}/examples/noitasim/*.hpp  # This line will include all .hpp files in the include directory
     )
     message("SETTING UP XCODE")
     target_sources(${PROJECT_NAME} PRIVATE ${XCODEHEADERS})

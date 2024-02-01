@@ -11,8 +11,6 @@ public:
     virtual ~BlinkGame() = default;
     virtual void init(const GameParameters& parameters);
 
-    void clicked(const ImVec2& position, int id = 0);
-
     virtual void renderImGui(); // renders the imgui parts of the game
     virtual void updateSDL(); // updates the SDL instructions that are part of the game (the rendering itself is triggered in the application class)
 

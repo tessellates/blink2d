@@ -1,0 +1,106 @@
+#pragma once
+
+#include "CellMeta.hpp"
+#include "NoitaConfig.hpp"
+#include <algorithm>
+#include <iostream>
+
+class NoitaState {
+public:
+    NoitaState() = default;
+
+    std::array<Cell, NoitaConfig::numCells> cells;
+    bool phase = false;
+
+    float gravity = 0.1;
+    float dragCoefficient = 0.01;
+    const float maxDrag = 10.0f; // Example maximum drag value
+
+
+    float computeVelocity(float velocity, float mass)
+    {
+        if (velocity == 0)
+        {
+            return gravity;
+        }
+        float dragForce = dragCoefficient * velocity * velocity;
+        if (dragForce / mass > velocity + gravity)
+        {
+            return 0;
+        }
+        dragForce *= velocity/std::abs(velocity);
+
+        return velocity + gravity - dragForce / mass;
+    }
+
+    int index(int x, int y) const {
+        return y * NoitaConfig::width + x;
+    }
+
+    void setSand(int x, int y) {
+        cells[index(x, y)] = {CellType::SAND, {0,0}};
+        cells[index(x, y)].phase = !phase;
+    };
+
+
+
+    void updateSwaps(int x, int y)
+    {
+        int cellIndex = index(x,y);
+        while (cells[cellIndex].moveUnits.y >= 1)
+        {
+            ++y;
+            int downIndex = index(x, y);
+            if (y < NoitaConfig::height)
+            {
+                if (cells[downIndex].type == SAND)
+                {
+                    cells[cellIndex].moveUnits.y = 0;
+                    continue;
+                }
+                cells[cellIndex].moveUnits.y--;
+                swapCells(cells[cellIndex], cells[downIndex]);
+                cellIndex = downIndex;
+            }
+            else
+            {
+                cells[cellIndex].moveUnits.y = 0;
+                cells[cellIndex].velocity.y = 0;
+            }
+        }
+    }
+
+
+    void updateVelocity(Cell& cell)
+    {
+        cell.velocity.y = computeVelocity(cell.velocity.y, cell.getMass());
+        cell.moveUnits += cell.velocity;
+    }
+
+
+    void update()
+    {
+        phase = !phase;
+        for (int x = 0; x < NoitaConfig::width; ++x)
+        {
+            for (int y = NoitaConfig::height-1; y >= 0; --y)
+            {
+                auto& cell = cells[index(x,y)];
+                if (cell.phase != phase || cell.type == EMPTY)
+                {
+                    continue;
+                }
+                updateVelocity(cell);
+                updateSwaps(x, y);
+            }
+        }
+    }
+
+    void swapCells(Cell& lcell, Cell& rcell)
+    {
+        // exclude from the current phase
+        lcell.phase = !phase;
+        rcell.phase = !phase;
+        std::swap(lcell, rcell);
+    }
+};

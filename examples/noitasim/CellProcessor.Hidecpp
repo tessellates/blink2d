@@ -1,0 +1,120 @@
+#include "CellProcessor.hpp"
+
+void CellProcessor::update()
+{
+    int it = 0;
+    auto& fromCells = state1 ? simpleCells1 : simpleCells2;
+    auto& targetCells = state1 ? simpleCells2 : simpleCells1;
+    for (size_t i = 0; i < NoitaConfig::numCells; ++i)
+    {
+        
+        if (i < (NoitaConfig::height-1)*NoitaConfig::width)
+        {
+            fromCells[i].walk = 5;
+            int parsed = parseWalk(fromCells[i].walk);
+            if(fromCells[i].type && !fromCells[i+parsed].type && !targetCells[i+parsed].type)
+            {
+                fromCells[i].walk >>= 3;
+                targetCells[i+parsed] = std::move(fromCells[i]);
+                fromCells[i].type = EMPTY;
+                continue;
+            }
+
+        }
+        if (fromCells[i].type)
+            targetCells[i] = std::move(fromCells[i]);
+        /*
+        if (fromCells[i].walk && fromCells[i].type)
+        {
+            int parsed = parseWalk(fromCells[i].walk);
+            fromCells[i].walk >>= 3;
+            if (!targetCells[i + parsed].type && !fromCells[i + parsed].type)
+            {
+                fromCells[i].walk >>= 3;
+                if (fromCells[i].walk)
+                    it++;
+                targetCells[i + parsed] = std::move(fromCells[i]);
+                fromCells[i].type = EMPTY;
+                continue;
+            }
+            fromCells[i].walk = 0;
+        }
+        if (fromCells[i].type)
+            targetCells[i] = std::move(fromCells[i]);*/
+        fromCells[i].type = EMPTY;
+    }
+
+    for (size_t i = NoitaConfig::numCells-1; i > 0; --i)
+    {
+        if (i < (NoitaConfig::height-1)*NoitaConfig::width)
+        {
+            int parsed = parseWalk(targetCells[i].walk);
+            if(targetCells[i].type && !targetCells[i+parsed].type && !fromCells[i+parsed].type)
+            {
+                targetCells[i].walk >>= 3;
+                fromCells[i+parsed] = std::move(targetCells[i]);
+                targetCells[i].type = EMPTY;
+                continue;
+            }
+
+        }
+        if (targetCells[i].type)
+            fromCells[i] = std::move(targetCells[i]);
+        /*
+        if (fromCells[i].walk && fromCells[i].type)
+        {
+            int parsed = parseWalk(fromCells[i].walk);
+            fromCells[i].walk >>= 3;
+            if (!targetCells[i + parsed].type && !fromCells[i + parsed].type)
+            {
+                fromCells[i].walk >>= 3;
+                if (fromCells[i].walk)
+                    it++;
+                targetCells[i + parsed] = std::move(fromCells[i]);
+                fromCells[i].type = EMPTY;
+                continue;
+            }
+            fromCells[i].walk = 0;
+        }
+        if (fromCells[i].type)
+            targetCells[i] = std::move(fromCells[i]);*/
+        targetCells[i].type = EMPTY;
+    }
+
+    //state1 = !state1;
+    if (false)
+    {
+        update();
+    }
+    else
+    {
+        for (size_t i = 0; i < NoitaConfig::numCells; ++i)
+        {
+            renderData[i] = fromCells[i].type;
+        }
+    }
+}
+
+//001 X+1
+//010 X-1   
+//011 Y+1
+//100 Y-1
+int CellProcessor::parseWalk(int walk)
+{
+    switch(walk & 0b111)
+    {
+        case(1):
+            return 1;
+        case(2):
+            return -1;
+        case(3):
+            return 0;
+        case(4):
+            return -NoitaConfig::width;
+        case(5):
+            return NoitaConfig::width;
+        default:
+            return 0;
+    }
+    
+}

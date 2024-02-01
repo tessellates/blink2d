@@ -5,22 +5,6 @@
 #include <ctime>   // for time
 
 
-std::array<Uint32, 20> convertColorsToUint32(const std::array<ImVec4, 20>& colors) {
-    std::array<Uint32, 20> uint32Colors;
-
-    for (size_t i = 0; i < colors.size(); ++i) {
-        const auto& col = colors[i];
-        Uint8 r = static_cast<Uint8>(col.x * 255);
-        Uint8 g = static_cast<Uint8>(col.y * 255);
-        Uint8 b = static_cast<Uint8>(col.z * 255);
-        Uint8 a = static_cast<Uint8>(col.w * 255);
-
-        uint32Colors[i] = (r << 24) | (g << 16) | (b << 8) | a;
-    }
-
-    return uint32Colors;
-}
-
 void NoitaSimGame::init(const GameParameters& parameters)
 {
     windowFlags = ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse;
@@ -28,34 +12,39 @@ void NoitaSimGame::init(const GameParameters& parameters)
     this->parameters = parameters;
     ImVec2 guiSpace = parameters.gameSpace - padding * 2;
     ImVec2 guiLocation = parameters.gameRoot + padding;
+    noitaSimGui.init(guiLocation.x, guiLocation.y, guiSpace.x, guiSpace.y);
+    cpanel = NoitaControlPanel(parameters.panelSpace, parameters.panelRoot);
 
-    fastTexture.initialize(blink2dgui::Application::instance()->getRenderer());
-
-    // Define an array of 20 hardcoded random colors
-    std::array<ImVec4, 20> colors = {
-        ImVec4(0.0832, 0.1560, 0.9222, 1.0),
-        ImVec4(0.1006, 0.5563, 0.8696, 1.0),
-        ImVec4(0.4417, 0.1276, 0.5991, 1.0),
-        ImVec4(0.6180, 0.5614, 0.7865, 1.0),
-        ImVec4(0.1581, 0.9560, 0.5877, 1.0),
-        ImVec4(0.7747, 0.1965, 0.5372, 1.0),
-        ImVec4(0.5284, 0.1262, 0.0339, 1.0),
-        ImVec4(0.7606, 0.7810, 0.0025, 1.0),
-        ImVec4(0.4269, 0.8886, 0.3616, 1.0),
-        ImVec4(0.0748, 0.2032, 0.0005, 1.0),
-        ImVec4(0.8029, 0.9388, 0.2829, 1.0),
-        ImVec4(0.0918, 0.9876, 0.8837, 1.0),
-        ImVec4(0.8101, 0.4227, 0.4114, 1.0),
-        ImVec4(0.5919, 0.2103, 0.5006, 1.0),
-        ImVec4(0.6364, 0.0818, 0.3202, 1.0),
-        ImVec4(0.0340, 0.2054, 0.9683, 1.0),
-        ImVec4(0.8368, 0.3891, 0.7698, 1.0),
-        ImVec4(0.3394, 0.7454, 0.7083, 1.0),
-        ImVec4(0.1088, 0.3799, 0.5746, 1.0),
-        ImVec4(0.3240, 0.8830, 0.2737, 1.0)
-    };
-    sdl_colors = convertColorsToUint32(colors);
+    std::cout << ">WELCOME<" << std::endl;
+    std::cout << "MAX PARTICLES:" << NoitaConfig::numCells << std::endl;
 }
+
+void NoitaSimGame::mouseDown(const ImVec2& position)
+{
+    mouseDownCoordinate(noitaSimGui.gridLocation(position.x, position.y));
+    for (int i = 1; i < brushSize; ++i)
+    {
+        mouseDownCoordinate(noitaSimGui.gridLocation(position.x+i, position.y));
+        mouseDownCoordinate(noitaSimGui.gridLocation(position.x-i, position.y));
+        mouseDownCoordinate(noitaSimGui.gridLocation(position.x, position.y+i));
+        mouseDownCoordinate(noitaSimGui.gridLocation(position.x, position.y-i));
+        mouseDownCoordinate(noitaSimGui.gridLocation(position.x+i, position.y+i));
+        mouseDownCoordinate(noitaSimGui.gridLocation(position.x-i, position.y-i));
+        mouseDownCoordinate(noitaSimGui.gridLocation(position.x+i, position.y-i));
+        mouseDownCoordinate(noitaSimGui.gridLocation(position.x-i, position.y+i));
+    }
+
+}
+
+void NoitaSimGame::mouseDownCoordinate(const Coordinate& coordinate)
+{
+    if (noitaSimGui.inGrid(coordinate))
+    {
+        //noitaState.setSand(coordinate.x, coordinate.y);
+    }
+}
+
+
 
 void NoitaSimGame::clicked(const ImVec2& position, int id)
 {
@@ -69,6 +58,7 @@ void NoitaSimGame::hover(const ImVec2& position, int id)
 
 void NoitaSimGame::renderImGui()
 {
+    cpanel.render(cm, brushSize);
     ImGui::SetNextWindowSize(parameters.gameSpace);
     ImGui::SetNextWindowPos(parameters.gameRoot);
 
@@ -79,6 +69,42 @@ void NoitaSimGame::renderImGui()
 
     ImGui::Begin("NoitaSim Game", nullptr, windowFlags);
 
+    if (ImGui::IsWindowHovered()) 
+    {
+        ImVec2 mousePos = ImGui::GetMousePos(); // Get mouse position in screen coordinates
+        if (ImGui::IsMouseClicked(ImGuiMouseButton_Left))
+        {
+            //mouseDown(mousePos);
+        }
+        
+        if (ImGui::IsMouseDown(ImGuiMouseButton_Left))
+        {
+            if (wasDown)
+            {
+                float minX = std::min(oldPos.x, mousePos.x);
+                float maxX = std::max(oldPos.x, mousePos.x);
+                float minY = std::min(oldPos.y, mousePos.y);
+                float maxY = std::max(oldPos.y, mousePos.y);
+                for (float y = minY; y <= maxY; ++y) {
+                    for (float x = minX; x <= maxX; ++x) {
+                        mouseDown({x, y});
+                    }
+                }
+                oldPos = mousePos;
+            }
+            else
+            {
+                mouseDown(mousePos);
+                wasDown = true;
+                oldPos = mousePos;
+            }
+        }
+        else
+        {
+            wasDown = false;
+        }
+    }
+
     ImGui::End();
     ImGui::GetStyle() = originalStyle;
 }
@@ -87,36 +113,40 @@ void NoitaSimGame::updateSDL()
 {
     clock.update();
     updateGame();
-
-
-    //NoitaSimGui.updateSDL();
-    //renderManager.renderSDL();
-    fastTexture.updateTexture();
-    fastTexture.render(parameters.gameRoot.x, parameters.gameRoot.y);
+    noitaSimGui.updateSDL();
 }
 
 void NoitaSimGame::updateGame()
 {
-    //srand(static_cast<unsigned int>(time(nullptr)));
-    for(auto& pixel : fastTexture.pixels_)
+    total.timeStart();
+    walk.timeStart();
+    cm.updateMove();
+    walk.timeEnd();
+    move.timeStart();
+    cm.updateCells();
+    move.timeEnd();
+    render.timeStart();
+    noitaSimGui.updatePixelData(cm.cells);
+    render.timeEnd();
+    total.timeEnd();
+    //noitaState.random_updater_simple();
     {
-        int randomIndex = (rand() % sdl_colors.size());
-        pixel = sdl_colors[randomIndex];
-        /*
-        int randomIndex = rand() % textures.size();
-        ex.texture = textures[randomIndex];
-        if (randomIndex == 2 || randomIndex == 4 || randomIndex == 6)
-        {
-            ex.texture = textures[randomIndex];
-            ex.inUse = true;
-        }
-        else
-        {
-            ex.inUse = false;
-            ex.texture = nullptr;
-        }*/
-        //ex.inUse = randomIndex == 2 || randomIndex == 4 || randomIndex == 6;
+        //noitaSimGui.updatePixelData(noitaState.simpleCells);
+        return;
     }
+    /*
+    //noitaState.random_updater_single();
+
+    //noitaState.random_updater();
+    noitaState.update();
+    if (noitaState.odd)
+    {
+        noitaSimGui.updatePixelData(noitaState.cells);
+    }
+    else
+    {
+        noitaSimGui.updatePixelData(noitaState.cellsOdd);
+    }*/
 }
 
 void NoitaSimGame::forward()

@@ -1,10 +1,14 @@
 #pragma once
 
 #include "BlinkGame.hpp"
-//#include "NoitaSimGui.hpp"
+#include "NoitaSimGui.hpp"
+#include "CellManager.hpp"
 #include "RenderExManager.hpp"
 #include "ColorTextureManager.hpp"
 #include "FastTexture.hpp"
+#include "NoitaControlPanel.hpp"
+#include "NoitaState.hpp"
+#include "SDLTimer.hpp"
 //#include "NoitaSimModel.hpp"
 
 class NoitaSimGame : public BlinkGame
@@ -14,6 +18,8 @@ public:
     ~NoitaSimGame() = default;
     void init(const GameParameters& parameters) override;
 
+    void mouseDown(const ImVec2& position);
+    void mouseDownCoordinate(const Coordinate&);
     void clicked(const ImVec2& position, int id = 0);
     void hover(const ImVec2& position, int id = 0);
 
@@ -27,12 +33,25 @@ public:
 
     ImGuiWindowFlags windowFlags;
     
-    //NoitaSimGui NoitaSimGui;
+    NoitaSimGui noitaSimGui;
+    NoitaControlPanel cpanel;
+    CellManager cm;
+    NoitaState noitaState;
+    
     //NoitaSimModel NoitaSimModel;
     bool play = true;
     ImVec2 padding;
     bool isHoverActive = false; // State variable to control hover
-    FastTexture<1312, 945> fastTexture;
-    std::array<Uint32, 20> sdl_colors;
+    std::array<int, NoitaConfig::width*NoitaConfig::height> gameData;
+
+    bool wasDown = false;
+    ImVec2 oldPos;
+
+    int brushSize = 2;
+
+    SDLTimer walk{"------walk-------"};
+    SDLTimer move{"move"};
+    SDLTimer render{"render"};
+    SDLTimer total{"------total------"};
 
 };

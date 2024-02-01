@@ -1,6 +1,9 @@
+#pragma once
+
 #include <SDL.h>
 #include <vector>
 #include <cstdint>
+#include <array>
 
 template<int width_, int height_>
 class FastTexture {
@@ -35,6 +38,10 @@ public:
     void render(int x, int y) {
         SDL_Rect dstRect = { x, y, width_ * scale, height_ * scale};
         SDL_RenderCopy(renderer_, texture_, NULL, &dstRect);
+    }
+
+    void render(SDL_Rect* quad) {
+        SDL_RenderCopy(renderer_, texture_, NULL, quad);
     }
 
 public:

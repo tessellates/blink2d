@@ -12,15 +12,17 @@
 #include <SDL.h>
 #include <vector>
 #include <optional>
+#include <array>
 
 #include "GameSettings.hpp"
+#include "CircularBuffer.hpp"
 
 namespace blink2dgui
 {
     class SettingsPanel
     {
     public:
-        SettingsPanel() = default;    // Constructor
+        SettingsPanel();   // Constructor
         ~SettingsPanel() = default;   // Destructor
 
         // Render the shape selector window
@@ -32,6 +34,7 @@ namespace blink2dgui
         int gameSpeed;
         int gridSize;
         std::optional<GameSettings> settings;
+        CircularBuffer<float,30> fpsBuffer;
     };
 }
 

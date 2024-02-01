@@ -3,10 +3,15 @@
 
 namespace blink2dgui
 {
+    SettingsPanel::SettingsPanel()
+    {
+        fpsBuffer.init(60);
+    }
+    
     void SettingsPanel::renderWindow(float scale)
     {
         ImGuiWindowFlags flags =  ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize;
-        ImVec2 windowSize = ImVec2(280, 720)*scale;  // Example size
+        ImVec2 windowSize = ImVec2(280, 360)*scale;  // Example size
         ImVec2 pos = ImVec2(0, 40)*scale;  // Example size
         ImVec2 pos2 = ImVec2(1000, 40)*scale;  // Example size
         ImGui::SetNextWindowSize(windowSize);
@@ -51,8 +56,8 @@ namespace blink2dgui
 
             }
         }
-
-        ImGui::Text("FPS: %.3f", 1.0f / Application::instance()->activeGameClock().getDeltaTime() * 1000);
+        fpsBuffer.add(1.0f / Application::instance()->activeGameClock().getDeltaTime() * 1000);
+        ImGui::Text("FPS: %.3f", fpsBuffer.getAverage());
 
         ImGui::End();
 
