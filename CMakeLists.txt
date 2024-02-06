@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.12)
 
 #LANGUAGES can be: C , CXX (i.e. C++)
 project(blink2d VERSION 1.0
@@ -15,6 +15,9 @@ set(CMAKE_FIND_FRAMEWORK LAST)
 #SDL
 find_package(SDL2_IMAGE REQUIRED)
 find_package(SDL2 REQUIRED)
+
+find_package(OpenMP)
+
 
 # Create the library
 add_library(${PROJECT_NAME})
@@ -61,8 +64,10 @@ if(BUILD_TESTS)
 endif()
 
 
+
 #Link SDL to the library
 target_link_libraries(${PROJECT_NAME} PUBLIC SDL2::SDL2main SDL2::SDL2 SDL2_image::SDL2_image)
+target_compile_options(${PROJECT_NAME} PRIVATE -Xclang -fopenmp)
 
 #Link the library to an executable
 target_link_libraries(main PUBLIC ${PROJECT_NAME})

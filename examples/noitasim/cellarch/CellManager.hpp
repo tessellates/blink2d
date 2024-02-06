@@ -12,7 +12,8 @@ public:
     void updateCells();
     void updateMove();
 
-    CellMoveProcessor<PhasedWalkProcessor> move;
+    CellMoveProcessor<OneWalkProcessor> move;
+    //CellMoveProcessor<PhasedWalkProcessor> move;
     WalkCalculator walk;
 
     void testSpawn(int n = NoitaConfig::numCells/2);

@@ -41,9 +41,19 @@ void NoitaSimGui::updatePixelData(const std::array<Cell, NoitaConfig::numCells>&
 
 void NoitaSimGui::updatePixelData(const std::array<SmartCell, NoitaConfig::numCells>& data)
 {
+    int counter = 0;
     for (int i = 0; i < data.size(); ++i)
     {
         mainTexture.pixels_[i] = colors[data[i].type % colors.size()];
+        if (data[i].type)
+        {
+            counter++;
+        }
+    }
+    particle_numbers.add(counter);
+    if (particle_numbers.head == 59)
+    {
+        std::cout << "PARTICLES: " << particle_numbers.getAverage() << std::endl;
     }
 }
 

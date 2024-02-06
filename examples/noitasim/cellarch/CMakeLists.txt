@@ -11,5 +11,6 @@ target_sources(${PROJECT_NAME}
         ${CMAKE_CURRENT_SOURCE_DIR}/CellManager.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/PhasedWalkProcessor.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/WalkCalculator.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/OneWalkProcessor.cpp
 )
 

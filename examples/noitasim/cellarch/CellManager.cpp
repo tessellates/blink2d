@@ -24,7 +24,7 @@ void CellManager::testSpawn(int n)
 
 void CellManager::randomTestSpawn()
 {
-    int n = NoitaConfig::numCells/2;
+    int n = NoitaConfig::numCells/5;
     testSpawn(n);
     std::random_device rd;
     std::mt19937 gen(rd());

@@ -27,7 +27,7 @@ public:
         }
     }
 
-    CircularBuffer<Uint32,60> averageTime;
+    CircularBuffer<float,60> averageTime;
     std::string message;
     Uint32 tickStart;
 };

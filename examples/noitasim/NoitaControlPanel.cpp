@@ -54,29 +54,36 @@ void NoitaControlPanel::render(CellManager& cm, int& brushSize) {
     if (ImGui::Button("-")) {
         cp.speed >>= 3; // Perform right bit shift
     }*/
-    /*
-    ImGui::Text("Speed: %d", cp.speed);
+    
+    ImGui::Text("Speed: %d", cm.walk.speed);
 
     if (ImGui::Button("+")) {
-        cp.speed++;
+        cm.walk.speed++;
 
     }
 
     // "-" button for right bit shift
     if (ImGui::Button("-")) {
-        if (cp.speed > 0)
+        if (cm.walk.speed > 0)
         {
-            cp.speed--;
+            cm.walk.speed--;
         }
     }
 
  // Direction buttons
-    ImGui::InputInt("pattern:", &cp.direction);
+    ImGui::InputInt("pattern:", &cm.walk.direction);
 
     // Display the current direction
-    ImGui::Text("Current pattern: %d", cp.direction);
+    ImGui::Text("Current pattern: %d", cm.walk.direction);
 
-
+    // Checkbox for 'phasing'
+    ImGui::Checkbox("parallel", &cm.move.parallel);
+    if (cm.move.parallel) {
+        ImGui::Text("parallel is ON");
+    } else {
+        ImGui::Text("parallel is OFF");
+    }
+/*
     // Checkbox for 'phasing'
     ImGui::Checkbox("Phasing", &cp.phasing);
     if (cp.phasing) {

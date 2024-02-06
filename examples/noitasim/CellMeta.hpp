@@ -35,7 +35,8 @@ struct SmartCell
 {
     Uint32 walk = 0;
     Uint32 type = 0;
-    bool checked = false;
+    Uint32 checked = 0;
+    //bool checked = false;
     //CellData* cdata;
 };
 

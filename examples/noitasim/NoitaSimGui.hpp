@@ -12,6 +12,7 @@
 #include "FastTexture.hpp"
 #include "NoitaConfig.hpp"
 #include "CellMeta.hpp"
+#include "CircularBuffer.hpp"
 
 class NoitaSimGui
 {
@@ -73,6 +74,7 @@ public:
         0x00CED1FF          // DarkTurquoise (instead of CadetBlue)
     };
     SDL_Rect frame;
+    CircularBuffer<float,60> particle_numbers;
 };
 
 

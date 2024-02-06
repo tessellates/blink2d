@@ -6,18 +6,29 @@
 #include <algorithm>
 #include <iostream>
 #include <random>
+#include <mutex>
+#include <bitset>
+#include <thread>
+#include <vector>
 
 template <typename _Derived>
 class CellMoveProcessor : public CRTP<_Derived>
 {
 public:
-    CellMoveProcessor(std::array<SmartCell, NoitaConfig::numCells>& cells) : cells(cells) {};
-
+    CellMoveProcessor(std::array<SmartCell, NoitaConfig::numCells>& cells) : cells(cells) {
+        totalThreads = std::min(std::thread::hardware_concurrency(), NoitaConfig::maxThreads);
+        lastIteration = std::vector<bool>(totalThreads, true);
+    };
+    int totalThreads;
+    std::vector<bool> lastIteration;
+    std::vector<size_t> indexes = {0, 1, 2, 3};
+    std::bitset<NoitaConfig::numCells> bs;
     std::array<SmartCell, NoitaConfig::numCells>& cells;
     int speed = 1;
     int phase = 1;
     bool phasing = true;
-    
+    bool parallel = false;
+
     void update()
     {
         this->derived().update();
@@ -44,7 +55,38 @@ public:
 class PhasedWalkProcessor : public CellMoveProcessor<PhasedWalkProcessor>
 {
 public:
+
     PhasedWalkProcessor(std::array<SmartCell, NoitaConfig::numCells>& cells);
     void update();
+    void updateParallel();
     void cellWalk(int index, int = 0);
+    void cellWalkThread(int index, int = 0, int = 0);
 };
+
+
+class OneWalkProcessor : public CellMoveProcessor<OneWalkProcessor>
+{
+public:
+    OneWalkProcessor(std::array<SmartCell, NoitaConfig::numCells>& cells);
+    void update();
+    void cellWalk(int index, int direction, bool&);
+
+    void processRowsRightLeft(int threadId);
+    void processRowsLeftRight(int threadId);
+    void processColumnsTopBottom(int threadId);
+    void processColumnsBottomTop(int threadId);
+};
+
+/*
+class PathProcessor : public CellMoveProcessor<PathProcessor>
+{
+public:
+    PathProcessor(std::array<SmartCell, NoitaConfig::numCells>& cells);
+    void update();
+    void cellWalk(int index, int direction, bool&);
+
+    void processRowsRightLeft(int threadId);
+    void processRowsLeftRight(int threadId);
+    void processColumnsTopBottom(int threadId);
+    void processColumnsBottomTop(int threadId);
+};*/
