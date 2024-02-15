@@ -22,7 +22,7 @@ public:
     void updateSDL();
     void updatePixelData(const std::array<int, NoitaConfig::width*NoitaConfig::height>&);
     void updatePixelData(const std::array<Cell, NoitaConfig::width*NoitaConfig::height>&);
-    void updatePixelData(const std::array<SmartCell, NoitaConfig::width*NoitaConfig::height>&);
+    void updatePixelData(const std::vector<SmartCell>&);
     void init(int, int, int, int);
     Coordinate gridLocation(int, int);
     bool inGrid(const Coordinate&);

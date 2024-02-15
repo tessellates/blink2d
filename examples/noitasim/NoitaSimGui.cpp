@@ -39,7 +39,7 @@ void NoitaSimGui::updatePixelData(const std::array<Cell, NoitaConfig::numCells>&
     }
 }
 
-void NoitaSimGui::updatePixelData(const std::array<SmartCell, NoitaConfig::numCells>& data)
+void NoitaSimGui::updatePixelData(const std::vector<SmartCell>& data)
 {
     int counter = 0;
     for (int i = 0; i < data.size(); ++i)

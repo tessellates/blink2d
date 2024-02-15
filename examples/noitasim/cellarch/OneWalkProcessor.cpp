@@ -1,6 +1,6 @@
 #include "CellMoveProcessor.hpp"
 
-OneWalkProcessor::OneWalkProcessor(std::array<SmartCell, NoitaConfig::numCells>& cells) : CellMoveProcessor(cells) 
+OneWalkProcessor::OneWalkProcessor(std::vector<SmartCell>& cells) : CellMoveProcessor(cells) 
 {
 };
 
@@ -139,6 +139,11 @@ void OneWalkProcessor::update()
     std::fill(lastIteration.begin(), lastIteration.end(), true);
     if (!finished)
     {
-        update();
+        itt++;
+        if (itt < 10)
+            update();
+        else
+            itt = 0;
     }
+    itt = 0;
 }

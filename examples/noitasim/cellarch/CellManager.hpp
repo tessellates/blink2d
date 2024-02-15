@@ -8,7 +8,7 @@ class CellManager
 {
 public:
     CellManager();
-    std::array<SmartCell, NoitaConfig::numCells> cells;
+    std::vector<SmartCell> cells;
     void updateCells();
     void updateMove();
 

@@ -15,7 +15,7 @@ template <typename _Derived>
 class CellMoveProcessor : public CRTP<_Derived>
 {
 public:
-    CellMoveProcessor(std::array<SmartCell, NoitaConfig::numCells>& cells) : cells(cells) {
+    CellMoveProcessor(std::vector<SmartCell>& cells) : cells(cells) {
         totalThreads = std::min(std::thread::hardware_concurrency(), NoitaConfig::maxThreads);
         lastIteration = std::vector<bool>(totalThreads, true);
     };
@@ -23,12 +23,12 @@ public:
     std::vector<bool> lastIteration;
     std::vector<size_t> indexes = {0, 1, 2, 3};
     std::bitset<NoitaConfig::numCells> bs;
-    std::array<SmartCell, NoitaConfig::numCells>& cells;
+    std::vector<SmartCell>& cells;
     int speed = 1;
     int phase = 1;
     bool phasing = true;
     bool parallel = false;
-
+    int itt = 0;
     void update()
     {
         this->derived().update();
@@ -56,7 +56,7 @@ class PhasedWalkProcessor : public CellMoveProcessor<PhasedWalkProcessor>
 {
 public:
 
-    PhasedWalkProcessor(std::array<SmartCell, NoitaConfig::numCells>& cells);
+    PhasedWalkProcessor(std::vector<SmartCell>& cells);
     void update();
     void updateParallel();
     void cellWalk(int index, int = 0);
@@ -67,7 +67,7 @@ public:
 class OneWalkProcessor : public CellMoveProcessor<OneWalkProcessor>
 {
 public:
-    OneWalkProcessor(std::array<SmartCell, NoitaConfig::numCells>& cells);
+    OneWalkProcessor(std::vector<SmartCell>& cells);
     void update();
     void cellWalk(int index, int direction, bool&);
 
@@ -81,7 +81,7 @@ public:
 class PathProcessor : public CellMoveProcessor<PathProcessor>
 {
 public:
-    PathProcessor(std::array<SmartCell, NoitaConfig::numCells>& cells);
+    PathProcessor(std::vector<SmartCell>& cells);
     void update();
     void cellWalk(int index, int direction, bool&);
 

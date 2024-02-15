@@ -12,6 +12,5 @@
 class Chunck
 {
 public:
-    std::array<int, NoitaConfig::numCells> smartIndexes;
-    std::array<int, 6> indexHead;
+    std::velocity<int> smartIndexes;
 };

@@ -11,8 +11,8 @@
 class WalkCalculator
 {
 public:
-    std::array<SmartCell, NoitaConfig::numCells>& cells;
-    WalkCalculator(std::array<SmartCell, NoitaConfig::numCells>& cells);
+    std::vector<SmartCell>& cells;
+    WalkCalculator(std::vector<SmartCell>& cells);
 
     std::random_device rd;
     std::uniform_int_distribution<> distrib{1, 4};
