@@ -5,11 +5,8 @@
 #include "CellManager.hpp"
 #include "RenderExManager.hpp"
 #include "ColorTextureManager.hpp"
-#include "FastTexture.hpp"
 #include "NoitaControlPanel.hpp"
-#include "NoitaState.hpp"
 #include "SDLTimer.hpp"
-//#include "NoitaSimModel.hpp"
 
 class NoitaSimGame : public BlinkGame
 {
@@ -36,14 +33,11 @@ public:
     NoitaSimGui noitaSimGui;
     NoitaControlPanel cpanel;
     CellManager cm;
-    NoitaState noitaState;
     
     //NoitaSimModel NoitaSimModel;
     bool play = true;
     ImVec2 padding;
     bool isHoverActive = false; // State variable to control hover
-    std::array<int, NoitaConfig::width*NoitaConfig::height> gameData;
-
     bool wasDown = false;
     ImVec2 oldPos;
 

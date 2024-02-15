@@ -9,12 +9,9 @@ target_include_directories(${PROJECT_NAME}
 target_sources(${PROJECT_NAME}
     PRIVATE 
         ${CMAKE_CURRENT_SOURCE_DIR}/ColorTextureManager.cpp
-        #${CMAKE_CURRENT_SOURCE_DIR}/NoitaSimModel.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/NoitaSimGui.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/NoitaSimGame.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/NoitaControlPanel.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/NoitaState.cpp
-        #${CMAKE_CURRENT_SOURCE_DIR}/CellProcessor.cpp
 )
 
 add_subdirectory(cellarch)

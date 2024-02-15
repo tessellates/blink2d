@@ -57,7 +57,7 @@ subprocess.run(cmakeCommands, cwd=buildPath)
 if isWin:
     subprocess.run([cmakeBin, "--build",  "build", "--config", config])
 else:
-    subprocess.run([cmakeBin, "--build", "build"])
+    subprocess.run([cmakeBin, "--build", "build", "--", "-j8"])
 
 # Without running cmake --build we instead would run something like the following:
 if 0:

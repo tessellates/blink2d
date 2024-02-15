@@ -4,11 +4,14 @@
 #include <vector>
 #include <cstdint>
 #include <array>
+#include "NoitaConfig.hpp"
 
-template<int width_, int height_>
 class FastTexture {
 public:
-    FastTexture() = default;
+    FastTexture()
+    {
+        pixels_ = std::vector<Uint32>(width_*height_);
+    }
 
     void initialize(SDL_Renderer* renderer)
     {
@@ -48,5 +51,7 @@ public:
     SDL_Renderer* renderer_;
     SDL_Texture* texture_;
     int scale = 1;
-    std::array<Uint32, width_*height_> pixels_;
+    std::vector<Uint32> pixels_;
+    int width_ = NoitaConfig::width;
+    int height_ = NoitaConfig::height;
 };

@@ -20,14 +20,12 @@ public:
     NoitaSimGui() = default;    // Constructor
     ~NoitaSimGui() = default;   // Destructor
     void updateSDL();
-    void updatePixelData(const std::array<int, NoitaConfig::width*NoitaConfig::height>&);
-    void updatePixelData(const std::array<Cell, NoitaConfig::width*NoitaConfig::height>&);
     void updatePixelData(const std::vector<SmartCell>&);
     void init(int, int, int, int);
     Coordinate gridLocation(int, int);
     bool inGrid(const Coordinate&);
 
-    FastTexture<NoitaConfig::width, NoitaConfig::height> mainTexture;
+    FastTexture mainTexture;
     std::array<Uint32, 42> colors = {
         0x00000000,
         0xFFFF00FF, // Yellow

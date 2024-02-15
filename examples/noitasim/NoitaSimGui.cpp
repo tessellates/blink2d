@@ -23,22 +23,6 @@ void NoitaSimGui::updateSDL()
     mainTexture.render(&frame);
 }
 
-void NoitaSimGui::updatePixelData(const std::array<int, NoitaConfig::width*NoitaConfig::height>& data)
-{
-    for (int i = 0; i < data.size(); ++i)
-    {
-        mainTexture.pixels_[i] = colors[data[i] % colors.size()];
-    }
-}
-
-void NoitaSimGui::updatePixelData(const std::array<Cell, NoitaConfig::numCells>& data)
-{
-    for (int i = 0; i < data.size(); ++i)
-    {
-        mainTexture.pixels_[i] = colors[data[i].type + 21*data[i].variance];
-    }
-}
-
 void NoitaSimGui::updatePixelData(const std::vector<SmartCell>& data)
 {
     int counter = 0;
