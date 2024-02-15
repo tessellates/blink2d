@@ -1,4 +1,6 @@
 #include "Coordinate.hpp"
+#include <array>
+
 
 // Default constructor
 Coordinate::Coordinate() : x(0), y(0) {}

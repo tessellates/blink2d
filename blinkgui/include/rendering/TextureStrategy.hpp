@@ -3,6 +3,8 @@
 #include "BlinkTexture.hpp"
 #include "AnimationManager.hpp"
 
+#include <vector>
+
 class ITextureStrategy {
 public:
     virtual ~ITextureStrategy() = default;

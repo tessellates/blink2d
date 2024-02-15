@@ -4,6 +4,8 @@
 #include <SDL_image.h>
 #include "imgui.h"
 #include "rendering/BlinkTexture.hpp"
+#include <vector>
+
 
 inline SDL_Texture* CreateBackgroundTexture(SDL_Renderer* renderer, float spacing, float textureHeight, float textureWidth)
 {

@@ -4,6 +4,7 @@
 #include "rendering/RenderAction.hpp"
 
 #include <deque>
+#include <array>
 
 class RenderManager : public Singleton<RenderManager>
 {

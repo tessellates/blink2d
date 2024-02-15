@@ -33,7 +33,7 @@ namespace blink2dgui
 #endif
 
         // Create window with SDL_Renderer graphics context
-        SDL_WindowFlags window_flags = (SDL_WindowFlags)(SDL_WINDOW_ALLOW_HIGHDPI);
+        SDL_WindowFlags window_flags = (SDL_WindowFlags)(SDL_WINDOW_ALLOW_HIGHDPI | SDL_WINDOW_FULLSCREEN);
         HEIGHT_MOD = float(HEIGHT)/float(HEIGHT_DEFAULT);
         WIDTH = WIDTH_DEFAULT * HEIGHT_MOD;
         window_ = SDL_CreateWindow("BLINK 2D", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WIDTH, HEIGHT, window_flags);
