@@ -4,7 +4,7 @@
 #include <vector>
 
 CellManager::CellManager() : move(cells), walk(cells) {
-    cells = std::vector<SmartCell>(NoitaConfig::numCells, SmartCell{0,0});
+    //cells = std::vector<SmartCell>(NoitaConfig::numCells, SmartCell{0,0});
 };
 
 void CellManager::updateCells()
@@ -19,7 +19,7 @@ void CellManager::updateMove()
 
 void CellManager::testSpawn(int n)
 {
-    std::fill(cells.begin(), cells.end(), SmartCell{0,0});
+    cells.fill({0, 0});
     for (int i = 0; i < n; ++i)
     {
         cells[i] = SmartCell{0, 1};

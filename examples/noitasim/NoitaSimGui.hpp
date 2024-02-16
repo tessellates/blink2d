@@ -20,7 +20,7 @@ public:
     NoitaSimGui() = default;    // Constructor
     ~NoitaSimGui() = default;   // Destructor
     void updateSDL();
-    void updatePixelData(const std::vector<SmartCell>&);
+    void updatePixelData(const std::array<SmartCell, NoitaConfig::numCells>&);
     void init(int, int, int, int);
     Coordinate gridLocation(int, int);
     bool inGrid(const Coordinate&);

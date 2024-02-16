@@ -2,7 +2,7 @@
 #include <thread>
 #include <vector>
 
-PhasedWalkProcessor::PhasedWalkProcessor(std::vector<SmartCell>& cells) : CellMoveProcessor(cells) 
+PhasedWalkProcessor::PhasedWalkProcessor(std::array<SmartCell, NoitaConfig::numCells>& cells) : CellMoveProcessor(cells) 
 {
 };
 

@@ -1,6 +1,6 @@
 #include "WalkCalculator.hpp"
 
-WalkCalculator::WalkCalculator(std::vector<SmartCell>& cells) : cells(cells), numThreads(std::thread::hardware_concurrency()), chunkSize(NoitaConfig::numCells / numThreads)
+WalkCalculator::WalkCalculator(std::array<SmartCell, NoitaConfig::numCells>& cells) : cells(cells), numThreads(std::thread::hardware_concurrency()), chunkSize(NoitaConfig::numCells / numThreads)
 {
     for (int i = 0; i < numThreads; ++i)
     {

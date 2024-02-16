@@ -23,7 +23,7 @@ void NoitaSimGui::updateSDL()
     mainTexture.render(&frame);
 }
 
-void NoitaSimGui::updatePixelData(const std::vector<SmartCell>& data)
+void NoitaSimGui::updatePixelData(const std::array<SmartCell, NoitaConfig::numCells>& data)
 {
     int counter = 0;
     for (int i = 0; i < data.size(); ++i)
